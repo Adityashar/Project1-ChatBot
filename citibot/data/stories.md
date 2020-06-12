@@ -13,6 +13,10 @@
 * affirm
   - utter_happy
 
+## default fallback
+* bot_challenge
+  - action_default_fallback
+
 ## sad path 2
 * greet
   - utter_greet

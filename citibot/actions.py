@@ -38,26 +38,49 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        entities = tracker.latest_message['entities']
-        print(entities)
+        try:
+            entities = tracker.latest_message['entities']
+            print(entities)
 
-        ID = ""
+            ID = ""
 
-        for dic in entities:
-            if(dic['entity'] == 'account_id'):
-                ID = dic['value']
-                break
-            # print(dic['entity']+ " : "+ dic['value'])
-        print(ID)
+            for dic in entities:
+                if(dic['entity'] == 'account_id'):
+                    ID = dic['value']
+                    break
+                # print(dic['entity']+ " : "+ dic['value'])
+            print(ID)
 
-        dataset = pd.read_csv('dataset.csv')
-        PS = dataset[dataset['Account ID'] == int(ID)]['Payment Status']
-        LE = dataset[dataset['Account ID'] == int(ID)]['Legal Entity']
+            dataset = pd.read_csv('dataset.csv')
+            PS = dataset[dataset['Account ID'] == int(ID)]['Payment Status']
+            LE = dataset[dataset['Account ID'] == int(ID)]['Legal Entity']
 
-        data = "Payment Status: {} , Legal Entity: {}".format(PS, LE) 
+            record = dataset[dataset['Account ID'] == int(ID)]
+            print(type(record))
 
-        print(data)
+            dispatcher.utter_message(text="Hi here are the details: {}  {}".format(PS, LE) , json_message= record.to_json())
+            return []
 
-        dispatcher.utter_message(text="Hi here are the details: " + (data))
+        except:
+            dispatcher.utter_message(template='utter_default', tracker, TEXT = "\n You entered a wrong ID.")
+            return []
 
-        return []
+#       dispatcher.utter_message("utter_name", tracker, Var=data)
+#       utter_name -> []{Var}
+
+
+
+# class ActionCheckRestaurants(Action):
+#    def name(self) -> Text:
+#       return "action_check_restaurants"
+
+#    def run(self,
+#            dispatcher: CollectingDispatcher,
+#            tracker: Tracker,
+#            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+#       cuisine = tracker.get_slot('cuisine')
+#       q = "select * from restaurants where cuisine='{0}' limit 1".format(cuisine)
+#       result = db.query(q)
+
+#       return [SlotSet("matches", result if result is not None else [])]
