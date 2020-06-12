@@ -2,5 +2,5 @@ CitiBank NewYork
 CitiBank HongKong 
 CitiBank London
 CitiBank Singapore
-CitiBank Bangaluru 
+CitiBank Bengaluru 
 CitiBank Pune

@@ -1,0 +1,12 @@
+- Tell me the status for the transaction from [CitiBank Pune](legal_entity) with id [103560](account_id)
+- Tell me the details for the transaction from [citibank pune]{"entity": "legal_entity", "value":"CitiBank Pune"} with id [103561](account_id)
+- Tell me the details for the payment from [citibank Hongkong]{"entity": "legal_entity", "value":"CitiBank HongKong"} with [103161](account_id) id
+- Tell me the status for the transaction from [CitiBank Pune](legal_entity) for agreement [103570](account_id)
+- Brief me about the payment status from [CitiBank Bangalore]{"entity": "legal_entity", "value":"CitiBank Bengaluru"} for account [103360](account_id)
+- Brief us for the agreement of [CitiBank Pune](legal_entity) for transaction id [103660](account_id)
+- Give me details about the status of the payment from [CitiBank NYC]{"entity": "legal_entity", "value":"CitiBank NewYork"} for agreement [103510](account_id) id
+- Give me something about the current status of the transaction from [CitiBank NewYorkCity]{"entity": "legal_entity", "value":"CitiBank NewYork"} for payment id [103520](account_id) 
+- For the id [103923](account_id) provide me the details of the current status of payment from [CitiBank London](legal_entity) 
+- for the transaction [18331](account_id) give me status of agreement deal from [CitiBank Bengaluru](legal_entity)
+- for the agreement id [18391](account_id) give me report of transaction from [CitiBank Bengaluru](legal_entity)
+- Give me the status report for the transaction from [CitiBank Pune](legal_entity) for agreement [103520](account_id)

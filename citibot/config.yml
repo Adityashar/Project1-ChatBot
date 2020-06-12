@@ -45,11 +45,18 @@ pipeline:
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
+    max_history: 30
   - name: TEDPolicy
-    max_history: 5
-    epochs: 100
+    max_history: 30
+    epochs: 40
   - name: MappingPolicy
-  - name: "FallbackPolicy"
-    nlu_threshold: 0.4
-    core_threshold: 0.3
-    fallback_action_name: "action_default_fallback"
+  # - name: "FallbackPolicy"
+  #   nlu_threshold: 0.4
+  #   core_threshold: 0.3
+  #   fallback_action_name: "action_default_fallback"
+# - name: "KerasPolicy"
+#     featurizer:
+#     - name: MaxHistoryTrackerFeaturizer
+#       max_history: 5
+#       state_featurizer:
+#         - name: BinarySingleStateFeaturizer

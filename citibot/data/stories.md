@@ -1,32 +1,12 @@
-## happy path
+<!-- ## happy path
 * greet
-  - utter_greet
-* mood_great
-  - utter_happy
+  - utter_greet -->
 
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## default fallback
+<!-- ## default fallback
 * bot_challenge
-  - action_default_fallback
+  - action_default_fallback -->
 
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
-
-## say goodbye
+<!-- ## say goodbye
 * goodbye
   - utter_goodbye
 
@@ -34,7 +14,19 @@
 * bot_challenge
   - utter_iamabot
 
-## status path
+## status path 1
 * payment_status
   - action_payment
-  - utter_payment
+  - utter_payment -->
+
+## status path 2
+* greet
+  - utter_greet
+* payment_status
+  - action_payment
+* goodbye
+  - utter_goodbye
+
+## status path 3
+* payment_status
+  - action_payment

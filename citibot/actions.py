@@ -12,6 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import pandas as pd
+import sys
 
 #
 # class ActionHelloWorld(Action):
@@ -29,7 +30,7 @@ import pandas as pd
 # rasa data convert nlu --data ./data/nlu.md --out ./data/data.json --format json
 
 
-class ActionHelloWorld(Action):
+class ActionPayment(Action):
 
     def name(self) -> Text:
         return "action_payment"
@@ -47,8 +48,8 @@ class ActionHelloWorld(Action):
             for dic in entities:
                 if(dic['entity'] == 'account_id'):
                     ID = dic['value']
-                    break
-                # print(dic['entity']+ " : "+ dic['value'])
+                #     break
+                print(dic['entity']+ " : "+ dic['value'])
             print(ID)
 
             dataset = pd.read_csv('dataset.csv')
@@ -56,13 +57,17 @@ class ActionHelloWorld(Action):
             LE = dataset[dataset['Account ID'] == int(ID)]['Legal Entity']
 
             record = dataset[dataset['Account ID'] == int(ID)]
-            print(type(record))
 
-            dispatcher.utter_message(text="Hi here are the details: {}  {}".format(PS, LE) , json_message= record.to_json())
+            if(record.empty):
+                raise ValueError("No record for this ID !!!")
+
+            print((record))
+
+            dispatcher.utter_message(text="Hi here are the details: {}  {}".format(PS, LE))
             return []
 
         except:
-            dispatcher.utter_message(template='utter_default', tracker, TEXT = "\n You entered a wrong ID.")
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
             return []
 
 #       dispatcher.utter_message("utter_name", tracker, Var=data)

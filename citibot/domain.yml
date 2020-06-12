@@ -3,8 +3,6 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
   - payment_status
 
@@ -23,15 +21,8 @@ responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
   utter_did_that_help:
   - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "Bye"
@@ -43,7 +34,7 @@ responses:
   - text: "I have received the payment"
 
   utter_default:
-  - text: "Please try again ! []{TEXT}"
+  - text: "Please try again !!"
 
 session_config:
   session_expiration_time: 60
