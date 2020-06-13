@@ -5,6 +5,7 @@ intents:
   - deny
   - bot_challenge
   - payment_status
+  - pending_payment
 
 entities:
   - legal_entity
@@ -16,6 +17,7 @@ entities:
 
 actions:
   - action_payment
+  - action_pending
 
 responses:
   utter_greet:

@@ -72,6 +72,45 @@ class ActionPayment(Action):
 
 #       dispatcher.utter_message("utter_name", tracker, Var=data)
 #       utter_name -> []{Var}
+class ActionPayment(Action):
+
+    def name(self) -> Text:
+        return "action_pending"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            print(entities)
+
+            ID = ""
+
+            for dic in entities:
+                if(dic['entity'] == 'account_id'):
+                    ID = dic['value']
+                #     break
+                print(dic['entity']+ " : "+ dic['value'])
+            print(ID)
+
+            dataset = pd.read_csv('dataset.csv')
+            PA = dataset[dataset['Account ID'] == int(ID)]['Payment Amount']
+            LE = dataset[dataset['Account ID'] == int(ID)]['Legal Entity']
+
+            record = dataset[dataset['Account ID'] == int(ID)]
+
+            if(record.empty):
+                raise ValueError("No record for this ID !!!")
+
+            print((record))
+
+            dispatcher.utter_message(text="Hi here are the details: {}  {}".format(PA, LE))
+            return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []
 
 
 

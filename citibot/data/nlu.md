@@ -49,6 +49,20 @@
 - For the id [103490](account_id) tell me the status 
 
 
+## intent:pending_payment
+- what is the pending payment of the agreement [103256](account_id)
+- what is the pending payment of the agreement with id [102729](account_id)
+- For pending payment between the [Deutsch bank](client_name) and [CitiBank NewYork](legal_entity) 
+- Tell me the pending payment between the [BNY Mellon](client_name) and [CitiBank HongKong](legal_entity)
+- Brief the details about the pending payment between [CitiBank Bengaluru](legal_entity) and [JP Morgan](client_name)
+- Give the amount pending of the transaction between the [CitiBank Pune](legal_entity) and [Goldman Sachs](client_name)
+- Give the pending amount of agreement with the id [103490](account_id)
+- Brief me about the pending payment of agreement deal with [103600](acoount_id) id
+- For the id [103490](account_id) tell me the pending amount left
+- what is the amount pending of the agreement [103600](account_id) id
+
+
+
 
 ## lookup:client_name
    data/Client_name.txt

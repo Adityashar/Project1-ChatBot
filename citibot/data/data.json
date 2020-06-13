@@ -544,6 +544,151 @@
           }
         ],
         "text": "Give me the status report for the transaction from CitiBank Pune for agreement 103520"
+      },
+      {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 45,
+            "end": 51,
+            "value": "103256",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the pending payment of the agreement 103256"
+      },
+      {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 53,
+            "end": 59,
+            "value": "102729",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the pending payment of the agreement with id 102729"
+      },
+      {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 49,
+            "end": 65,
+            "value": "CitiBank NewYork",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 32,
+            "end": 44,
+            "value": "DEUTSCH BANK",
+            "entity": "client_name"
+          }
+        ],
+        "text": "For pending payment between the DEUTSCH BANK and CitiBank NewYork"
+      },
+      {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 55,
+            "end": 72,
+            "value": "CitiBank HongKong",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 40,
+            "end": 50,
+            "value": "BNY Mellon",
+            "entity": "client_name"
+          }
+        ],
+        "text": "Tell me the pending payment between the BNY Mellon and CitiBank HongKong"
+      },
+
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 52,
+            "end": 70,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 75,
+            "end": 84,
+            "value": "JP Morgan",
+            "entity": "client_name"
+          }
+        ],
+        "text": "Brief the details about the pending payment between CitiBank Bengaluru and JP Morgan"
+      },
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 55,
+            "end": 68,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 73,
+            "end": 86,
+            "value": "Goldman Sachs",
+            "entity": "client_name"
+          }
+        ],
+        "text": "Give the amount pending of the transaction between the CitiBank Pune and Goldman Sachs"
+      },
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 49,
+            "end": 55,
+            "value": "103490",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give the pending amount of agreement with the id 103490"
+      },
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 58,
+            "end": 64,
+            "value": "103600",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the pending payment of agreement deal with 103600 id"
+      },
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "103490",
+            "entity": "account_id"
+          }
+        ],
+        "text": "For the id 103490 tell me the pending amount left"
+      },
+       {
+        "intent": "pending_payment",
+        "entities": [
+          {
+            "start": 44,
+            "end": 50,
+            "value": "103600",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount pending of the agreement 103600 id"
       }
     ],
     "regex_features": [],

@@ -30,3 +30,7 @@
 ## status path 3
 * payment_status
   - action_payment
+
+## pending path 1
+* pending_payment
+  - action_pending
