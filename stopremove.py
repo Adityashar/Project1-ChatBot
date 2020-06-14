@@ -3,7 +3,7 @@ from nltk.tokenize import word_tokenize
 #from nltk.tokenize import TreebankWordTokenizer
 #tokenizer = TreebankWordTokenizer.tokenize()
 import pickle
-infile = open(r"C:\Users\Ashwin\Downloads\questions.pkl", 'rb')
+infile = open("questions.pkl", 'rb')
 data = pickle.load(infile)
 infile.close()
 print(data)
