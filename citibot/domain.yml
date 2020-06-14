@@ -24,26 +24,29 @@ actions:
 
 slots:
   legal_entity:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   client_name:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   currency:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   payment_date:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   amountpaid:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   amountpending:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
   account_id:
-    type: text
-    autofill: false
+    type: unfeaturized
+    auto_fill: false
+  source:
+    type: unfeaturized
+    auto_fill: false
   
 
 responses:
@@ -61,6 +64,27 @@ responses:
 
   utter_payment:
   - text: "I have received the payment"
+
+  utter_accountid:
+  - text: "The transaction id is {account_id}."
+
+  utter_clientname:
+  - text: "The client involved in this agreement is {client_name}."  
+
+  utter_legalentity:
+  - text: "The legal entity involved in this agreement is {legal_entity}."
+
+  utter_paymentdate:
+  - text: "The transaction took place on {payment_date}."
+
+  utter_paidamount:
+  - text: "The amount paid is {currency} {amountpaid}."
+
+  utter_pendingamount:
+  - text: "The amount pending is {currency} {amountpending}."
+
+  utter_source:
+  - text: "The Source for given information is {Source}."
 
   utter_default:
   - text: "Please try again !!"

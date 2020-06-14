@@ -11,6 +11,8 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
+
 import pandas as pd
 import sys
 
@@ -49,6 +51,14 @@ def query_maker(entities):
     print(string)
     return string[:-5]
 
+def record_finder(entities):
+    query = query_maker(entities)
+    dataset = pd.read_csv('dataset.csv')
+    records = dataset.query(query)
+    print(records['Payment_Status'].item())
+
+    return records
+
 class ActionPayment(Action):
 
     def name(self) -> Text:
@@ -60,20 +70,22 @@ class ActionPayment(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            print(entities)
-
-            data = {}
-
-            query = query_maker(entities)
-            dataset = pd.read_csv('dataset.csv')
-            records = dataset.query(query)
-            print(records['Payment_Status'].item())
+            records = record_finder(entities)
 
             if(records.empty):
-                raise ValueError("No record for this ID !!!")
-
-            dispatcher.utter_message(text="The payment is "+records['Payment_Status'].item())# {}  {}".format(PS, LE))
-            return []
+                raise ValueError("No record for this query !!!")
+    
+            print(records)
+            dispatcher.utter_message(text="The payment is "+records['Payment_Status'].item()+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
+            return [SlotSet("account_id", records['Account_ID'].item()),
+                    SlotSet("legal_entity", records['Legal_Entity'].item()),
+                    SlotSet("client_name", records['Client_Name'].item()),
+                    SlotSet("amountpaid", records['Paid_Amount'].item()),
+                    SlotSet("amountpending", records['Pending_Amount'].item()),
+                    SlotSet("currency", records['Currency'].item()),
+                    SlotSet("source", records['Source'].item()),
+                    SlotSet("payment_date", records['Payment_Date'].item())
+                    ]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -95,20 +107,21 @@ class ActionAmountPaid(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            print(entities)
-
-            data = {}
-
-            query = query_maker(entities)
-            dataset = pd.read_csv('dataset.csv')
-            records = dataset.query(query)
-            print(records['Payment_Status'].item())
+            records = record_finder(entities)
 
             if(records.empty):
-                raise ValueError("No record for this ID !!!")
-
-            dispatcher.utter_message(text="The payment amount is "+records['Paid_Amount'].item())# {}  {}".format(PS, LE))
-            return []
+                raise ValueError("No record for this query !!!")
+            records = records
+            dispatcher.utter_message(text="The payment amount is {}".format(records['Paid_Amount'].item())+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
+            return [SlotSet("account_id", records['Account_ID'].item()),
+                    SlotSet("legal_entity", records['Legal_Entity'].item()),
+                    SlotSet("client_name", records['Client_Name'].item()),
+                    SlotSet("amountpaid", records['Paid_Amount'].item()),
+                    SlotSet("amountpending", records['Pending_Amount'].item()),
+                    SlotSet("currency", records['Currency'].item()),
+                    SlotSet("source", records['Source'].item()),
+                    SlotSet("payment_date", records['Payment_Date'].item())
+                    ]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -126,20 +139,21 @@ class ActionAmountPending(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            print(entities)
-
-            data = {}
-
-            query = query_maker(entities)
-            dataset = pd.read_csv('dataset.csv')
-            records = dataset.query(query)
-            print(records['Payment_Status'].item())
+            records = record_finder(entities)
 
             if(records.empty):
-                raise ValueError("No record for this ID !!!")
-
-            dispatcher.utter_message(text="The payment pending is "+records['Pending_Amount'].item())# {}  {}".format(PS, LE))
-            return []
+                raise ValueError("No record for this statement !!!")
+            records = records
+            dispatcher.utter_message(text="The payment pending is {}".format(records['Pending_Amount'].item()) + "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
+            return [SlotSet("account_id", records['Account_ID'].item()),
+                    SlotSet("legal_entity", records['Legal_Entity'].item()),
+                    SlotSet("client_name", records['Client_Name'].item()),
+                    SlotSet("amountpaid", records['Paid_Amount'].item()),
+                    SlotSet("amountpending", records['Pending_Amount'].item()),
+                    SlotSet("currency", records['Currency'].item()),
+                    SlotSet("source", records['Source'].item()),
+                    SlotSet("payment_date", records['Payment_Date'].item())
+                    ]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))

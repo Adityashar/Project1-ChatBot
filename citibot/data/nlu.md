@@ -57,7 +57,7 @@
 - Give me something about the current status of the transaction from [CitiBank NewYorkCity]{"entity": "legal_entity", "value":"CitiBank NewYork"} for payment id [103520](account_id) 
 - For the id [103923](account_id) provide me the details of the current status of payment from [CitiBank London](legal_entity) 
 - for the transaction [18331](account_id) give me status of agreement deal from [CitiBank Bengaluru](legal_entity)
-- for the agreement id [18391](account_id) give me report of transaction from [CitiBank Bengaluru](legal_entity)
+- for the agreement id [18391](account_id) give me report of transaction from [Citi Bank Bangaluru]{"entity": "legal_entity", "value":"CitiBank Bengaluru"} 
 - Give me the status report for the transaction from [CitiBank Pune](legal_entity) for agreement [103520](account_id)
 
 
@@ -111,4 +111,12 @@
 - citi bank pune
 - citibankpune
 - Citibank Pune
+- CITIBANK PUNE
+
+## synonym:CitiBank Bengaluru
+- citibank bangalore
+- citibank bengaluru
+- citi bank bengaluru
+- citi bank bangalore
+- CITIBANK BENGALURU
 
