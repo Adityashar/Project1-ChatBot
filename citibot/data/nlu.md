@@ -97,6 +97,16 @@
 - For [103490](account_id) agreement give me the pending amount details
 - For the id [103440](account_id) tell me the pending amount
 
+
+## intent:source_info
+- what is the source
+- tell me the source
+- give me the source please
+- is your information reliable
+- can i trust your sources
+- how can i trust you
+- give me a reason to believe u
+
 ## lookup:client_name
    data/Client_name.txt
 
@@ -119,4 +129,14 @@
 - citi bank bengaluru
 - citi bank bangalore
 - CITIBANK BENGALURU
+
+## synonym:CitiBank NewYork
+- Citibank new york
+- citibank new york city
+- citi bank new york
+- citibank nyc
+- citibank NYC
+- CitiBank NYC
+- CitiBank NewYorkCity
+- CitiBank New york City
 

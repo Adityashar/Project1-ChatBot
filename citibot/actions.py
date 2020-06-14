@@ -43,6 +43,9 @@ import sys
 #         return []
 # rasa data convert nlu --data ./data/nlu.md --out ./data/data.json --format json
 
+# rasa run -m models --enable-api --cors "*" --debug
+
+
 FEATURES = ['Client_Name', 'Account_ID', 'Legal_Entity', 'Currency', 
             'Payment_Type', 'Paid_Amount', 'Payment_Date', 'Payment_Status', 
             'Pending_Amount','Comments', 'Source']
@@ -124,7 +127,7 @@ class ActionAmountPaid(Action):
             if(records.empty):
                 raise ValueError("No record for this query !!!")
             records = records
-            dispatcher.utter_message(text="The payment amount is {}".format(records['Paid_Amount'].item())+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
+            dispatcher.utter_message(text="The payment amount is {} {}".format(records['Currency'].item(), records['Paid_Amount'].item())+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
             return [SlotSet("account_id", records['Account_ID'].item()),
                     SlotSet("legal_entity", records['Legal_Entity'].item()),
                     SlotSet("client_name", records['Client_Name'].item()),
@@ -156,7 +159,7 @@ class ActionAmountPending(Action):
             if(records.empty):
                 raise ValueError("No record for this statement !!!")
             records = records
-            dispatcher.utter_message(text="The payment pending is {}".format(records['Pending_Amount'].item()) + "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
+            dispatcher.utter_message(text="The payment pending is {} {}".format(records['Currency'].item(),records['Pending_Amount'].item()) + "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
             return [SlotSet("account_id", records['Account_ID'].item()),
                     SlotSet("legal_entity", records['Legal_Entity'].item()),
                     SlotSet("client_name", records['Client_Name'].item()),

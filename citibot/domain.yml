@@ -7,6 +7,7 @@ intents:
   - payment_status
   - paid_amount
   - pending_amount
+  - source_info
 
 entities:
   - legal_entity
@@ -84,7 +85,7 @@ responses:
   - text: "The amount pending is {currency} {amountpending}."
 
   utter_source:
-  - text: "The Source for given information is {Source}."
+  - text: "The Source for given information is {source}."
 
   utter_default:
   - text: "Please try again !!"

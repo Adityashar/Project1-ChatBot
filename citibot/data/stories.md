@@ -33,6 +33,12 @@
 ## payment path 1
 * paid_amount
   - action_amount_paid
+* pending_amount
+  - action_amount_pending
+* payment_status
+  - utter_payment
+* affirm OR thank
+  - utter_affirm
 
 ## payment path 2
 * greet
@@ -56,3 +62,7 @@
 ## pending path 2
 * pending_amount
   - action_amount_pending
+
+## give source path
+* source_info
+  - utter_source
