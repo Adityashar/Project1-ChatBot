@@ -51,7 +51,7 @@ slots:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! How can i help you?"
 
   utter_deny:
   - text: "Did that help you?"
@@ -66,7 +66,7 @@ responses:
   - text: "I have received the payment"
 
   utter_accountid:
-  - text: "The transaction id is {account_id}."
+  - text: "The agreement id is {account_id} for the transaction between {legal_entity} and {client_name}. "
 
   utter_clientname:
   - text: "The client involved in this agreement is {client_name}."  
@@ -75,7 +75,7 @@ responses:
   - text: "The legal entity involved in this agreement is {legal_entity}."
 
   utter_paymentdate:
-  - text: "The transaction took place on {payment_date}."
+  - text: "The transaction between {legal_entity} and {client_name} took place on {payment_date}."
 
   utter_paidamount:
   - text: "The amount paid is {currency} {amountpaid}."

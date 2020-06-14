@@ -46,6 +46,12 @@
   - utter_greet
 * pending_amount
   - action_amount_pending
+* paid_amount
+  - utter_paidamount
+* payment_status
+  - utter_payment
+* affirm OR thank
+  - utter_affirm
 
 ## pending path 2
 * pending_amount

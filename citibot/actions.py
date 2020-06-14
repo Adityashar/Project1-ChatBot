@@ -12,9 +12,21 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-
+from dbconnect import query_formation, getData
 import pandas as pd
 import sys
+
+
+## database code 
+            ##table = ""
+            #intent = tracker.latest_message['intent']
+            #query = query_formation(entities, table, intent)
+            #lis = getData(query)
+
+            #info = lis[0][0]
+
+            #dispatcher.utter_message(text="Hi here are the details: {}".format(info))
+
 
 #
 # class ActionHelloWorld(Action):
