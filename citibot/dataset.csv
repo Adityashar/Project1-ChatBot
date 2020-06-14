@@ -1,4 +1,4 @@
-,Client Name,Account ID,Legal Entity,Currency,Payment Type,Paid Amount,Payment Date,Payment Status,Pending Amount,Comments,Source
+,Client_Name,Account_ID,Legal_Entity,Currency,Payment_Type,Paid_Amount,Payment_Date,Payment_Status,Pending_Amount,Comments,Source
 0,J P Morgan,101008,CitiBank New York Branch,GBP,Receive,45678,2020-03-11 ,Fully paid,0,Transaction complete,0
 1,J P Morgan,105049,CitiBank New York Branch,USD,Receive,765327,2020-03-12 ,Partially Paid,1008,Waiting for pending amount,0
 2,DEUTSCHE BANK,105050,CitiBank HongKong,CAD,Receive,637229,2020-03-13 ,Partially Paid,34566,Waiting for pending amount,0

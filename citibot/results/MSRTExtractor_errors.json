@@ -1,0 +1,1701 @@
+[
+  {
+    "text": "what is the status of the agreement 103256",
+    "entities": [
+      {
+        "start": 36,
+        "end": 42,
+        "value": "103256",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 36,
+        "end": 42,
+        "confidence_entity": 0.996800256352963,
+        "value": "103256",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 36,
+        "end": 42,
+        "value": "103256",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 36,
+        "end": 41,
+        "text": "103256",
+        "entity": "number",
+        "value": "103256",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is the status of the agreement with id 102729",
+    "entities": [
+      {
+        "start": 44,
+        "end": 50,
+        "value": "102729",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.9965808822847768,
+        "value": "102729",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 44,
+        "end": 50,
+        "value": "102729",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 44,
+        "end": 49,
+        "text": "102729",
+        "entity": "number",
+        "value": "102729",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is the status of the transaction with 103197 account id",
+    "entities": [
+      {
+        "start": 43,
+        "end": 49,
+        "value": "103197",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 43,
+        "end": 49,
+        "confidence_entity": 0.9936019937230435,
+        "value": "103197",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 43,
+        "end": 49,
+        "value": "103197",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "text": "103197",
+        "entity": "number",
+        "value": "103197",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the deal with account id 104112",
+    "entities": [
+      {
+        "start": 40,
+        "end": 46,
+        "value": "104112",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 40,
+        "end": 46,
+        "confidence_entity": 0.9977432415070725,
+        "value": "104112",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 40,
+        "end": 46,
+        "value": "104112",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "text": "104112",
+        "entity": "number",
+        "value": "104112",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the transaction deal with agreement id 103640",
+    "entities": [
+      {
+        "start": 54,
+        "end": 60,
+        "value": "103640",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 54,
+        "end": 60,
+        "confidence_entity": 0.9981011880229589,
+        "value": "103640",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 54,
+        "end": 60,
+        "value": "103640",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 54,
+        "end": 59,
+        "text": "103640",
+        "entity": "number",
+        "value": "103640",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the payment agreement deal with 103600 id",
+    "entities": [
+      {
+        "start": 47,
+        "end": 53,
+        "value": "103600",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 47,
+        "end": 53,
+        "confidence_entity": 0.9963231169568066,
+        "value": "103600",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 47,
+        "end": 53,
+        "value": "103600",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 47,
+        "end": 52,
+        "text": "103600",
+        "entity": "number",
+        "value": "103600",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the status of the transaction 101872",
+    "entities": [
+      {
+        "start": 38,
+        "end": 44,
+        "value": "101872",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9965647510716452,
+        "value": "101872",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 38,
+        "end": 44,
+        "value": "101872",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "text": "101872",
+        "entity": "number",
+        "value": "101872",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give the details of the account 101369",
+    "entities": [
+      {
+        "start": 32,
+        "end": 38,
+        "value": "101369",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 32,
+        "end": 38,
+        "confidence_entity": 0.9965647356602859,
+        "value": "101369",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 32,
+        "end": 38,
+        "value": "101369",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 32,
+        "end": 37,
+        "text": "101369",
+        "entity": "number",
+        "value": "101369",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give the details about agreement 102906 accound id",
+    "entities": [
+      {
+        "start": 33,
+        "end": 39,
+        "value": "102906",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 33,
+        "end": 39,
+        "confidence_entity": 0.9933231032381691,
+        "value": "102906",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 33,
+        "end": 39,
+        "value": "102906",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 33,
+        "end": 38,
+        "text": "102906",
+        "entity": "number",
+        "value": "102906",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about the deal with 105086 id",
+    "entities": [
+      {
+        "start": 38,
+        "end": 44,
+        "value": "105086",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 38,
+        "end": 44,
+        "confidence_entity": 0.9963346345774851,
+        "value": "105086",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 38,
+        "end": 44,
+        "value": "105086",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "text": "105086",
+        "entity": "number",
+        "value": "105086",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How are things going on with the agreement 103180 id",
+    "entities": [
+      {
+        "start": 43,
+        "end": 49,
+        "value": "103180",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 43,
+        "end": 49,
+        "confidence_entity": 0.9960937040410812,
+        "value": "103180",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 43,
+        "end": 49,
+        "value": "103180",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "text": "103180",
+        "entity": "number",
+        "value": "103180",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "For 103490 agreement give me the details pls",
+    "entities": [
+      {
+        "start": 4,
+        "end": 10,
+        "value": "103490",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 4,
+        "end": 10,
+        "confidence_entity": 0.9963950454740669,
+        "value": "103490",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 4,
+        "end": 10,
+        "value": "103490",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 4,
+        "end": 9,
+        "text": "103490",
+        "entity": "number",
+        "value": "103490",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "For the id 103490 tell me the status",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "103490",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9963424861051259,
+        "value": "103490",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "value": "103490",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 11,
+        "end": 16,
+        "text": "103490",
+        "entity": "number",
+        "value": "103490",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the status for the transaction from CitiBank Pune with id 103560",
+    "entities": [
+      {
+        "start": 44,
+        "end": 57,
+        "value": "CitiBank Pune",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 66,
+        "end": 72,
+        "value": "103560",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 44,
+        "end": 57,
+        "confidence_entity": 0.9881181785792272,
+        "value": "CitiBank Pune",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 66,
+        "end": 72,
+        "confidence_entity": 0.9977175529241817,
+        "value": "103560",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 44,
+        "end": 57,
+        "value": "CitiBank Pune",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 66,
+        "end": 72,
+        "value": "103560",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 66,
+        "end": 71,
+        "text": "103560",
+        "entity": "number",
+        "value": "103560",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the details for the transaction from citibank pune with id 103561",
+    "entities": [
+      {
+        "start": 45,
+        "end": 58,
+        "value": "CitiBank Pune",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 67,
+        "end": 73,
+        "value": "103561",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 45,
+        "end": 58,
+        "confidence_entity": 0.9881225920756963,
+        "value": "CitiBank Pune",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 67,
+        "end": 73,
+        "confidence_entity": 0.9961605301745365,
+        "value": "103561",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 45,
+        "end": 58,
+        "value": "citibank pune",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 67,
+        "end": 73,
+        "value": "103561",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 67,
+        "end": 72,
+        "text": "103561",
+        "entity": "number",
+        "value": "103561",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the details for the payment from citibank Hongkong with 103161 id",
+    "entities": [
+      {
+        "start": 41,
+        "end": 58,
+        "value": "CitiBank HongKong",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 64,
+        "end": 70,
+        "value": "103161",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 41,
+        "end": 58,
+        "confidence_entity": 0.9723153854453653,
+        "value": "CitiBank HongKong",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 64,
+        "end": 70,
+        "confidence_entity": 0.9901202021037255,
+        "value": "103161",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 41,
+        "end": 58,
+        "value": "citibank Hongkong",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 64,
+        "end": 70,
+        "value": "103161",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 64,
+        "end": 69,
+        "text": "103161",
+        "entity": "number",
+        "value": "103161",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the status for the transaction from CitiBank Pune for agreement 103570",
+    "entities": [
+      {
+        "start": 44,
+        "end": 57,
+        "value": "CitiBank Pune",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 72,
+        "end": 78,
+        "value": "103570",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 44,
+        "end": 57,
+        "confidence_entity": 0.9993726373170688,
+        "value": "CitiBank Pune",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 72,
+        "end": 78,
+        "confidence_entity": 0.9977562529753572,
+        "value": "103570",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 44,
+        "end": 57,
+        "value": "CitiBank Pune",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 72,
+        "end": 78,
+        "value": "103570",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 72,
+        "end": 77,
+        "text": "103570",
+        "entity": "number",
+        "value": "103570",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the payment status from CitiBank Bangalore for account 103360",
+    "entities": [
+      {
+        "start": 39,
+        "end": 57,
+        "value": "CitiBank Bengaluru",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 70,
+        "end": 76,
+        "value": "103360",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 39,
+        "end": 57,
+        "confidence_entity": 0.9725410494800422,
+        "value": "CitiBank Bengaluru",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 70,
+        "end": 76,
+        "confidence_entity": 0.9943058798397625,
+        "value": "103360",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 39,
+        "end": 57,
+        "value": "CitiBank Bangalore",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 70,
+        "end": 76,
+        "value": "103360",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 70,
+        "end": 75,
+        "text": "103360",
+        "entity": "number",
+        "value": "103360",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief us for the agreement of CitiBank Pune for transaction id 103660",
+    "entities": [
+      {
+        "start": 30,
+        "end": 43,
+        "value": "CitiBank Pune",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 63,
+        "end": 69,
+        "value": "103660",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 30,
+        "end": 43,
+        "confidence_entity": 0.9993190885639893,
+        "value": "CitiBank Pune",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 63,
+        "end": 69,
+        "confidence_entity": 0.9975106858204357,
+        "value": "103660",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 30,
+        "end": 43,
+        "value": "CitiBank Pune",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 63,
+        "end": 69,
+        "value": "103660",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 63,
+        "end": 68,
+        "text": "103660",
+        "entity": "number",
+        "value": "103660",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me details about the status of the payment from CitiBank NYC for agreement 103510 id",
+    "entities": [
+      {
+        "start": 53,
+        "end": 65,
+        "value": "CitiBank NewYork",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 80,
+        "end": 86,
+        "value": "103510",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 53,
+        "end": 65,
+        "confidence_entity": 0.972338690802575,
+        "value": "CitiBank NewYork",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 80,
+        "end": 86,
+        "confidence_entity": 0.9952936736064377,
+        "value": "103510",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 53,
+        "end": 65,
+        "value": "CitiBank NYC",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 80,
+        "end": 86,
+        "value": "103510",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 80,
+        "end": 85,
+        "text": "103510",
+        "entity": "number",
+        "value": "103510",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me something about the current status of the transaction from CitiBank NewYorkCity for payment id 103520",
+    "entities": [
+      {
+        "start": 67,
+        "end": 87,
+        "value": "CitiBank NewYork",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 103,
+        "end": 109,
+        "value": "103520",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 67,
+        "end": 87,
+        "confidence_entity": 0.8874857592755108,
+        "value": "CitiBank NewYork",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 103,
+        "end": 109,
+        "confidence_entity": 0.9980262583609876,
+        "value": "103520",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 67,
+        "end": 87,
+        "value": "CitiBank NewYorkCity",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 103,
+        "end": 109,
+        "value": "103520",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 103,
+        "end": 108,
+        "text": "103520",
+        "entity": "number",
+        "value": "103520",
+        "extractor": "MSRTExtractor"
+      },
+      {
+        "start": 28,
+        "end": 34,
+        "text": "current",
+        "entity": "ordinal",
+        "value": "0",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "For the id 103923 provide me the details of the current status of payment from CitiBank London",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "103923",
+        "entity": "account_id"
+      },
+      {
+        "start": 79,
+        "end": 94,
+        "value": "CitiBank London",
+        "entity": "legal_entity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9940097957614276,
+        "value": "103923",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 79,
+        "end": 94,
+        "confidence_entity": 0.9986640227337733,
+        "value": "CitiBank London",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "value": "103923",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 79,
+        "end": 94,
+        "value": "CitiBank London",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 11,
+        "end": 16,
+        "text": "103923",
+        "entity": "number",
+        "value": "103923",
+        "extractor": "MSRTExtractor"
+      },
+      {
+        "start": 48,
+        "end": 54,
+        "text": "current",
+        "entity": "ordinal",
+        "value": "0",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "for the transaction 18331 give me status of agreement deal from CitiBank Bengaluru",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "18331",
+        "entity": "account_id"
+      },
+      {
+        "start": 64,
+        "end": 82,
+        "value": "CitiBank Bengaluru",
+        "entity": "legal_entity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9922019490439705,
+        "value": "18331",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 64,
+        "end": 82,
+        "confidence_entity": 0.9767828478519607,
+        "value": "CitiBank Bengaluru",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 20,
+        "end": 25,
+        "value": "18331",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 64,
+        "end": 82,
+        "value": "CitiBank Bengaluru",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 20,
+        "end": 24,
+        "text": "18331",
+        "entity": "number",
+        "value": "18331",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "for the agreement id 18391 give me report of transaction from CitiBank Bengaluru",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "18391",
+        "entity": "account_id"
+      },
+      {
+        "start": 62,
+        "end": 80,
+        "value": "CitiBank Bengaluru",
+        "entity": "legal_entity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9924466738096187,
+        "value": "18391",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 62,
+        "end": 80,
+        "confidence_entity": 0.976782844277641,
+        "value": "CitiBank Bengaluru",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 21,
+        "end": 26,
+        "value": "18391",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 62,
+        "end": 80,
+        "value": "CitiBank Bengaluru",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 21,
+        "end": 25,
+        "text": "18391",
+        "entity": "number",
+        "value": "18391",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give me the status report for the transaction from CitiBank Pune for agreement 103520",
+    "entities": [
+      {
+        "start": 51,
+        "end": 64,
+        "value": "CitiBank Pune",
+        "entity": "legal_entity"
+      },
+      {
+        "start": 79,
+        "end": 85,
+        "value": "103520",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "legal_entity",
+        "start": 51,
+        "end": 64,
+        "confidence_entity": 0.9993726372316417,
+        "value": "CitiBank Pune",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "account_id",
+        "start": 79,
+        "end": 85,
+        "confidence_entity": 0.997756252975363,
+        "value": "103520",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "legal_entity",
+        "start": 51,
+        "end": 64,
+        "value": "CitiBank Pune",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "account_id",
+        "start": 79,
+        "end": 85,
+        "value": "103520",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 79,
+        "end": 84,
+        "text": "103520",
+        "entity": "number",
+        "value": "103520",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is the amount paid in the agreement 103256",
+    "entities": [
+      {
+        "start": 41,
+        "end": 47,
+        "value": "103256",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 41,
+        "end": 47,
+        "confidence_entity": 0.9968002435424504,
+        "value": "103256",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 41,
+        "end": 47,
+        "value": "103256",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 41,
+        "end": 46,
+        "text": "103256",
+        "entity": "number",
+        "value": "103256",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is the amount paid in the agreement with id 102729",
+    "entities": [
+      {
+        "start": 49,
+        "end": 55,
+        "value": "102729",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 49,
+        "end": 55,
+        "confidence_entity": 0.9965808811191199,
+        "value": "102729",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 49,
+        "end": 55,
+        "value": "102729",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 49,
+        "end": 54,
+        "text": "102729",
+        "entity": "number",
+        "value": "102729",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is the amount paid during the transaction with 103197 account id",
+    "entities": [
+      {
+        "start": 52,
+        "end": 58,
+        "value": "103197",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 52,
+        "end": 58,
+        "confidence_entity": 0.993601989991465,
+        "value": "103197",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 52,
+        "end": 58,
+        "value": "103197",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 52,
+        "end": 57,
+        "text": "103197",
+        "entity": "number",
+        "value": "103197",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the payment done in deal with account id 104112",
+    "entities": [
+      {
+        "start": 56,
+        "end": 62,
+        "value": "104112",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 56,
+        "end": 62,
+        "confidence_entity": 0.997739134601441,
+        "value": "104112",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 56,
+        "end": 62,
+        "value": "104112",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 56,
+        "end": 61,
+        "text": "104112",
+        "entity": "number",
+        "value": "104112",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the transaction done in deal with agreement id 103640",
+    "entities": [
+      {
+        "start": 62,
+        "end": 68,
+        "value": "103640",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 62,
+        "end": 68,
+        "confidence_entity": 0.9981009246083973,
+        "value": "103640",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 62,
+        "end": 68,
+        "value": "103640",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 62,
+        "end": 67,
+        "text": "103640",
+        "entity": "number",
+        "value": "103640",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Brief me about the payment made in the agreement deal with 103600 id",
+    "entities": [
+      {
+        "start": 59,
+        "end": 65,
+        "value": "103600",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 59,
+        "end": 65,
+        "confidence_entity": 0.9963342031993803,
+        "value": "103600",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 59,
+        "end": 65,
+        "value": "103600",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "text": "103600",
+        "entity": "number",
+        "value": "103600",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me how much money was paid in the transaction 101872",
+    "entities": [
+      {
+        "start": 51,
+        "end": 57,
+        "value": "101872",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9965640724361848,
+        "value": "101872",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 51,
+        "end": 57,
+        "value": "101872",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 51,
+        "end": 56,
+        "text": "101872",
+        "entity": "number",
+        "value": "101872",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give the details of the money transferred with account id 101369",
+    "entities": [
+      {
+        "start": 58,
+        "end": 64,
+        "value": "101369",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 58,
+        "end": 64,
+        "confidence_entity": 0.9965782986818456,
+        "value": "101369",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 58,
+        "end": 64,
+        "value": "101369",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 58,
+        "end": 63,
+        "text": "101369",
+        "entity": "number",
+        "value": "101369",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Give the amount paid for agreement 102906 accound id",
+    "entities": [
+      {
+        "start": 35,
+        "end": 41,
+        "value": "102906",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 35,
+        "end": 41,
+        "confidence_entity": 0.9933211977661752,
+        "value": "102906",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 35,
+        "end": 41,
+        "value": "102906",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 35,
+        "end": 40,
+        "text": "102906",
+        "entity": "number",
+        "value": "102906",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something about payment done in the deal with 105086 id",
+    "entities": [
+      {
+        "start": 54,
+        "end": 60,
+        "value": "105086",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 54,
+        "end": 60,
+        "confidence_entity": 0.9963346974532185,
+        "value": "105086",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 54,
+        "end": 60,
+        "value": "105086",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 54,
+        "end": 59,
+        "text": "105086",
+        "entity": "number",
+        "value": "105086",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How much amount transaction took place with the agreement 103180 id",
+    "entities": [
+      {
+        "start": 58,
+        "end": 64,
+        "value": "103180",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 58,
+        "end": 64,
+        "confidence_entity": 0.9960937066797264,
+        "value": "103180",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 58,
+        "end": 64,
+        "value": "103180",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 58,
+        "end": 63,
+        "text": "103180",
+        "entity": "number",
+        "value": "103180",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "How much amount transferred in the agreement 103180 id",
+    "entities": [
+      {
+        "start": 45,
+        "end": 51,
+        "value": "103180",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 45,
+        "end": 51,
+        "confidence_entity": 0.996093731640102,
+        "value": "103180",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 45,
+        "end": 51,
+        "value": "103180",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "text": "103180",
+        "entity": "number",
+        "value": "103180",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "For 103490 agreement give me the paid amount details",
+    "entities": [
+      {
+        "start": 4,
+        "end": 10,
+        "value": "103490",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 4,
+        "end": 10,
+        "confidence_entity": 0.9964140832426537,
+        "value": "103490",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 4,
+        "end": 10,
+        "value": "103490",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 4,
+        "end": 9,
+        "text": "103490",
+        "entity": "number",
+        "value": "103490",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  },
+  {
+    "text": "For the id 103440 tell me the payment made",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "103440",
+        "entity": "account_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "confidence_entity": 0.9971632178306745,
+        "value": "103440",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "account_id",
+        "start": 11,
+        "end": 17,
+        "value": "103440",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "start": 11,
+        "end": 16,
+        "text": "103440",
+        "entity": "number",
+        "value": "103440",
+        "extractor": "MSRTExtractor"
+      }
+    ]
+  }
+]

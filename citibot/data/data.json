@@ -86,92 +86,20 @@
         "text": "not really"
       },
       {
-        "intent": "mood_great",
-        "text": "perfect"
+        "intent": "thank",
+        "text": "tysm"
       },
       {
-        "intent": "mood_great",
-        "text": "very good"
+        "intent": "thank",
+        "text": "thanks"
       },
       {
-        "intent": "mood_great",
-        "text": "great"
+        "intent": "thank",
+        "text": "thank you so much"
       },
       {
-        "intent": "mood_great",
-        "text": "amazing"
-      },
-      {
-        "intent": "mood_great",
-        "text": "wonderful"
-      },
-      {
-        "intent": "mood_great",
-        "text": "I am feeling very good"
-      },
-      {
-        "intent": "mood_great",
-        "text": "I am great"
-      },
-      {
-        "intent": "mood_great",
-        "text": "I'm good"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "sad"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "very sad"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "unhappy"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "bad"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "very bad"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "awful"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "terrible"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "not very good"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "extremely sad"
-      },
-      {
-        "intent": "mood_unhappy",
-        "text": "so sad"
-      },
-      {
-        "intent": "bot_challenge",
-        "text": "are you a bot?"
-      },
-      {
-        "intent": "bot_challenge",
-        "text": "are you a human?"
-      },
-      {
-        "intent": "bot_challenge",
-        "text": "am I talking to a bot?"
-      },
-      {
-        "intent": "bot_challenge",
-        "text": "am I talking to a human?"
+        "intent": "thank",
+        "text": "appreciate your efforts"
       },
       {
         "intent": "payment_status",
@@ -544,6 +472,378 @@
           }
         ],
         "text": "Give me the status report for the transaction from CitiBank Pune for agreement 103520"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 41,
+            "end": 47,
+            "value": "103256",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount paid in the agreement 103256"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 49,
+            "end": 55,
+            "value": "102729",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount paid in the agreement with id 102729"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 52,
+            "end": 58,
+            "value": "103197",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount paid during the transaction with 103197 account id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 54,
+            "end": 60,
+            "value": "104112",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the money paid in deal with account id 104112"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 62,
+            "end": 68,
+            "value": "103640",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the transaction done in deal with agreement id 103640"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 59,
+            "end": 65,
+            "value": "103600",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the payment made in the agreement deal with 103600 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 56,
+            "end": 62,
+            "value": "101872",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me how much money was delivered in the transaction 101872"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 58,
+            "end": 64,
+            "value": "101369",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give the details of the money transferred with account id 101369"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 35,
+            "end": 41,
+            "value": "102906",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give the amount paid for agreement 102906 accound id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 60,
+            "end": 66,
+            "value": "105086",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me something about money payment done in the deal with 105086 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 58,
+            "end": 64,
+            "value": "103180",
+            "entity": "account_id"
+          }
+        ],
+        "text": "How much amount transaction took place with the agreement 103180 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 45,
+            "end": 51,
+            "value": "103180",
+            "entity": "account_id"
+          }
+        ],
+        "text": "How much amount transferred in the agreement 103180 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "103490",
+            "entity": "account_id"
+          }
+        ],
+        "text": "For 103490 agreement give me the paid amount details"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "103440",
+            "entity": "account_id"
+          }
+        ],
+        "text": "For the id 103440 tell me the payment made"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 44,
+            "end": 50,
+            "value": "103256",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount pending in the agreement 103256"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 52,
+            "end": 58,
+            "value": "102729",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount pending in the agreement with id 102729"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 55,
+            "end": 61,
+            "value": "103197",
+            "entity": "account_id"
+          }
+        ],
+        "text": "what is the amount pending during the transaction with 103197 account id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 60,
+            "end": 66,
+            "value": "104112",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the money to be paid in deal with account id 104112"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 68,
+            "end": 74,
+            "value": "103640",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the transaction to be done in deal with agreement id 103640"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 62,
+            "end": 68,
+            "value": "103600",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the payment pending in the agreement deal with 103600 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 64,
+            "end": 70,
+            "value": "101872",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me how much money needs to be delivered in the transaction 101872"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 59,
+            "end": 65,
+            "value": "101272",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me how much money needs to be paid in the transaction 101272"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 53,
+            "end": 59,
+            "value": "101172",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me how much money is pending in the transaction 101172"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 75,
+            "end": 81,
+            "value": "101369",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give the details of the money that needs to be transferred with account id 101369"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 38,
+            "end": 44,
+            "value": "102906",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give the amount pending for agreement 102906 accound id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 66,
+            "end": 72,
+            "value": "105086",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me something about money payment to be done in the deal with 105086 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 63,
+            "end": 69,
+            "value": "105086",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me something about money payment pending in the deal with 105086 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 69,
+            "end": 75,
+            "value": "103180",
+            "entity": "account_id"
+          }
+        ],
+        "text": "How much amount transaction is left to take place with the agreement 103180 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 57,
+            "end": 63,
+            "value": "103180",
+            "entity": "account_id"
+          }
+        ],
+        "text": "How much amount needs to be transferred in the agreement 103180 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 4,
+            "end": 10,
+            "value": "103490",
+            "entity": "account_id"
+          }
+        ],
+        "text": "For 103490 agreement give me the pending amount details"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "103440",
+            "entity": "account_id"
+          }
+        ],
+        "text": "For the id 103440 tell me the pending amount"
       }
     ],
     "regex_features": [],

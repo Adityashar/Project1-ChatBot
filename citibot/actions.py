@@ -29,6 +29,25 @@ import sys
 #         return []
 # rasa data convert nlu --data ./data/nlu.md --out ./data/data.json --format json
 
+FEATURES = ['Client_Name', 'Account_ID', 'Legal_Entity', 'Currency', 
+            'Payment_Type', 'Paid_Amount', 'Payment_Date', 'Payment_Status', 
+            'Pending_Amount','Comments', 'Source']
+
+ENTITY_LIST = {'legal_entity':'Legal_Entity',
+              'client_name':'Client_Name',
+              'currency':'Currency',
+              'payment_date':'Payment_Date',
+              'amountpaid':'Paid_Amount',
+              'amountpending':'Pending_Amount',
+              'account_id':'Account_ID'}
+
+def query_maker(entities):
+    string = ""
+    for e in entities:
+        if e['entity'] in ENTITY_LIST.keys() and e['extractor'] == 'CRFEntityExtractor':
+            string = string + ENTITY_LIST[e['entity']] + " == \"" + e['value'] + "\" and " 
+    print(string)
+    return string[:-5]
 
 class ActionPayment(Action):
 
@@ -43,27 +62,17 @@ class ActionPayment(Action):
             entities = tracker.latest_message['entities']
             print(entities)
 
-            ID = ""
+            data = {}
 
-            for dic in entities:
-                if(dic['entity'] == 'account_id'):
-                    ID = dic['value']
-                #     break
-                print(dic['entity']+ " : "+ dic['value'])
-            print(ID)
-
+            query = query_maker(entities)
             dataset = pd.read_csv('dataset.csv')
-            PS = dataset[dataset['Account ID'] == int(ID)]['Payment Status']
-            LE = dataset[dataset['Account ID'] == int(ID)]['Legal Entity']
+            records = dataset.query(query)
+            print(records['Payment_Status'].item())
 
-            record = dataset[dataset['Account ID'] == int(ID)]
-
-            if(record.empty):
+            if(records.empty):
                 raise ValueError("No record for this ID !!!")
 
-            print((record))
-
-            dispatcher.utter_message(text="Hi here are the details: {}  {}".format(PS, LE))
+            dispatcher.utter_message(text="The payment is "+records['Payment_Status'].item())# {}  {}".format(PS, LE))
             return []
 
         except:
@@ -72,6 +81,76 @@ class ActionPayment(Action):
 
 #       dispatcher.utter_message("utter_name", tracker, Var=data)
 #       utter_name -> []{Var}
+
+
+#
+class ActionAmountPaid(Action):
+
+    def name(self) -> Text:
+        return "action_amount_paid"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            print(entities)
+
+            data = {}
+
+            query = query_maker(entities)
+            dataset = pd.read_csv('dataset.csv')
+            records = dataset.query(query)
+            print(records['Payment_Status'].item())
+
+            if(records.empty):
+                raise ValueError("No record for this ID !!!")
+
+            dispatcher.utter_message(text="The payment amount is "+records['Paid_Amount'].item())# {}  {}".format(PS, LE))
+            return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []        
+
+
+class ActionAmountPending(Action):
+
+    def name(self) -> Text:
+        return "action_amount_pending"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            print(entities)
+
+            data = {}
+
+            query = query_maker(entities)
+            dataset = pd.read_csv('dataset.csv')
+            records = dataset.query(query)
+            print(records['Payment_Status'].item())
+
+            if(records.empty):
+                raise ValueError("No record for this ID !!!")
+
+            dispatcher.utter_message(text="The payment pending is "+records['Pending_Amount'].item())# {}  {}".format(PS, LE))
+            return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []        
+
+
+
+
+
+
+
 
 
 

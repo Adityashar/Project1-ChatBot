@@ -3,32 +3,61 @@ intents:
   - goodbye
   - affirm
   - deny
-  - bot_challenge
+  - thank
   - payment_status
+  - paid_amount
+  - pending_amount
 
 entities:
   - legal_entity
   - client_name
   - currency
   - payment_date
-  - amount
+  - amountpaid
+  - amountpending
   - account_id
 
 actions:
   - action_payment
+  - action_amount_paid
+  - action_amount_pending
+
+slots:
+  legal_entity:
+    type: text
+    autofill: false
+  client_name:
+    type: text
+    autofill: false
+  currency:
+    type: text
+    autofill: false
+  payment_date:
+    type: text
+    autofill: false
+  amountpaid:
+    type: text
+    autofill: false
+  amountpending:
+    type: text
+    autofill: false
+  account_id:
+    type: text
+    autofill: false
+  
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
 
-  utter_did_that_help:
+  utter_deny:
   - text: "Did that help you?"
 
   utter_goodbye:
   - text: "Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_affirm:
+  - text: "okay"
 
   utter_payment:
   - text: "I have received the payment"
