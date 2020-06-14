@@ -13,6 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import pandas as pd
 import sys
+#from connectionwithdatabase import query_formation, getData
 
 #
 # class ActionHelloWorld(Action):
@@ -42,6 +43,16 @@ class ActionPayment(Action):
         try:
             entities = tracker.latest_message['entities']
             print(entities)
+
+            ## database code 
+            ##table = ""
+            #intent = tracker.latest_message['intent']
+            #query = query_formation(entities, table, intent)
+            #lis = getData(query)
+
+            #info = lis[0][0]
+
+            #dispatcher.utter_message(text="Hi here are the details: {}".format(info))
 
             ID = ""
 
@@ -84,6 +95,17 @@ class ActionPayment(Action):
         try:
             entities = tracker.latest_message['entities']
             print(entities)
+
+
+            ## database code 
+            #table = ""
+            # intent = tracker.latest_message['intent']
+            #query = query_formation(entities, table, intent)
+            #lis = getData(query)
+
+            #info = lis[0][0]
+
+            #dispatcher.utter_message(text="Hi here are the details: {}".format(info))
 
             ID = ""
 
