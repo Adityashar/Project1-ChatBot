@@ -85,6 +85,10 @@ class ActionPayment(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_payment')
+                return []
+
             records = record_finder(entities)
 
             if(records.empty):
@@ -122,6 +126,10 @@ class ActionAmountPaid(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_paidamount')
+                return []
+
             records = record_finder(entities)
 
             if(records.empty):
@@ -154,6 +162,9 @@ class ActionAmountPending(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_pendingamount')
+                return []
             records = record_finder(entities)
 
             if(records.empty):
