@@ -44,6 +44,8 @@ import sys
 # rasa data convert nlu --data ./data/nlu.md --out ./data/data.json --format json
 
 # rasa run -m models --enable-api --cors "*" --debug
+# ps -fA | grep python
+
 
 
 FEATURES = ['Client_Name', 'Account_ID', 'Legal_Entity', 'Currency', 
