@@ -279,42 +279,6 @@
         "intent": "payment_status",
         "entities": [
           {
-            "start": 45,
-            "end": 58,
-            "value": "CitiBank Pune",
-            "entity": "legal_entity"
-          },
-          {
-            "start": 67,
-            "end": 73,
-            "value": "103561",
-            "entity": "account_id"
-          }
-        ],
-        "text": "Tell me the details for the transaction from citibank pune with id 103561"
-      },
-      {
-        "intent": "payment_status",
-        "entities": [
-          {
-            "start": 41,
-            "end": 58,
-            "value": "CitiBank HongKong",
-            "entity": "legal_entity"
-          },
-          {
-            "start": 64,
-            "end": 70,
-            "value": "103161",
-            "entity": "account_id"
-          }
-        ],
-        "text": "Tell me the details for the payment from citibank Hongkong with 103161 id"
-      },
-      {
-        "intent": "payment_status",
-        "entities": [
-          {
             "start": 44,
             "end": 57,
             "value": "CitiBank Pune",
@@ -448,12 +412,12 @@
           },
           {
             "start": 62,
-            "end": 80,
+            "end": 81,
             "value": "CitiBank Bengaluru",
             "entity": "legal_entity"
           }
         ],
-        "text": "for the agreement id 18391 give me report of transaction from CitiBank Bengaluru"
+        "text": "for the agreement id 18391 give me report of transaction from Citi Bank Bangaluru"
       },
       {
         "intent": "payment_status",
@@ -640,6 +604,222 @@
           }
         ],
         "text": "For the id 103440 tell me the payment made"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 49,
+            "end": 62,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 71,
+            "end": 77,
+            "value": "103560",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the amount paid for the transaction from CitiBank Pune with id 103560"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 52,
+            "end": 65,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 74,
+            "end": 80,
+            "value": "103561",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the details for the transaction amount from citibank pune with id 103561"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 46,
+            "end": 63,
+            "value": "CitiBank HongKong",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 69,
+            "end": 75,
+            "value": "103161",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the details for the payment made from citibank Hongkong with 103161 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 49,
+            "end": 62,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 77,
+            "end": 83,
+            "value": "103570",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the amount paid for the transaction from CitiBank Pune for agreement 103570"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 32,
+            "end": 50,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 63,
+            "end": 69,
+            "value": "103360",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the payment made CitiBank Bangalore for account 103360"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 59,
+            "end": 72,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 92,
+            "end": 98,
+            "value": "103660",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief us about the money payment made for the agreement of CitiBank Pune for transaction id 103660"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 42,
+            "end": 54,
+            "value": "CitiBank NewYork",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 69,
+            "end": 75,
+            "value": "103510",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me details about the amount paid for CitiBank NYC for agreement 103510 id"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 73,
+            "end": 93,
+            "value": "CitiBank NewYork",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 109,
+            "end": 115,
+            "value": "103520",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me something about the current amount paid for the transaction from CitiBank NewYorkCity for payment id 103520"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "103923",
+            "entity": "account_id"
+          },
+          {
+            "start": 74,
+            "end": 89,
+            "value": "CitiBank London",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "For the id 103923 provide me the details of the current amount paid  from CitiBank London"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 20,
+            "end": 25,
+            "value": "18331",
+            "entity": "account_id"
+          },
+          {
+            "start": 70,
+            "end": 88,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "for the transaction 18331 give me paid amount for agreement deal from CitiBank Bengaluru"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "18391",
+            "entity": "account_id"
+          },
+          {
+            "start": 59,
+            "end": 78,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "for the agreement id 18391 give me transaction amount from Citi Bank Bangaluru"
+      },
+      {
+        "intent": "paid_amount",
+        "entities": [
+          {
+            "start": 48,
+            "end": 61,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 76,
+            "end": 82,
+            "value": "103520",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me the money paid for the transaction from CitiBank Pune for agreement 103520"
       },
       {
         "intent": "pending_amount",
@@ -844,6 +1024,250 @@
           }
         ],
         "text": "For the id 103440 tell me the pending amount"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 52,
+            "end": 65,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 74,
+            "end": 80,
+            "value": "103560",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the pending amount for the transaction from CitiBank Pune with id 103560"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 53,
+            "end": 66,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 75,
+            "end": 81,
+            "value": "103561",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the details for the pending transaction from citibank pune with id 103561"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 53,
+            "end": 70,
+            "value": "CitiBank HongKong",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 76,
+            "end": 82,
+            "value": "103161",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the details for the payment to be given from citibank Hongkong with 103161 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 53,
+            "end": 66,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 81,
+            "end": 87,
+            "value": "103570",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Tell me the payment pending for the transaction from CitiBank Pune for agreement 103570"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 39,
+            "end": 57,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 70,
+            "end": 76,
+            "value": "103360",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief me about the amount pending from CitiBank Bangalore for account 103360"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 48,
+            "end": 61,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 81,
+            "end": 87,
+            "value": "103660",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Brief us for money pending for the agreement of CitiBank Pune for transaction id 103660"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 44,
+            "end": 56,
+            "value": "CitiBank NewYork",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 71,
+            "end": 77,
+            "value": "103510",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me details about the payment left from CitiBank NYC for agreement 103510 id"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 85,
+            "end": 105,
+            "value": "CitiBank NewYork",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 121,
+            "end": 127,
+            "value": "103520",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me something about the current payment left to be paid for the transaction from CitiBank NewYorkCity for payment id 103520"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "103923",
+            "entity": "account_id"
+          },
+          {
+            "start": 77,
+            "end": 92,
+            "value": "CitiBank London",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "For the id 103923 provide me the details of the current pending payment from CitiBank London"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 20,
+            "end": 25,
+            "value": "18331",
+            "entity": "account_id"
+          },
+          {
+            "start": 71,
+            "end": 89,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "for the transaction 18331 give me money pending of agreement deal from CitiBank Bengaluru"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "18391",
+            "entity": "account_id"
+          },
+          {
+            "start": 70,
+            "end": 89,
+            "value": "CitiBank Bengaluru",
+            "entity": "legal_entity"
+          }
+        ],
+        "text": "for the agreement id 18391 give me report of transaction pending from Citi Bank Bangaluru"
+      },
+      {
+        "intent": "pending_amount",
+        "entities": [
+          {
+            "start": 54,
+            "end": 67,
+            "value": "CitiBank Pune",
+            "entity": "legal_entity"
+          },
+          {
+            "start": 82,
+            "end": 88,
+            "value": "103520",
+            "entity": "account_id"
+          }
+        ],
+        "text": "Give me the money to be paid for the transaction from CitiBank Pune for agreement 103520"
+      },
+      {
+        "intent": "source_info",
+        "text": "what is the source"
+      },
+      {
+        "intent": "source_info",
+        "text": "tell me the source"
+      },
+      {
+        "intent": "source_info",
+        "text": "give me the source please"
+      },
+      {
+        "intent": "source_info",
+        "text": "is your information reliable"
+      },
+      {
+        "intent": "source_info",
+        "text": "can i trust your sources"
+      },
+      {
+        "intent": "source_info",
+        "text": "how can i trust you"
+      },
+      {
+        "intent": "source_info",
+        "text": "give me a reason to believe u"
       }
     ],
     "regex_features": [],
@@ -863,32 +1287,45 @@
     ],
     "entity_synonyms": [
       {
-        "value": "CitiBank Pune",
-        "synonyms": [
-          "citibank pune",
-          "citibank Pune",
-          "citi bank pune",
-          "citibankpune",
-          "Citibank Pune"
-        ]
-      },
-      {
-        "value": "CitiBank HongKong",
-        "synonyms": [
-          "citibank Hongkong"
-        ]
-      },
-      {
         "value": "CitiBank Bengaluru",
         "synonyms": [
-          "CitiBank Bangalore"
+          "CitiBank Bangalore",
+          "Citi Bank Bangaluru",
+          "citibank bangalore",
+          "citibank bengaluru",
+          "citi bank bengaluru",
+          "citi bank bangalore",
+          "CITIBANK BENGALURU"
         ]
       },
       {
         "value": "CitiBank NewYork",
         "synonyms": [
           "CitiBank NYC",
-          "CitiBank NewYorkCity"
+          "CitiBank NewYorkCity",
+          "Citibank new york",
+          "citibank new york city",
+          "citi bank new york",
+          "citibank nyc",
+          "citibank NYC",
+          "CitiBank New york City"
+        ]
+      },
+      {
+        "value": "CitiBank Pune",
+        "synonyms": [
+          "citibank pune",
+          "citibank Pune",
+          "citi bank pune",
+          "citibankpune",
+          "Citibank Pune",
+          "CITIBANK PUNE"
+        ]
+      },
+      {
+        "value": "CitiBank HongKong",
+        "synonyms": [
+          "citibank Hongkong"
         ]
       }
     ]
