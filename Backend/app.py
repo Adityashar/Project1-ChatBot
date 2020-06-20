@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-
+import dataload
 
 app = Flask(__name__)
 
@@ -12,6 +12,7 @@ def submit():
 	if request.method == 'POST':
 		file = request.files['data']
 		file.save(file.filename)
+		loadtheModule(file.filename, file.filename)
 
 	return redirect('/')
 

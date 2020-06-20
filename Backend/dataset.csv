@@ -1,0 +1,921 @@
+,Client_Name,Account_ID,Legal_Entity,Currency,Payment_Type,Paid_Amount,Payment_Date,Payment_Status,Pending_Amount,Comments,Source
+0,J P Morgan,101008,CitiBank NewYork,GBP,Receive,45678,2020-03-11 ,Fully paid,0,Transaction complete,0
+1,J P Morgan,105049,CitiBank NewYork,USD,Receive,765327,2020-03-12 ,Partially Paid,1008,Waiting for pending amount,0
+2,DEUTSCHE BANK,105050,CitiBank HongKong,CAD,Receive,637229,2020-03-13 ,Partially Paid,34566,Waiting for pending amount,0
+3,DEUTSCHE BANK,105058,CitiBank NewYork,USD,Receive,22345566,2020-03-14 ,Partially Paid,1000000,Waiting for pending amount,0
+4,DEUTSCHE BANK,105059,CitiBank NewYork,EUR,Receive,553322,2020-03-15 ,Rejected,553322,Payment Failed,0
+5,BNY Mellon,105061,CitiBank London,USD,Receive,56789,2020-03-16 ,Rejected,56789,Payment Failed,0
+6,BNY Mellon,105071,CitiBank London,GBP,Receive,98735627,2020-03-07 ,Rejected,98735627,Payment Failed,0
+7,BNY Mellon,105101,CitiBank London,EUR,Receive,6578,2020-03-08 ,Fully paid,0,Transaction complete,0
+8,BNY Mellon,105102,CitiBank NewYork,USD,Receive,352627,2020-03-09 ,Partially Paid,23456,Waiting for pending amount,0
+9,J P Morgan,105115,CitiBank Singapore,EUR,Receive,532828,2020-03-10 ,Fully paid,0,Transaction complete,0
+10,J P Morgan,105126,CitiBank NewYork,USD,Deliver,4567,2020-04-11 ,Fully paid,0,Transaction complete,0
+11,DEUTSCHE BANK,105120,CitiBank NewYork,EUR,Deliver,87643,2020-03-12 ,Processing,87643,Payment is in progress,0
+12,DEUTSCHE BANK,105121,CitiBank London,USD,Deliver,22345,2020-03-13 ,Fully paid,0,Transaction complete,0
+13,DEUTSCHE BANK,105122,CitiBank London,GBP,Deliver,55543,2020-03-14 ,Fully paid,0,Transaction complete,0
+14,BNY Mellon,105125,CitiBank NewYork,EUR,Deliver,23455,2020-06-01 ,Rejected,23455,Payment Failed,0
+15,BNY Mellon,105135,CitiBank London,USD,Deliver,4321456,2020-03-16 ,Processing,4321456,Payment is in progress,0
+16,BNY Mellon,105140,CitiBank London,EUR,Deliver,654322,2020-03-17 ,Processing,654322,Payment is in progress,0
+17,BNY Mellon,105146,CitiBank Singapore,USD,Deliver,876543,2020-06-10 ,Processing,876543,Payment is in progress,0
+18,HSBC,105150,CitiBank NewYork,GBP,Deliver,3456,2020-03-19 ,Processing,3456,Payment is in progress,0
+19,HSBC,105170,CitiBank Singapore,EUR,Deliver,6664,2020-03-20 ,Processing,6664,Payment is in progress,0
+20,HSBC,103560,CitiBank Bengaluru,INR,Receive,2421,2020-02-23 ,Fully paid,0,Transaction complete,1
+21,J P Morgan,104644,CitiBank Pune,INR,Receive,6879,2020-02-26 ,Processing,6879,Payment is in progress,1
+22,Goldman Sachs,104136,CitiBank London,CAD,Deliver,6633,2020-02-24 ,Partially Paid,5987,Waiting for pending amount,1
+23,Morgan Stanley,103256,CitiBank Bengaluru,USD,Receive,7332,2020-04-28 ,Processing,7332,Payment is in progress,1
+24,Wells Fargo,104112,CitiBank Bengaluru,USD,Deliver,484,2020-04-20 ,Partially Paid,6030,Waiting for pending amount,1
+25,Morgan Stanley,101369,CitiBank NewYork,GBP,Receive,7332,2020-04-17 ,Fully paid,0,Transaction complete,1
+26,BNY Mellon,102729,CitiBank Pune,GBP,Deliver,1667,2020-04-07 ,Partially Paid,9533,Waiting for pending amount,1
+27,Goldman Sachs,103197,CitiBank London,EUR,Receive,622,2020-05-21 ,Fully paid,0,Transaction complete,1
+28,Goldman Sachs,104425,CitiBank Singapore,EUR,Deliver,1778,2020-04-11 ,Fully paid,0,Transaction complete,1
+29,Wells Fargo,103600,CitiBank London,USD,Deliver,5374,2020-05-05 ,Fully paid,0,Transaction complete,1
+30,Wells Fargo,103640,CitiBank Singapore,GBP,Deliver,5393,2020-05-14 ,Rejected,5393,Payment Failed,1
+31,BNP Paribas,101655,CitiBank Bengaluru,EUR,Receive,5255,2020-05-09 ,Partially Paid,6822,Waiting for pending amount,1
+32,J P Morgan,103262,CitiBank Pune,USD,Deliver,8154,2020-05-22 ,Rejected,8154,Payment Failed,1
+33,HSBC,102806,CitiBank Singapore,CAD,Deliver,7899,2020-03-12 ,Rejected,7899,Payment Failed,1
+34,BNY Mellon,103690,CitiBank London,EUR,Deliver,8605,2020-03-11 ,Fully paid,0,Transaction complete,1
+35,J P Morgan,103490,CitiBank Singapore,GBP,Receive,419,2020-06-02 ,Processing,419,Payment is in progress,1
+36,Goldman Sachs,101418,CitiBank HongKong,GBP,Receive,4442,2020-03-12 ,Processing,4442,Payment is in progress,1
+37,Goldman Sachs,104633,CitiBank NewYork,INR,Deliver,7020,2020-06-01 ,Fully paid,0,Transaction complete,1
+38,HSBC,102057,CitiBank London,EUR,Deliver,2580,2020-02-20 ,Partially Paid,9071,Waiting for pending amount,1
+39,Morgan Stanley,101872,CitiBank Singapore,EUR,Receive,5132,2020-02-22 ,Fully paid,0,Transaction complete,1
+40,Wells Fargo,103180,CitiBank Bengaluru,EUR,Deliver,9679,2020-05-23 ,Rejected,9679,Payment Failed,1
+41,Goldman Sachs,105086,CitiBank Pune,EUR,Receive,8632,2020-03-14 ,Processing,8632,Payment is in progress,1
+42,BNY Mellon,102906,CitiBank HongKong,EUR,Receive,2029,2020-05-11 ,Rejected,2029,Payment Failed,1
+43,J P Morgan,103946,CitiBank Bengaluru,GBP,Receive,5393,2020-05-20 ,Rejected,5393,Payment Failed,1
+44,BNP Paribas,102516,CitiBank HongKong,EUR,Deliver,5483,2020-03-08 ,Rejected,5483,Payment Failed,1
+45,Goldman Sachs,101072,CitiBank Pune,EUR,Deliver,5369,2020-03-15 ,Partially Paid,7436,Waiting for pending amount,1
+46,HSBC,105091,CitiBank Bengaluru,CAD,Deliver,854,2020-04-19 ,Fully paid,0,Transaction complete,1
+47,BNY Mellon,104512,CitiBank NewYork,EUR,Deliver,8358,2020-05-14 ,Partially Paid,2059,Waiting for pending amount,1
+48,Morgan Stanley,103731,CitiBank Bengaluru,USD,Deliver,1297,2020-04-02 ,Rejected,1297,Payment Failed,1
+49,BNY Mellon,101071,CitiBank Singapore,EUR,Receive,2076,2020-03-06 ,Rejected,2076,Payment Failed,1
+50,J P Morgan,103557,CitiBank Bengaluru,USD,Deliver,9740,2020-05-19 ,Processing,9740,Payment is in progress,1
+51,BNP Paribas,104924,CitiBank NewYork,CAD,Deliver,4770,2020-03-01 ,Rejected,4770,Payment Failed,1
+52,Wells Fargo,102733,CitiBank Bengaluru,CAD,Receive,4065,2020-04-18 ,Processing,4065,Payment is in progress,1
+53,BNY Mellon,103099,CitiBank NewYork,INR,Deliver,700,2020-04-30 ,Processing,700,Payment is in progress,1
+54,HSBC,104314,CitiBank London,USD,Receive,6221,2020-06-05 ,Fully paid,0,Transaction complete,1
+55,J P Morgan,102643,CitiBank HongKong,CAD,Deliver,3792,2020-05-12 ,Partially Paid,6276,Waiting for pending amount,1
+56,Goldman Sachs,104746,CitiBank NewYork,INR,Receive,3173,2020-05-14 ,Fully paid,0,Transaction complete,1
+57,BNY Mellon,103939,CitiBank NewYork,EUR,Deliver,9455,2020-04-12 ,Processing,9455,Payment is in progress,1
+58,DEUTSCHE BANK,105002,CitiBank London,GBP,Deliver,1420,2020-03-16 ,Processing,1420,Payment is in progress,1
+59,J P Morgan,102174,CitiBank NewYork,INR,Receive,9433,2020-05-07 ,Partially Paid,3814,Waiting for pending amount,1
+60,BNY Mellon,102038,CitiBank Pune,GBP,Receive,1331,2020-03-28 ,Rejected,1331,Payment Failed,1
+61,J P Morgan,102637,CitiBank HongKong,EUR,Receive,7253,2020-04-24 ,Rejected,7253,Payment Failed,1
+62,BNY Mellon,103799,CitiBank NewYork,INR,Deliver,654,2020-05-13 ,Partially Paid,1016,Waiting for pending amount,1
+63,J P Morgan,104806,CitiBank Singapore,CAD,Deliver,8728,2020-03-28 ,Rejected,8728,Payment Failed,1
+64,J P Morgan,102439,CitiBank Bengaluru,INR,Deliver,849,2020-04-18 ,Processing,849,Payment is in progress,1
+65,Wells Fargo,104683,CitiBank London,USD,Deliver,2089,2020-04-01 ,Processing,2089,Payment is in progress,1
+66,Goldman Sachs,103907,CitiBank Bengaluru,GBP,Receive,3554,2020-04-19 ,Processing,3554,Payment is in progress,1
+67,J P Morgan,102791,CitiBank London,INR,Deliver,8935,2020-04-23 ,Fully paid,0,Transaction complete,1
+68,HSBC,102297,CitiBank HongKong,GBP,Receive,482,2020-04-14 ,Rejected,482,Payment Failed,1
+69,J P Morgan,103427,CitiBank NewYork,INR,Deliver,6526,2020-04-11 ,Fully paid,0,Transaction complete,1
+70,DEUTSCHE BANK,103819,CitiBank Singapore,EUR,Receive,9637,2020-05-15 ,Rejected,9637,Payment Failed,1
+71,HSBC,102631,CitiBank HongKong,USD,Receive,4076,2020-02-24 ,Processing,4076,Payment is in progress,1
+72,BNP Paribas,104069,CitiBank HongKong,GBP,Deliver,377,2020-02-29 ,Fully paid,0,Transaction complete,1
+73,Wells Fargo,101280,CitiBank London,INR,Receive,3936,2020-05-12 ,Fully paid,0,Transaction complete,1
+74,HSBC,103187,CitiBank NewYork,GBP,Receive,4699,2020-06-08 ,Processing,4699,Payment is in progress,1
+75,BNP Paribas,103806,CitiBank Pune,CAD,Deliver,3893,2020-05-22 ,Rejected,3893,Payment Failed,1
+76,DEUTSCHE BANK,102409,CitiBank Singapore,GBP,Deliver,1356,2020-03-01 ,Processing,1356,Payment is in progress,1
+77,Morgan Stanley,104835,CitiBank Bengaluru,CAD,Receive,104,2020-05-11 ,Fully paid,0,Transaction complete,1
+78,BNY Mellon,104209,CitiBank HongKong,INR,Receive,3419,2020-03-21 ,Fully paid,0,Transaction complete,1
+79,Morgan Stanley,101236,CitiBank London,USD,Receive,8635,2020-03-29 ,Fully paid,0,Transaction complete,1
+80,HSBC,104239,CitiBank Pune,USD,Receive,1396,2020-03-22 ,Rejected,1396,Payment Failed,1
+81,J P Morgan,103232,CitiBank Bengaluru,INR,Deliver,8664,2020-03-13 ,Partially Paid,6518,Waiting for pending amount,1
+82,Wells Fargo,102668,CitiBank NewYork,CAD,Receive,6027,2020-05-06 ,Partially Paid,7362,Waiting for pending amount,1
+83,DEUTSCHE BANK,102284,CitiBank Singapore,CAD,Deliver,5030,2020-05-20 ,Partially Paid,5776,Waiting for pending amount,1
+84,Morgan Stanley,103711,CitiBank NewYork,EUR,Deliver,6764,2020-05-24 ,Rejected,6764,Payment Failed,1
+85,Wells Fargo,103649,CitiBank London,GBP,Deliver,8666,2020-05-10 ,Fully paid,0,Transaction complete,1
+86,DEUTSCHE BANK,102505,CitiBank Pune,INR,Receive,7047,2020-05-30 ,Fully paid,0,Transaction complete,1
+87,Morgan Stanley,104474,CitiBank Pune,GBP,Receive,5091,2020-03-16 ,Partially Paid,1858,Waiting for pending amount,1
+88,DEUTSCHE BANK,102951,CitiBank London,INR,Receive,6891,2020-04-14 ,Rejected,6891,Payment Failed,1
+89,DEUTSCHE BANK,102238,CitiBank Pune,GBP,Receive,6176,2020-03-18 ,Fully paid,0,Transaction complete,1
+90,J P Morgan,103402,CitiBank Pune,GBP,Receive,7604,2020-05-12 ,Processing,7604,Payment is in progress,1
+91,Wells Fargo,105149,CitiBank NewYork,EUR,Deliver,8136,2020-05-18 ,Partially Paid,7198,Waiting for pending amount,1
+92,J P Morgan,101305,CitiBank Pune,INR,Receive,7320,2020-05-08 ,Rejected,7320,Payment Failed,1
+93,BNY Mellon,103024,CitiBank Pune,CAD,Receive,4392,2020-05-14 ,Processing,4392,Payment is in progress,1
+94,BNP Paribas,102625,CitiBank Singapore,EUR,Receive,3976,2020-03-12 ,Rejected,3976,Payment Failed,1
+95,BNP Paribas,102006,CitiBank Pune,CAD,Deliver,1097,2020-05-29 ,Partially Paid,6408,Waiting for pending amount,1
+96,Goldman Sachs,103992,CitiBank Bengaluru,GBP,Receive,1048,2020-06-05 ,Partially Paid,9187,Waiting for pending amount,1
+97,Goldman Sachs,105160,CitiBank Pune,EUR,Deliver,1984,2020-04-25 ,Rejected,1984,Payment Failed,1
+98,Wells Fargo,103951,CitiBank HongKong,INR,Deliver,6672,2020-04-18 ,Processing,6672,Payment is in progress,1
+99,Goldman Sachs,104100,CitiBank London,EUR,Receive,8845,2020-04-25 ,Fully paid,0,Transaction complete,1
+100,BNY Mellon,102847,CitiBank London,GBP,Receive,1728,2020-05-04 ,Partially Paid,8416,Waiting for pending amount,1
+101,J P Morgan,104990,CitiBank Bengaluru,INR,Receive,3456,2020-04-06 ,Processing,3456,Payment is in progress,1
+102,Wells Fargo,101024,CitiBank Bengaluru,USD,Receive,2302,2020-03-27 ,Rejected,2302,Payment Failed,1
+103,HSBC,104470,CitiBank Singapore,CAD,Deliver,1467,2020-03-28 ,Rejected,1467,Payment Failed,1
+104,DEUTSCHE BANK,101088,CitiBank Bengaluru,EUR,Deliver,1692,2020-05-28 ,Rejected,1692,Payment Failed,1
+105,Morgan Stanley,103643,CitiBank HongKong,CAD,Deliver,8953,2020-03-18 ,Processing,8953,Payment is in progress,1
+106,Morgan Stanley,101171,CitiBank London,GBP,Receive,4230,2020-02-22 ,Partially Paid,6754,Waiting for pending amount,1
+107,Goldman Sachs,104786,CitiBank London,GBP,Deliver,2421,2020-05-02 ,Processing,2421,Payment is in progress,1
+108,BNY Mellon,103917,CitiBank London,CAD,Receive,6512,2020-04-04 ,Rejected,6512,Payment Failed,1
+109,BNY Mellon,104709,CitiBank Singapore,GBP,Deliver,9213,2020-03-15 ,Processing,9213,Payment is in progress,1
+110,HSBC,103669,CitiBank London,INR,Receive,738,2020-05-28 ,Rejected,738,Payment Failed,1
+111,BNY Mellon,101731,CitiBank Singapore,GBP,Deliver,2886,2020-04-25 ,Partially Paid,7357,Waiting for pending amount,1
+112,DEUTSCHE BANK,102690,CitiBank Bengaluru,USD,Receive,9694,2020-02-25 ,Partially Paid,4208,Waiting for pending amount,1
+113,BNY Mellon,102611,CitiBank Pune,INR,Deliver,240,2020-04-12 ,Fully paid,0,Transaction complete,1
+114,BNP Paribas,105118,CitiBank Singapore,INR,Deliver,8302,2020-03-05 ,Processing,8302,Payment is in progress,1
+115,Wells Fargo,103871,CitiBank HongKong,EUR,Receive,2122,2020-02-25 ,Processing,2122,Payment is in progress,1
+116,J P Morgan,101284,CitiBank NewYork,USD,Deliver,394,2020-05-01 ,Fully paid,0,Transaction complete,1
+117,BNP Paribas,104411,CitiBank London,EUR,Receive,2129,2020-04-13 ,Fully paid,0,Transaction complete,1
+118,Goldman Sachs,102607,CitiBank Singapore,CAD,Receive,7213,2020-05-15 ,Partially Paid,6849,Waiting for pending amount,2
+119,Goldman Sachs,101785,CitiBank Pune,EUR,Receive,1893,2020-04-08 ,Partially Paid,2603,Waiting for pending amount,2
+120,BNP Paribas,102204,CitiBank Pune,CAD,Receive,4473,2020-04-06 ,Rejected,4473,Payment Failed,2
+121,HSBC,103250,CitiBank Pune,INR,Deliver,3797,2020-04-14 ,Partially Paid,4915,Waiting for pending amount,2
+122,J P Morgan,103639,CitiBank Bengaluru,USD,Receive,3660,2020-04-18 ,Processing,3660,Payment is in progress,2
+123,Morgan Stanley,102720,CitiBank Pune,CAD,Receive,9867,2020-02-22 ,Partially Paid,8294,Waiting for pending amount,2
+124,HSBC,102696,CitiBank Pune,EUR,Receive,6326,2020-05-04 ,Rejected,6326,Payment Failed,2
+125,J P Morgan,101457,CitiBank Pune,CAD,Receive,4310,2020-05-06 ,Rejected,4310,Payment Failed,2
+126,Morgan Stanley,103933,CitiBank London,CAD,Receive,4420,2020-03-11 ,Rejected,4420,Payment Failed,2
+127,BNY Mellon,103575,CitiBank Pune,CAD,Deliver,3882,2020-05-23 ,Partially Paid,8796,Waiting for pending amount,2
+128,J P Morgan,101350,CitiBank Bengaluru,INR,Receive,3512,2020-04-12 ,Partially Paid,8568,Waiting for pending amount,2
+129,J P Morgan,102850,CitiBank London,EUR,Receive,333,2020-03-03 ,Processing,333,Payment is in progress,2
+130,BNP Paribas,102387,CitiBank Bengaluru,INR,Deliver,6093,2020-02-26 ,Processing,6093,Payment is in progress,2
+131,J P Morgan,104953,CitiBank HongKong,USD,Deliver,6038,2020-05-18 ,Partially Paid,7007,Waiting for pending amount,2
+132,Goldman Sachs,101536,CitiBank Bengaluru,INR,Receive,4072,2020-06-07 ,Fully paid,0,Transaction complete,2
+133,BNP Paribas,102412,CitiBank Singapore,GBP,Deliver,4201,2020-06-08 ,Processing,4201,Payment is in progress,2
+134,J P Morgan,102814,CitiBank Singapore,GBP,Receive,8136,2020-03-06 ,Processing,8136,Payment is in progress,2
+135,Morgan Stanley,103500,CitiBank Singapore,EUR,Deliver,9652,2020-02-27 ,Partially Paid,5453,Waiting for pending amount,2
+136,Morgan Stanley,103370,CitiBank NewYork,CAD,Deliver,9306,2020-05-17 ,Processing,9306,Payment is in progress,2
+137,DEUTSCHE BANK,102613,CitiBank London,INR,Deliver,6417,2020-05-25 ,Processing,6417,Payment is in progress,2
+138,Goldman Sachs,104727,CitiBank Bengaluru,GBP,Receive,1627,2020-03-31 ,Rejected,1627,Payment Failed,2
+139,J P Morgan,103422,CitiBank Singapore,CAD,Deliver,5547,2020-06-01 ,Rejected,5547,Payment Failed,2
+140,HSBC,103866,CitiBank Singapore,INR,Receive,8961,2020-04-01 ,Rejected,8961,Payment Failed,2
+141,BNY Mellon,102810,CitiBank Pune,CAD,Receive,8414,2020-02-27 ,Fully paid,0,Transaction complete,2
+142,DEUTSCHE BANK,102022,CitiBank Pune,GBP,Deliver,3274,2020-05-02 ,Fully paid,0,Transaction complete,2
+143,J P Morgan,102034,CitiBank Pune,USD,Deliver,3720,2020-04-07 ,Rejected,3720,Payment Failed,2
+144,BNP Paribas,104099,CitiBank NewYork,EUR,Deliver,4702,2020-05-10 ,Partially Paid,9489,Waiting for pending amount,2
+145,Goldman Sachs,102606,CitiBank HongKong,INR,Receive,4639,2020-04-27 ,Fully paid,0,Transaction complete,2
+146,Morgan Stanley,101344,CitiBank Pune,CAD,Deliver,6347,2020-03-24 ,Fully paid,0,Transaction complete,2
+147,Wells Fargo,104479,CitiBank Singapore,GBP,Deliver,4708,2020-04-07 ,Processing,4708,Payment is in progress,2
+148,DEUTSCHE BANK,102921,CitiBank London,INR,Deliver,7752,2020-05-26 ,Partially Paid,6433,Waiting for pending amount,2
+149,Morgan Stanley,102741,CitiBank Singapore,CAD,Receive,6676,2020-04-29 ,Processing,6676,Payment is in progress,2
+150,HSBC,105052,CitiBank London,INR,Receive,3449,2020-05-17 ,Fully paid,0,Transaction complete,2
+151,J P Morgan,103770,CitiBank NewYork,EUR,Deliver,8373,2020-03-04 ,Processing,8373,Payment is in progress,2
+152,HSBC,103235,CitiBank Singapore,CAD,Deliver,3426,2020-04-07 ,Partially Paid,224,Waiting for pending amount,2
+153,J P Morgan,104054,CitiBank Pune,USD,Deliver,5356,2020-05-20 ,Processing,5356,Payment is in progress,2
+154,BNP Paribas,104799,CitiBank Singapore,EUR,Receive,2083,2020-03-30 ,Processing,2083,Payment is in progress,2
+155,DEUTSCHE BANK,101364,CitiBank Singapore,GBP,Receive,5154,2020-04-17 ,Fully paid,0,Transaction complete,2
+156,J P Morgan,104841,CitiBank Pune,USD,Receive,5836,2020-03-16 ,Partially Paid,9582,Waiting for pending amount,2
+157,Wells Fargo,104895,CitiBank HongKong,USD,Receive,3399,2020-04-11 ,Partially Paid,4639,Waiting for pending amount,2
+158,Wells Fargo,103497,CitiBank HongKong,INR,Receive,9640,2020-06-06 ,Processing,9640,Payment is in progress,2
+159,Goldman Sachs,101789,CitiBank HongKong,USD,Receive,2471,2020-05-04 ,Processing,2471,Payment is in progress,2
+160,J P Morgan,105055,CitiBank Singapore,GBP,Deliver,287,2020-03-04 ,Processing,287,Payment is in progress,2
+161,HSBC,101713,CitiBank London,INR,Deliver,4192,2020-05-18 ,Fully paid,0,Transaction complete,2
+162,DEUTSCHE BANK,103935,CitiBank London,USD,Deliver,6598,2020-03-02 ,Rejected,6598,Payment Failed,2
+163,J P Morgan,101110,CitiBank London,CAD,Deliver,3711,2020-05-29 ,Rejected,3711,Payment Failed,2
+164,BNP Paribas,102721,CitiBank HongKong,GBP,Receive,885,2020-04-26 ,Rejected,885,Payment Failed,2
+165,DEUTSCHE BANK,104398,CitiBank Bengaluru,EUR,Receive,8418,2020-05-17 ,Partially Paid,9618,Waiting for pending amount,2
+166,HSBC,101508,CitiBank Bengaluru,GBP,Deliver,6647,2020-02-29 ,Processing,6647,Payment is in progress,2
+167,Goldman Sachs,103901,CitiBank Pune,CAD,Receive,3187,2020-05-26 ,Processing,3187,Payment is in progress,2
+168,HSBC,104758,CitiBank Singapore,USD,Deliver,4011,2020-03-27 ,Partially Paid,5313,Waiting for pending amount,2
+169,DEUTSCHE BANK,101417,CitiBank London,USD,Deliver,4886,2020-05-18 ,Partially Paid,775,Waiting for pending amount,2
+170,HSBC,101229,CitiBank Pune,USD,Receive,4949,2020-03-23 ,Partially Paid,6082,Waiting for pending amount,2
+171,HSBC,101456,CitiBank Singapore,USD,Deliver,4716,2020-04-11 ,Processing,4716,Payment is in progress,2
+172,J P Morgan,103816,CitiBank London,INR,Deliver,9004,2020-05-31 ,Fully paid,0,Transaction complete,2
+173,J P Morgan,104113,CitiBank NewYork,EUR,Receive,3177,2020-05-19 ,Rejected,3177,Payment Failed,2
+174,BNY Mellon,104238,CitiBank Bengaluru,USD,Deliver,2310,2020-05-17 ,Processing,2310,Payment is in progress,2
+175,BNY Mellon,101203,CitiBank NewYork,INR,Deliver,6378,2020-02-24 ,Rejected,6378,Payment Failed,2
+176,Wells Fargo,102578,CitiBank NewYork,GBP,Receive,2102,2020-04-27 ,Partially Paid,2424,Waiting for pending amount,2
+177,BNP Paribas,101983,CitiBank Bengaluru,CAD,Deliver,6205,2020-05-28 ,Partially Paid,208,Waiting for pending amount,2
+178,J P Morgan,102524,CitiBank Bengaluru,USD,Deliver,3476,2020-05-31 ,Partially Paid,1729,Waiting for pending amount,2
+179,BNY Mellon,102530,CitiBank Singapore,EUR,Deliver,1992,2020-06-07 ,Fully paid,0,Transaction complete,2
+180,BNY Mellon,104921,CitiBank Bengaluru,USD,Deliver,3210,2020-04-21 ,Rejected,3210,Payment Failed,2
+181,DEUTSCHE BANK,101115,CitiBank London,CAD,Receive,9510,2020-03-20 ,Partially Paid,3850,Waiting for pending amount,2
+182,Goldman Sachs,103652,CitiBank Singapore,INR,Receive,8084,2020-04-22 ,Processing,8084,Payment is in progress,2
+183,DEUTSCHE BANK,102049,CitiBank NewYork,CAD,Deliver,8490,2020-02-24 ,Rejected,8490,Payment Failed,2
+184,J P Morgan,104830,CitiBank Pune,GBP,Deliver,7097,2020-06-08 ,Processing,7097,Payment is in progress,2
+185,Wells Fargo,102665,CitiBank Bengaluru,EUR,Receive,3039,2020-03-03 ,Partially Paid,3064,Waiting for pending amount,2
+186,HSBC,104542,CitiBank HongKong,CAD,Deliver,8651,2020-05-28 ,Rejected,8651,Payment Failed,2
+187,Morgan Stanley,101506,CitiBank London,EUR,Deliver,1412,2020-04-17 ,Partially Paid,415,Waiting for pending amount,2
+188,J P Morgan,101194,CitiBank Bengaluru,INR,Deliver,199,2020-05-09 ,Fully paid,0,Transaction complete,2
+189,DEUTSCHE BANK,101384,CitiBank London,GBP,Deliver,2013,2020-04-10 ,Processing,2013,Payment is in progress,2
+190,J P Morgan,102166,CitiBank Pune,GBP,Receive,8090,2020-03-19 ,Partially Paid,5741,Waiting for pending amount,2
+191,Morgan Stanley,104305,CitiBank London,USD,Deliver,2257,2020-05-03 ,Fully paid,0,Transaction complete,2
+192,HSBC,102934,CitiBank Pune,EUR,Deliver,6103,2020-03-11 ,Processing,6103,Payment is in progress,2
+193,Wells Fargo,101420,CitiBank HongKong,GBP,Deliver,5810,2020-06-01 ,Processing,5810,Payment is in progress,2
+194,Morgan Stanley,103035,CitiBank Bengaluru,EUR,Receive,5642,2020-06-07 ,Fully paid,0,Transaction complete,2
+195,DEUTSCHE BANK,103809,CitiBank Bengaluru,INR,Deliver,8198,2020-05-28 ,Partially Paid,5816,Waiting for pending amount,2
+196,Morgan Stanley,105088,CitiBank NewYork,CAD,Receive,3710,2020-04-01 ,Processing,3710,Payment is in progress,2
+197,Wells Fargo,101626,CitiBank Singapore,INR,Receive,3379,2020-05-16 ,Fully paid,0,Transaction complete,2
+198,DEUTSCHE BANK,103227,CitiBank London,EUR,Deliver,2551,2020-06-08 ,Partially Paid,7749,Waiting for pending amount,2
+199,J P Morgan,103572,CitiBank Singapore,CAD,Deliver,6621,2020-05-30 ,Partially Paid,3359,Waiting for pending amount,2
+200,HSBC,103241,CitiBank NewYork,INR,Receive,3010,2020-05-09 ,Processing,3010,Payment is in progress,2
+201,HSBC,101354,CitiBank Bengaluru,USD,Deliver,4227,2020-03-25 ,Fully paid,0,Transaction complete,2
+202,BNY Mellon,102041,CitiBank Pune,EUR,Receive,2200,2020-03-23 ,Processing,2200,Payment is in progress,2
+203,Goldman Sachs,103801,CitiBank Singapore,USD,Receive,2618,2020-02-29 ,Partially Paid,1981,Waiting for pending amount,2
+204,BNP Paribas,101856,CitiBank Singapore,CAD,Deliver,4209,2020-03-27 ,Fully paid,0,Transaction complete,2
+205,Wells Fargo,102703,CitiBank Pune,USD,Receive,6678,2020-02-29 ,Partially Paid,3593,Waiting for pending amount,2
+206,Morgan Stanley,102156,CitiBank HongKong,INR,Receive,666,2020-03-20 ,Partially Paid,5345,Waiting for pending amount,2
+207,HSBC,102145,CitiBank London,GBP,Receive,1402,2020-05-11 ,Partially Paid,4468,Waiting for pending amount,2
+208,HSBC,104493,CitiBank Bengaluru,EUR,Deliver,2658,2020-03-01 ,Partially Paid,1551,Waiting for pending amount,2
+209,HSBC,104541,CitiBank Pune,CAD,Deliver,3714,2020-05-13 ,Rejected,3714,Payment Failed,2
+210,BNY Mellon,103574,CitiBank Singapore,GBP,Deliver,5920,2020-05-12 ,Processing,5920,Payment is in progress,2
+211,J P Morgan,102459,CitiBank Bengaluru,USD,Receive,2586,2020-05-04 ,Fully paid,0,Transaction complete,2
+212,DEUTSCHE BANK,101646,CitiBank London,EUR,Deliver,362,2020-03-27 ,Processing,362,Payment is in progress,3
+213,HSBC,104421,CitiBank London,USD,Deliver,5707,2020-05-16 ,Fully paid,0,Transaction complete,3
+214,J P Morgan,101621,CitiBank Bengaluru,CAD,Deliver,6764,2020-02-28 ,Partially Paid,7432,Waiting for pending amount,3
+215,J P Morgan,105137,CitiBank Bengaluru,INR,Receive,435,2020-04-19 ,Fully paid,0,Transaction complete,3
+216,Wells Fargo,101897,CitiBank HongKong,CAD,Receive,1818,2020-03-25 ,Partially Paid,6107,Waiting for pending amount,3
+217,BNY Mellon,101806,CitiBank Singapore,GBP,Receive,1273,2020-04-04 ,Partially Paid,1120,Waiting for pending amount,3
+218,BNY Mellon,102740,CitiBank Bengaluru,EUR,Receive,8886,2020-03-09 ,Rejected,8886,Payment Failed,3
+219,DEUTSCHE BANK,104872,CitiBank HongKong,CAD,Deliver,7097,2020-05-12 ,Fully paid,0,Transaction complete,3
+220,Wells Fargo,102361,CitiBank Bengaluru,USD,Deliver,5567,2020-06-06 ,Processing,5567,Payment is in progress,3
+221,DEUTSCHE BANK,103118,CitiBank Singapore,EUR,Deliver,5882,2020-04-17 ,Rejected,5882,Payment Failed,3
+222,Morgan Stanley,101502,CitiBank Bengaluru,CAD,Receive,3358,2020-04-10 ,Rejected,3358,Payment Failed,3
+223,J P Morgan,105075,CitiBank NewYork,EUR,Receive,6415,2020-03-16 ,Rejected,6415,Payment Failed,3
+224,BNY Mellon,102967,CitiBank Pune,INR,Deliver,5477,2020-04-10 ,Rejected,5477,Payment Failed,3
+225,Morgan Stanley,103137,CitiBank HongKong,CAD,Receive,3591,2020-02-23 ,Processing,3591,Payment is in progress,3
+226,Wells Fargo,101396,CitiBank Singapore,GBP,Receive,2,2020-04-12 ,Processing,2,Payment is in progress,3
+227,BNP Paribas,104969,CitiBank Singapore,CAD,Deliver,3961,2020-04-19 ,Fully paid,0,Transaction complete,3
+228,HSBC,101239,CitiBank London,CAD,Deliver,7033,2020-04-19 ,Fully paid,0,Transaction complete,3
+229,J P Morgan,103753,CitiBank NewYork,CAD,Deliver,5774,2020-02-23 ,Processing,5774,Payment is in progress,3
+230,HSBC,103467,CitiBank Bengaluru,CAD,Deliver,9628,2020-03-26 ,Processing,9628,Payment is in progress,3
+231,DEUTSCHE BANK,102629,CitiBank London,GBP,Deliver,4638,2020-04-12 ,Processing,4638,Payment is in progress,3
+232,BNY Mellon,103710,CitiBank Pune,INR,Receive,7657,2020-05-30 ,Rejected,7657,Payment Failed,3
+233,Wells Fargo,105053,CitiBank London,USD,Deliver,6811,2020-02-24 ,Partially Paid,7775,Waiting for pending amount,3
+234,Goldman Sachs,102707,CitiBank Singapore,USD,Receive,3534,2020-04-24 ,Partially Paid,8196,Waiting for pending amount,3
+235,Wells Fargo,104707,CitiBank NewYork,EUR,Deliver,7900,2020-05-16 ,Rejected,7900,Payment Failed,3
+236,HSBC,104701,CitiBank HongKong,INR,Deliver,8444,2020-06-07 ,Partially Paid,8477,Waiting for pending amount,3
+237,HSBC,101547,CitiBank London,GBP,Receive,2545,2020-03-21 ,Fully paid,0,Transaction complete,3
+238,Morgan Stanley,102243,CitiBank NewYork,GBP,Receive,3675,2020-03-21 ,Processing,3675,Payment is in progress,3
+239,HSBC,102074,CitiBank Singapore,CAD,Receive,6510,2020-02-29 ,Fully paid,0,Transaction complete,3
+240,Wells Fargo,101030,CitiBank Bengaluru,USD,Deliver,2697,2020-03-08 ,Fully paid,0,Transaction complete,3
+241,DEUTSCHE BANK,103695,CitiBank Pune,EUR,Deliver,5183,2020-02-27 ,Partially Paid,5156,Waiting for pending amount,3
+242,Goldman Sachs,102030,CitiBank Pune,CAD,Receive,1297,2020-05-23 ,Processing,1297,Payment is in progress,3
+243,BNP Paribas,101581,CitiBank Singapore,GBP,Receive,4077,2020-03-16 ,Fully paid,0,Transaction complete,3
+244,BNY Mellon,101463,CitiBank London,CAD,Receive,8888,2020-04-16 ,Partially Paid,4829,Waiting for pending amount,3
+245,DEUTSCHE BANK,101227,CitiBank London,EUR,Receive,1497,2020-04-19 ,Processing,1497,Payment is in progress,3
+246,Goldman Sachs,102860,CitiBank London,INR,Receive,5480,2020-03-12 ,Rejected,5480,Payment Failed,3
+247,Goldman Sachs,104330,CitiBank HongKong,CAD,Receive,6649,2020-06-05 ,Fully paid,0,Transaction complete,3
+248,J P Morgan,103114,CitiBank Singapore,GBP,Receive,5459,2020-03-01 ,Processing,5459,Payment is in progress,3
+249,HSBC,105009,CitiBank Singapore,EUR,Deliver,5503,2020-06-08 ,Fully paid,0,Transaction complete,3
+250,HSBC,104196,CitiBank Pune,GBP,Receive,1846,2020-04-13 ,Fully paid,0,Transaction complete,3
+251,HSBC,104247,CitiBank HongKong,GBP,Receive,979,2020-05-05 ,Rejected,979,Payment Failed,3
+252,HSBC,102119,CitiBank Bengaluru,GBP,Receive,8861,2020-05-03 ,Partially Paid,9264,Waiting for pending amount,3
+253,HSBC,104388,CitiBank Pune,GBP,Deliver,779,2020-02-28 ,Partially Paid,4899,Waiting for pending amount,3
+254,DEUTSCHE BANK,104556,CitiBank Pune,GBP,Receive,2141,2020-05-18 ,Rejected,2141,Payment Failed,3
+255,Morgan Stanley,104237,CitiBank HongKong,GBP,Deliver,1496,2020-03-15 ,Processing,1496,Payment is in progress,3
+256,Wells Fargo,104589,CitiBank Pune,INR,Deliver,5382,2020-02-25 ,Partially Paid,977,Waiting for pending amount,3
+257,Morgan Stanley,104574,CitiBank HongKong,EUR,Deliver,6296,2020-04-05 ,Rejected,6296,Payment Failed,3
+258,J P Morgan,104482,CitiBank HongKong,INR,Deliver,4246,2020-05-09 ,Partially Paid,7766,Waiting for pending amount,3
+259,Wells Fargo,102876,CitiBank London,INR,Deliver,3990,2020-06-03 ,Partially Paid,2259,Waiting for pending amount,3
+260,HSBC,102980,CitiBank Bengaluru,CAD,Receive,1673,2020-05-18 ,Rejected,1673,Payment Failed,3
+261,DEUTSCHE BANK,101165,CitiBank HongKong,EUR,Deliver,4876,2020-04-13 ,Fully paid,0,Transaction complete,3
+262,BNP Paribas,101370,CitiBank Singapore,CAD,Deliver,7919,2020-05-19 ,Processing,7919,Payment is in progress,3
+263,BNP Paribas,104473,CitiBank Pune,CAD,Deliver,8689,2020-05-26 ,Processing,8689,Payment is in progress,3
+264,J P Morgan,104614,CitiBank Singapore,CAD,Deliver,8980,2020-04-13 ,Partially Paid,1314,Waiting for pending amount,3
+265,HSBC,101754,CitiBank HongKong,INR,Receive,5644,2020-02-25 ,Fully paid,0,Transaction complete,3
+266,DEUTSCHE BANK,103002,CitiBank Pune,INR,Deliver,3606,2020-04-04 ,Rejected,3606,Payment Failed,3
+267,J P Morgan,103779,CitiBank NewYork,EUR,Deliver,7029,2020-05-10 ,Rejected,7029,Payment Failed,3
+268,Wells Fargo,104607,CitiBank Bengaluru,INR,Receive,2030,2020-03-04 ,Processing,2030,Payment is in progress,3
+269,J P Morgan,102664,CitiBank Pune,INR,Receive,7759,2020-03-24 ,Partially Paid,2835,Waiting for pending amount,3
+270,HSBC,103120,CitiBank Singapore,EUR,Receive,547,2020-05-14 ,Rejected,547,Payment Failed,3
+271,J P Morgan,102479,CitiBank NewYork,USD,Deliver,9926,2020-03-23 ,Rejected,9926,Payment Failed,3
+272,Morgan Stanley,104965,CitiBank NewYork,GBP,Receive,9796,2020-05-17 ,Fully paid,0,Transaction complete,3
+273,Wells Fargo,104172,CitiBank Pune,INR,Receive,4855,2020-05-30 ,Fully paid,0,Transaction complete,3
+274,HSBC,101389,CitiBank Singapore,CAD,Deliver,6362,2020-05-07 ,Fully paid,0,Transaction complete,3
+275,BNP Paribas,103094,CitiBank NewYork,GBP,Deliver,949,2020-03-04 ,Processing,949,Payment is in progress,3
+276,HSBC,101170,CitiBank London,CAD,Deliver,9523,2020-04-26 ,Processing,9523,Payment is in progress,3
+277,Goldman Sachs,101916,CitiBank Singapore,CAD,Deliver,5483,2020-04-02 ,Fully paid,0,Transaction complete,3
+278,BNP Paribas,102612,CitiBank Bengaluru,INR,Receive,4630,2020-03-30 ,Fully paid,0,Transaction complete,3
+279,BNY Mellon,104427,CitiBank HongKong,USD,Deliver,667,2020-03-21 ,Partially Paid,2582,Waiting for pending amount,3
+280,HSBC,103991,CitiBank Pune,GBP,Receive,3394,2020-05-08 ,Partially Paid,9420,Waiting for pending amount,3
+281,DEUTSCHE BANK,104063,CitiBank London,GBP,Deliver,2674,2020-05-16 ,Rejected,2674,Payment Failed,3
+282,Wells Fargo,103382,CitiBank Singapore,INR,Deliver,9945,2020-03-27 ,Rejected,9945,Payment Failed,3
+283,DEUTSCHE BANK,102070,CitiBank Singapore,CAD,Receive,3829,2020-05-06 ,Fully paid,0,Transaction complete,3
+284,HSBC,102315,CitiBank NewYork,EUR,Deliver,2795,2020-03-05 ,Processing,2795,Payment is in progress,3
+285,BNP Paribas,104626,CitiBank London,GBP,Receive,7664,2020-03-22 ,Partially Paid,3772,Waiting for pending amount,3
+286,Wells Fargo,101109,CitiBank Pune,GBP,Deliver,5739,2020-02-21 ,Fully paid,0,Transaction complete,3
+287,Goldman Sachs,105108,CitiBank London,INR,Receive,5443,2020-04-28 ,Rejected,5443,Payment Failed,3
+288,Goldman Sachs,102937,CitiBank Bengaluru,CAD,Receive,6398,2020-06-06 ,Processing,6398,Payment is in progress,3
+289,HSBC,104629,CitiBank London,USD,Deliver,4445,2020-04-14 ,Processing,4445,Payment is in progress,3
+290,Wells Fargo,101252,CitiBank Bengaluru,GBP,Deliver,7837,2020-05-10 ,Rejected,7837,Payment Failed,3
+291,BNP Paribas,103713,CitiBank HongKong,CAD,Receive,4020,2020-03-26 ,Fully paid,0,Transaction complete,3
+292,BNY Mellon,103101,CitiBank Singapore,INR,Receive,951,2020-06-01 ,Rejected,951,Payment Failed,3
+293,Wells Fargo,102160,CitiBank Pune,INR,Deliver,7061,2020-03-29 ,Partially Paid,3732,Waiting for pending amount,3
+294,DEUTSCHE BANK,103296,CitiBank Singapore,INR,Deliver,2600,2020-05-03 ,Rejected,2600,Payment Failed,3
+295,HSBC,102597,CitiBank London,INR,Receive,3122,2020-03-31 ,Fully paid,0,Transaction complete,3
+296,Wells Fargo,104855,CitiBank Singapore,EUR,Receive,9612,2020-04-07 ,Partially Paid,1763,Waiting for pending amount,3
+297,BNP Paribas,103702,CitiBank HongKong,INR,Deliver,310,2020-04-01 ,Fully paid,0,Transaction complete,3
+298,Goldman Sachs,102896,CitiBank London,CAD,Deliver,1887,2020-03-30 ,Partially Paid,2714,Waiting for pending amount,3
+299,Wells Fargo,102309,CitiBank HongKong,CAD,Receive,6225,2020-03-06 ,Rejected,6225,Payment Failed,3
+300,DEUTSCHE BANK,104573,CitiBank Singapore,USD,Deliver,8818,2020-04-13 ,Fully paid,0,Transaction complete,3
+301,BNY Mellon,101346,CitiBank Singapore,EUR,Receive,7178,2020-04-23 ,Processing,7178,Payment is in progress,3
+302,Morgan Stanley,103677,CitiBank Singapore,GBP,Receive,4666,2020-05-14 ,Rejected,4666,Payment Failed,3
+303,Wells Fargo,104365,CitiBank Singapore,GBP,Receive,3972,2020-03-12 ,Fully paid,0,Transaction complete,3
+304,DEUTSCHE BANK,104415,CitiBank Bengaluru,GBP,Deliver,5253,2020-04-08 ,Partially Paid,7341,Waiting for pending amount,3
+305,Morgan Stanley,101840,CitiBank London,EUR,Deliver,9583,2020-02-29 ,Processing,9583,Payment is in progress,3
+306,HSBC,101678,CitiBank Bengaluru,EUR,Receive,1009,2020-03-18 ,Processing,1009,Payment is in progress,3
+307,BNY Mellon,103443,CitiBank HongKong,USD,Deliver,8229,2020-04-02 ,Fully paid,0,Transaction complete,4
+308,HSBC,104466,CitiBank London,GBP,Deliver,4649,2020-03-20 ,Processing,4649,Payment is in progress,4
+309,Goldman Sachs,101686,CitiBank Singapore,EUR,Receive,3892,2020-05-10 ,Processing,3892,Payment is in progress,4
+310,Goldman Sachs,104461,CitiBank NewYork,USD,Deliver,2801,2020-02-22 ,Partially Paid,4279,Waiting for pending amount,4
+311,BNY Mellon,104768,CitiBank Singapore,CAD,Deliver,6108,2020-04-05 ,Processing,6108,Payment is in progress,4
+312,Goldman Sachs,103354,CitiBank Bengaluru,GBP,Deliver,9726,2020-02-26 ,Partially Paid,1364,Waiting for pending amount,4
+313,Goldman Sachs,101680,CitiBank London,CAD,Deliver,9580,2020-04-14 ,Rejected,9580,Payment Failed,4
+314,DEUTSCHE BANK,101568,CitiBank Bengaluru,EUR,Receive,428,2020-06-06 ,Processing,428,Payment is in progress,4
+315,BNP Paribas,103705,CitiBank Bengaluru,EUR,Receive,1671,2020-05-21 ,Partially Paid,4044,Waiting for pending amount,4
+316,DEUTSCHE BANK,102454,CitiBank London,CAD,Receive,1596,2020-04-25 ,Processing,1596,Payment is in progress,4
+317,BNP Paribas,102803,CitiBank London,USD,Deliver,6408,2020-04-22 ,Rejected,6408,Payment Failed,4
+318,BNP Paribas,101677,CitiBank Pune,EUR,Deliver,1897,2020-06-04 ,Rejected,1897,Payment Failed,4
+319,Wells Fargo,104133,CitiBank London,GBP,Deliver,1955,2020-02-27 ,Processing,1955,Payment is in progress,4
+320,Goldman Sachs,101926,CitiBank Singapore,GBP,Deliver,3538,2020-03-27 ,Rejected,3538,Payment Failed,4
+321,J P Morgan,104007,CitiBank Bengaluru,GBP,Deliver,8069,2020-05-19 ,Fully paid,0,Transaction complete,4
+322,HSBC,101860,CitiBank Singapore,EUR,Receive,5668,2020-05-04 ,Partially Paid,4266,Waiting for pending amount,4
+323,DEUTSCHE BANK,105095,CitiBank NewYork,USD,Receive,5106,2020-04-15 ,Rejected,5106,Payment Failed,4
+324,DEUTSCHE BANK,102032,CitiBank HongKong,GBP,Deliver,6898,2020-04-21 ,Rejected,6898,Payment Failed,4
+325,Goldman Sachs,103723,CitiBank Singapore,INR,Receive,8181,2020-02-29 ,Processing,8181,Payment is in progress,4
+326,BNY Mellon,102509,CitiBank NewYork,USD,Deliver,362,2020-06-03 ,Fully paid,0,Transaction complete,4
+327,Wells Fargo,102437,CitiBank Singapore,GBP,Deliver,699,2020-06-02 ,Partially Paid,6566,Waiting for pending amount,4
+328,BNY Mellon,103255,CitiBank Singapore,EUR,Receive,7835,2020-02-24 ,Partially Paid,1488,Waiting for pending amount,4
+329,DEUTSCHE BANK,104564,CitiBank HongKong,INR,Receive,4237,2020-06-01 ,Rejected,4237,Payment Failed,4
+330,J P Morgan,102691,CitiBank NewYork,INR,Deliver,9902,2020-06-02 ,Processing,9902,Payment is in progress,4
+331,Wells Fargo,101602,CitiBank HongKong,INR,Deliver,3852,2020-04-04 ,Rejected,3852,Payment Failed,4
+332,Wells Fargo,101738,CitiBank Bengaluru,EUR,Receive,4075,2020-03-07 ,Partially Paid,1079,Waiting for pending amount,4
+333,Morgan Stanley,103699,CitiBank HongKong,EUR,Deliver,8021,2020-05-18 ,Partially Paid,7234,Waiting for pending amount,4
+334,Wells Fargo,101472,CitiBank Bengaluru,GBP,Deliver,9432,2020-05-24 ,Fully paid,0,Transaction complete,4
+335,Goldman Sachs,102956,CitiBank HongKong,USD,Deliver,5383,2020-02-23 ,Processing,5383,Payment is in progress,4
+336,Morgan Stanley,104795,CitiBank London,EUR,Receive,3437,2020-04-22 ,Rejected,3437,Payment Failed,4
+337,BNY Mellon,101726,CitiBank Bengaluru,GBP,Receive,8569,2020-04-17 ,Rejected,8569,Payment Failed,4
+338,DEUTSCHE BANK,101161,CitiBank Pune,INR,Receive,5801,2020-04-22 ,Rejected,5801,Payment Failed,4
+339,Wells Fargo,104424,CitiBank HongKong,USD,Receive,9347,2020-06-07 ,Partially Paid,551,Waiting for pending amount,4
+340,HSBC,101371,CitiBank Bengaluru,GBP,Receive,7668,2020-05-01 ,Rejected,7668,Payment Failed,4
+341,BNY Mellon,102428,CitiBank HongKong,GBP,Deliver,9321,2020-04-15 ,Processing,9321,Payment is in progress,4
+342,BNP Paribas,105090,CitiBank Singapore,CAD,Receive,5054,2020-05-31 ,Partially Paid,4353,Waiting for pending amount,4
+343,DEUTSCHE BANK,104957,CitiBank NewYork,CAD,Deliver,7785,2020-03-22 ,Partially Paid,5778,Waiting for pending amount,4
+344,HSBC,104374,CitiBank Singapore,EUR,Deliver,8032,2020-06-07 ,Rejected,8032,Payment Failed,4
+345,J P Morgan,103449,CitiBank London,EUR,Receive,9626,2020-04-13 ,Fully paid,0,Transaction complete,4
+346,BNP Paribas,103954,CitiBank Pune,USD,Deliver,4273,2020-04-03 ,Processing,4273,Payment is in progress,4
+347,Wells Fargo,102347,CitiBank London,EUR,Deliver,7867,2020-02-28 ,Partially Paid,6478,Waiting for pending amount,4
+348,Morgan Stanley,103766,CitiBank HongKong,CAD,Receive,251,2020-03-27 ,Processing,251,Payment is in progress,4
+349,BNY Mellon,102507,CitiBank NewYork,GBP,Receive,1998,2020-03-14 ,Rejected,1998,Payment Failed,4
+350,BNY Mellon,105026,CitiBank HongKong,GBP,Deliver,9072,2020-03-02 ,Partially Paid,3562,Waiting for pending amount,4
+351,HSBC,104875,CitiBank London,GBP,Receive,2572,2020-05-09 ,Fully paid,0,Transaction complete,4
+352,HSBC,102052,CitiBank Bengaluru,GBP,Receive,2217,2020-02-28 ,Processing,2217,Payment is in progress,4
+353,Wells Fargo,101353,CitiBank London,USD,Deliver,7361,2020-05-31 ,Rejected,7361,Payment Failed,4
+354,Morgan Stanley,102088,CitiBank HongKong,USD,Deliver,8567,2020-04-18 ,Fully paid,0,Transaction complete,4
+355,BNY Mellon,101807,CitiBank Singapore,INR,Deliver,4381,2020-04-23 ,Rejected,4381,Payment Failed,4
+356,Wells Fargo,102375,CitiBank Pune,GBP,Deliver,9320,2020-06-05 ,Fully paid,0,Transaction complete,4
+357,BNP Paribas,103952,CitiBank HongKong,GBP,Deliver,3358,2020-05-31 ,Processing,3358,Payment is in progress,4
+358,BNY Mellon,103989,CitiBank Singapore,USD,Deliver,3305,2020-05-09 ,Processing,3305,Payment is in progress,4
+359,BNY Mellon,101846,CitiBank Singapore,EUR,Receive,1164,2020-04-08 ,Processing,1164,Payment is in progress,4
+360,HSBC,102503,CitiBank London,INR,Deliver,5399,2020-04-04 ,Fully paid,0,Transaction complete,4
+361,J P Morgan,103466,CitiBank HongKong,GBP,Receive,4355,2020-03-12 ,Rejected,4355,Payment Failed,4
+362,Morgan Stanley,104230,CitiBank Bengaluru,EUR,Deliver,7821,2020-03-17 ,Rejected,7821,Payment Failed,4
+363,Morgan Stanley,104602,CitiBank London,EUR,Deliver,2347,2020-03-29 ,Partially Paid,5497,Waiting for pending amount,4
+364,BNP Paribas,101917,CitiBank Singapore,GBP,Receive,4858,2020-04-07 ,Processing,4858,Payment is in progress,4
+365,J P Morgan,103821,CitiBank NewYork,INR,Deliver,5622,2020-03-03 ,Fully paid,0,Transaction complete,4
+366,J P Morgan,104433,CitiBank NewYork,USD,Receive,4829,2020-03-14 ,Processing,4829,Payment is in progress,4
+367,J P Morgan,103425,CitiBank Bengaluru,GBP,Deliver,6888,2020-02-29 ,Rejected,6888,Payment Failed,4
+368,BNP Paribas,104907,CitiBank London,CAD,Receive,1463,2020-02-26 ,Rejected,1463,Payment Failed,4
+369,Goldman Sachs,102794,CitiBank Bengaluru,USD,Receive,5805,2020-03-14 ,Rejected,5805,Payment Failed,4
+370,BNY Mellon,102380,CitiBank Singapore,CAD,Receive,1052,2020-03-30 ,Rejected,1052,Payment Failed,4
+371,Wells Fargo,102303,CitiBank NewYork,GBP,Receive,6372,2020-03-09 ,Partially Paid,682,Waiting for pending amount,4
+372,BNP Paribas,105084,CitiBank HongKong,EUR,Deliver,3458,2020-03-24 ,Fully paid,0,Transaction complete,4
+373,BNP Paribas,101114,CitiBank NewYork,GBP,Receive,7878,2020-02-22 ,Rejected,7878,Payment Failed,4
+374,Wells Fargo,104013,CitiBank London,CAD,Receive,4149,2020-05-22 ,Processing,4149,Payment is in progress,4
+375,Goldman Sachs,102253,CitiBank Pune,INR,Deliver,5992,2020-04-25 ,Processing,5992,Payment is in progress,4
+376,BNY Mellon,101656,CitiBank London,INR,Receive,6954,2020-02-22 ,Processing,6954,Payment is in progress,4
+377,Morgan Stanley,102884,CitiBank HongKong,INR,Deliver,7015,2020-02-21 ,Fully paid,0,Transaction complete,4
+378,Goldman Sachs,103922,CitiBank HongKong,INR,Deliver,8662,2020-03-14 ,Fully paid,0,Transaction complete,4
+379,Goldman Sachs,101385,CitiBank London,EUR,Deliver,1038,2020-03-25 ,Fully paid,0,Transaction complete,4
+380,HSBC,101778,CitiBank London,GBP,Deliver,7117,2020-04-10 ,Partially Paid,29,Waiting for pending amount,4
+381,Goldman Sachs,103188,CitiBank HongKong,CAD,Receive,5308,2020-02-26 ,Rejected,5308,Payment Failed,4
+382,DEUTSCHE BANK,102265,CitiBank NewYork,INR,Deliver,659,2020-05-29 ,Processing,659,Payment is in progress,4
+383,Wells Fargo,104649,CitiBank NewYork,USD,Receive,7936,2020-04-13 ,Fully paid,0,Transaction complete,4
+384,Morgan Stanley,104348,CitiBank NewYork,GBP,Receive,7304,2020-03-09 ,Processing,7304,Payment is in progress,4
+385,Goldman Sachs,103011,CitiBank Bengaluru,EUR,Deliver,27,2020-03-13 ,Partially Paid,4326,Waiting for pending amount,4
+386,Morgan Stanley,102318,CitiBank Bengaluru,USD,Receive,9911,2020-06-05 ,Fully paid,0,Transaction complete,4
+387,Goldman Sachs,101639,CitiBank London,INR,Receive,1841,2020-03-12 ,Rejected,1841,Payment Failed,4
+388,BNP Paribas,101697,CitiBank Pune,USD,Deliver,184,2020-06-08 ,Processing,184,Payment is in progress,4
+389,J P Morgan,102879,CitiBank Bengaluru,CAD,Receive,8998,2020-05-10 ,Partially Paid,5221,Waiting for pending amount,4
+390,Goldman Sachs,105057,CitiBank Bengaluru,USD,Deliver,4438,2020-03-01 ,Processing,4438,Payment is in progress,4
+391,Goldman Sachs,101544,CitiBank Bengaluru,GBP,Deliver,5997,2020-05-14 ,Fully paid,0,Transaction complete,4
+392,BNY Mellon,104528,CitiBank Singapore,EUR,Deliver,8627,2020-02-19 ,Partially Paid,9365,Waiting for pending amount,4
+393,J P Morgan,105045,CitiBank London,CAD,Deliver,533,2020-05-26 ,Partially Paid,3847,Waiting for pending amount,4
+394,Morgan Stanley,104253,CitiBank Pune,USD,Receive,1353,2020-03-04 ,Partially Paid,7185,Waiting for pending amount,4
+395,J P Morgan,104139,CitiBank Bengaluru,EUR,Receive,8197,2020-03-19 ,Rejected,8197,Payment Failed,4
+396,DEUTSCHE BANK,101265,CitiBank HongKong,GBP,Deliver,6660,2020-04-16 ,Processing,6660,Payment is in progress,4
+397,Goldman Sachs,104155,CitiBank London,EUR,Deliver,1478,2020-04-17 ,Rejected,1478,Payment Failed,4
+398,BNP Paribas,102728,CitiBank Bengaluru,GBP,Deliver,8744,2020-06-04 ,Fully paid,0,Transaction complete,4
+399,BNP Paribas,102586,CitiBank Pune,USD,Receive,8384,2020-04-01 ,Fully paid,0,Transaction complete,4
+400,J P Morgan,103495,CitiBank Pune,USD,Receive,6062,2020-04-22 ,Processing,6062,Payment is in progress,4
+401,DEUTSCHE BANK,102750,CitiBank London,CAD,Receive,907,2020-05-29 ,Rejected,907,Payment Failed,4
+402,BNY Mellon,104126,CitiBank London,CAD,Deliver,3929,2020-04-28 ,Rejected,3929,Payment Failed,4
+403,HSBC,102457,CitiBank Singapore,GBP,Deliver,7055,2020-03-16 ,Fully paid,0,Transaction complete,5
+404,Goldman Sachs,102101,CitiBank London,USD,Receive,1759,2020-04-26 ,Fully paid,0,Transaction complete,5
+405,Goldman Sachs,103996,CitiBank Bengaluru,USD,Receive,5993,2020-03-04 ,Processing,5993,Payment is in progress,5
+406,Wells Fargo,102061,CitiBank Bengaluru,CAD,Deliver,395,2020-04-05 ,Rejected,395,Payment Failed,5
+407,Goldman Sachs,103759,CitiBank Bengaluru,USD,Receive,9136,2020-05-09 ,Partially Paid,2224,Waiting for pending amount,5
+408,DEUTSCHE BANK,101507,CitiBank London,USD,Deliver,549,2020-04-29 ,Partially Paid,6824,Waiting for pending amount,5
+409,Morgan Stanley,103110,CitiBank Bengaluru,CAD,Deliver,904,2020-05-28 ,Fully paid,0,Transaction complete,5
+410,HSBC,102167,CitiBank London,EUR,Receive,5313,2020-06-07 ,Fully paid,0,Transaction complete,5
+411,HSBC,103073,CitiBank Singapore,INR,Deliver,6045,2020-04-08 ,Partially Paid,7559,Waiting for pending amount,5
+412,DEUTSCHE BANK,104753,CitiBank HongKong,USD,Receive,4765,2020-03-21 ,Partially Paid,7996,Waiting for pending amount,5
+413,Goldman Sachs,101555,CitiBank London,EUR,Receive,7453,2020-05-25 ,Processing,7453,Payment is in progress,5
+414,Wells Fargo,103896,CitiBank Pune,GBP,Receive,725,2020-05-17 ,Processing,725,Payment is in progress,5
+415,HSBC,101710,CitiBank HongKong,EUR,Deliver,8133,2020-04-30 ,Fully paid,0,Transaction complete,5
+416,J P Morgan,103231,CitiBank Bengaluru,EUR,Deliver,5946,2020-04-25 ,Partially Paid,58,Waiting for pending amount,5
+417,BNP Paribas,102117,CitiBank NewYork,CAD,Deliver,557,2020-03-21 ,Partially Paid,6739,Waiting for pending amount,5
+418,Morgan Stanley,102308,CitiBank Bengaluru,EUR,Deliver,3963,2020-06-01 ,Rejected,3963,Payment Failed,5
+419,DEUTSCHE BANK,101630,CitiBank London,CAD,Deliver,9732,2020-06-02 ,Processing,9732,Payment is in progress,5
+420,Wells Fargo,102737,CitiBank Bengaluru,EUR,Deliver,3275,2020-04-04 ,Partially Paid,3558,Waiting for pending amount,5
+421,BNY Mellon,102580,CitiBank NewYork,GBP,Receive,7880,2020-04-30 ,Rejected,7880,Payment Failed,5
+422,Wells Fargo,101687,CitiBank NewYork,USD,Receive,1541,2020-04-06 ,Partially Paid,1510,Waiting for pending amount,5
+423,J P Morgan,103026,CitiBank London,CAD,Receive,6992,2020-02-26 ,Rejected,6992,Payment Failed,5
+424,BNY Mellon,102859,CitiBank Singapore,INR,Receive,8568,2020-04-08 ,Processing,8568,Payment is in progress,5
+425,Wells Fargo,104592,CitiBank NewYork,INR,Deliver,6403,2020-06-04 ,Processing,6403,Payment is in progress,5
+426,Wells Fargo,102825,CitiBank HongKong,CAD,Receive,3806,2020-06-08 ,Partially Paid,8478,Waiting for pending amount,5
+427,HSBC,101733,CitiBank Singapore,USD,Receive,1722,2020-05-04 ,Partially Paid,3009,Waiting for pending amount,5
+428,Wells Fargo,103237,CitiBank Bengaluru,CAD,Deliver,8276,2020-04-19 ,Fully paid,0,Transaction complete,5
+429,Goldman Sachs,105076,CitiBank Pune,GBP,Deliver,2793,2020-05-22 ,Processing,2793,Payment is in progress,5
+430,BNP Paribas,104250,CitiBank Bengaluru,GBP,Deliver,7037,2020-05-28 ,Rejected,7037,Payment Failed,5
+431,Morgan Stanley,103124,CitiBank Singapore,USD,Receive,4965,2020-04-10 ,Fully paid,0,Transaction complete,5
+432,J P Morgan,101373,CitiBank Bengaluru,INR,Receive,3398,2020-06-01 ,Processing,3398,Payment is in progress,5
+433,Goldman Sachs,104804,CitiBank Pune,USD,Deliver,2249,2020-05-04 ,Fully paid,0,Transaction complete,5
+434,BNP Paribas,103087,CitiBank NewYork,GBP,Deliver,4740,2020-03-13 ,Processing,4740,Payment is in progress,5
+435,Wells Fargo,102981,CitiBank Singapore,EUR,Deliver,8877,2020-05-25 ,Processing,8877,Payment is in progress,5
+436,BNP Paribas,104123,CitiBank HongKong,CAD,Receive,2201,2020-05-29 ,Rejected,2201,Payment Failed,5
+437,BNP Paribas,103069,CitiBank HongKong,GBP,Receive,7047,2020-04-16 ,Partially Paid,8684,Waiting for pending amount,5
+438,BNY Mellon,102610,CitiBank Pune,INR,Deliver,557,2020-02-25 ,Partially Paid,830,Waiting for pending amount,5
+439,Goldman Sachs,104720,CitiBank London,EUR,Receive,8531,2020-05-25 ,Processing,8531,Payment is in progress,5
+440,BNP Paribas,102997,CitiBank London,USD,Receive,5183,2020-03-31 ,Partially Paid,8603,Waiting for pending amount,5
+441,BNY Mellon,104952,CitiBank HongKong,GBP,Receive,5240,2020-04-24 ,Processing,5240,Payment is in progress,5
+442,Morgan Stanley,104628,CitiBank Bengaluru,GBP,Deliver,281,2020-05-27 ,Partially Paid,6480,Waiting for pending amount,5
+443,Morgan Stanley,104393,CitiBank HongKong,CAD,Receive,2575,2020-05-22 ,Rejected,2575,Payment Failed,5
+444,J P Morgan,101197,CitiBank Pune,INR,Receive,7713,2020-06-01 ,Partially Paid,5843,Waiting for pending amount,5
+445,HSBC,101673,CitiBank Singapore,USD,Receive,2232,2020-03-17 ,Rejected,2232,Payment Failed,5
+446,Goldman Sachs,103248,CitiBank Pune,GBP,Deliver,8204,2020-05-19 ,Rejected,8204,Payment Failed,5
+447,Morgan Stanley,103503,CitiBank Bengaluru,GBP,Deliver,2786,2020-05-21 ,Processing,2786,Payment is in progress,5
+448,Goldman Sachs,101368,CitiBank NewYork,USD,Receive,2491,2020-04-08 ,Rejected,2491,Payment Failed,5
+449,Goldman Sachs,102689,CitiBank HongKong,USD,Deliver,6757,2020-03-05 ,Rejected,6757,Payment Failed,5
+450,BNY Mellon,102002,CitiBank NewYork,GBP,Receive,1373,2020-04-12 ,Rejected,1373,Payment Failed,5
+451,HSBC,102649,CitiBank London,GBP,Receive,7204,2020-05-01 ,Partially Paid,2497,Waiting for pending amount,5
+452,Morgan Stanley,101753,CitiBank NewYork,EUR,Deliver,5190,2020-05-06 ,Processing,5190,Payment is in progress,5
+453,Morgan Stanley,101530,CitiBank Singapore,INR,Receive,8686,2020-05-26 ,Partially Paid,223,Waiting for pending amount,5
+454,Goldman Sachs,102075,CitiBank London,USD,Receive,780,2020-03-24 ,Partially Paid,7169,Waiting for pending amount,5
+455,BNY Mellon,101569,CitiBank HongKong,INR,Deliver,3107,2020-04-23 ,Fully paid,0,Transaction complete,5
+456,Goldman Sachs,102018,CitiBank Pune,CAD,Receive,6629,2020-06-06 ,Processing,6629,Payment is in progress,5
+457,DEUTSCHE BANK,102386,CitiBank HongKong,CAD,Receive,5913,2020-03-05 ,Fully paid,0,Transaction complete,5
+458,HSBC,102316,CitiBank Bengaluru,CAD,Deliver,7379,2020-02-27 ,Partially Paid,1113,Waiting for pending amount,5
+459,Morgan Stanley,102819,CitiBank NewYork,GBP,Deliver,2560,2020-02-24 ,Processing,2560,Payment is in progress,5
+460,Morgan Stanley,101474,CitiBank London,GBP,Receive,3263,2020-04-20 ,Fully paid,0,Transaction complete,5
+461,J P Morgan,102182,CitiBank Bengaluru,INR,Receive,4385,2020-03-04 ,Processing,4385,Payment is in progress,5
+462,J P Morgan,104944,CitiBank London,USD,Deliver,4059,2020-05-05 ,Rejected,4059,Payment Failed,5
+463,Morgan Stanley,101589,CitiBank Pune,CAD,Deliver,1264,2020-02-29 ,Partially Paid,4407,Waiting for pending amount,5
+464,Wells Fargo,102415,CitiBank NewYork,INR,Receive,5544,2020-03-09 ,Partially Paid,6126,Waiting for pending amount,5
+465,Wells Fargo,101968,CitiBank London,INR,Deliver,4350,2020-03-11 ,Processing,4350,Payment is in progress,5
+466,J P Morgan,105012,CitiBank Pune,CAD,Receive,5562,2020-03-04 ,Processing,5562,Payment is in progress,5
+467,HSBC,103184,CitiBank NewYork,USD,Deliver,8071,2020-04-07 ,Processing,8071,Payment is in progress,5
+468,DEUTSCHE BANK,104460,CitiBank Singapore,CAD,Receive,4326,2020-02-20 ,Rejected,4326,Payment Failed,5
+469,Goldman Sachs,102585,CitiBank London,INR,Receive,4245,2020-04-29 ,Partially Paid,718,Waiting for pending amount,5
+470,Morgan Stanley,101424,CitiBank Pune,GBP,Receive,733,2020-04-29 ,Rejected,733,Payment Failed,5
+471,J P Morgan,101769,CitiBank Pune,EUR,Receive,5330,2020-03-22 ,Rejected,5330,Payment Failed,5
+472,HSBC,101080,CitiBank HongKong,INR,Deliver,4119,2020-04-05 ,Rejected,4119,Payment Failed,5
+473,HSBC,103112,CitiBank Bengaluru,GBP,Deliver,3013,2020-03-14 ,Fully paid,0,Transaction complete,5
+474,Goldman Sachs,102012,CitiBank NewYork,GBP,Receive,8582,2020-05-18 ,Partially Paid,5819,Waiting for pending amount,5
+475,Goldman Sachs,102846,CitiBank NewYork,EUR,Deliver,311,2020-05-29 ,Rejected,311,Payment Failed,5
+476,Morgan Stanley,101864,CitiBank London,INR,Deliver,9122,2020-03-09 ,Fully paid,0,Transaction complete,5
+477,BNP Paribas,102402,CitiBank NewYork,CAD,Deliver,6981,2020-04-22 ,Fully paid,0,Transaction complete,5
+478,Morgan Stanley,101517,CitiBank HongKong,CAD,Receive,5354,2020-03-01 ,Fully paid,0,Transaction complete,5
+479,J P Morgan,101761,CitiBank NewYork,INR,Deliver,1228,2020-06-01 ,Processing,1228,Payment is in progress,5
+480,Morgan Stanley,102036,CitiBank Bengaluru,USD,Deliver,8134,2020-06-08 ,Partially Paid,2540,Waiting for pending amount,5
+481,DEUTSCHE BANK,101551,CitiBank Bengaluru,EUR,Deliver,9828,2020-04-17 ,Partially Paid,6669,Waiting for pending amount,5
+482,BNY Mellon,102239,CitiBank Singapore,CAD,Receive,3729,2020-03-03 ,Fully paid,0,Transaction complete,5
+483,Morgan Stanley,104826,CitiBank Pune,GBP,Deliver,9425,2020-02-19 ,Partially Paid,7251,Waiting for pending amount,5
+484,Morgan Stanley,102196,CitiBank NewYork,INR,Deliver,6331,2020-03-25 ,Rejected,6331,Payment Failed,5
+485,Morgan Stanley,103037,CitiBank Pune,CAD,Receive,8422,2020-04-23 ,Processing,8422,Payment is in progress,5
+486,BNY Mellon,104991,CitiBank London,INR,Deliver,8148,2020-04-21 ,Processing,8148,Payment is in progress,5
+487,Goldman Sachs,102436,CitiBank London,CAD,Receive,1361,2020-04-01 ,Partially Paid,1054,Waiting for pending amount,5
+488,BNP Paribas,102102,CitiBank HongKong,EUR,Deliver,2050,2020-04-07 ,Partially Paid,4717,Waiting for pending amount,5
+489,Morgan Stanley,101375,CitiBank London,INR,Deliver,1195,2020-04-18 ,Fully paid,0,Transaction complete,5
+490,Wells Fargo,105081,CitiBank NewYork,USD,Deliver,984,2020-05-29 ,Rejected,984,Payment Failed,5
+491,Morgan Stanley,103221,CitiBank HongKong,CAD,Receive,7145,2020-03-19 ,Partially Paid,7127,Waiting for pending amount,5
+492,Morgan Stanley,102251,CitiBank Bengaluru,GBP,Receive,8385,2020-03-17 ,Processing,8385,Payment is in progress,5
+493,BNY Mellon,104299,CitiBank HongKong,INR,Receive,8715,2020-04-24 ,Rejected,8715,Payment Failed,6
+494,DEUTSCHE BANK,104825,CitiBank London,INR,Receive,9691,2020-03-18 ,Partially Paid,4131,Waiting for pending amount,6
+495,BNY Mellon,104094,CitiBank Bengaluru,GBP,Receive,3849,2020-04-15 ,Processing,3849,Payment is in progress,6
+496,DEUTSCHE BANK,101061,CitiBank Pune,USD,Receive,9584,2020-03-21 ,Fully paid,0,Transaction complete,6
+497,Goldman Sachs,104269,CitiBank Pune,INR,Receive,2031,2020-02-23 ,Processing,2031,Payment is in progress,6
+498,DEUTSCHE BANK,103749,CitiBank London,INR,Deliver,9300,2020-02-29 ,Rejected,9300,Payment Failed,6
+499,Morgan Stanley,102922,CitiBank Bengaluru,EUR,Deliver,1040,2020-04-18 ,Rejected,1040,Payment Failed,6
+500,Morgan Stanley,104996,CitiBank NewYork,INR,Receive,8411,2020-03-29 ,Rejected,8411,Payment Failed,6
+501,Wells Fargo,102353,CitiBank Pune,USD,Deliver,5886,2020-04-14 ,Processing,5886,Payment is in progress,6
+502,J P Morgan,103328,CitiBank Pune,CAD,Receive,6577,2020-03-17 ,Processing,6577,Payment is in progress,6
+503,DEUTSCHE BANK,101690,CitiBank Bengaluru,CAD,Receive,8975,2020-05-26 ,Partially Paid,5735,Waiting for pending amount,6
+504,J P Morgan,102333,CitiBank NewYork,USD,Deliver,342,2020-04-02 ,Rejected,342,Payment Failed,6
+505,DEUTSCHE BANK,101703,CitiBank HongKong,CAD,Receive,4737,2020-04-29 ,Rejected,4737,Payment Failed,6
+506,Goldman Sachs,103224,CitiBank Pune,USD,Deliver,6301,2020-03-13 ,Processing,6301,Payment is in progress,6
+507,BNY Mellon,104984,CitiBank London,INR,Receive,5855,2020-03-12 ,Processing,5855,Payment is in progress,6
+508,Goldman Sachs,102201,CitiBank Singapore,CAD,Deliver,311,2020-03-25 ,Rejected,311,Payment Failed,6
+509,J P Morgan,103941,CitiBank HongKong,INR,Receive,2426,2020-04-18 ,Partially Paid,9960,Waiting for pending amount,6
+510,Wells Fargo,103294,CitiBank London,EUR,Receive,9034,2020-04-16 ,Processing,9034,Payment is in progress,6
+511,Morgan Stanley,101800,CitiBank HongKong,EUR,Receive,8638,2020-04-27 ,Processing,8638,Payment is in progress,6
+512,DEUTSCHE BANK,103153,CitiBank HongKong,USD,Deliver,9834,2020-03-12 ,Processing,9834,Payment is in progress,6
+513,DEUTSCHE BANK,103831,CitiBank Pune,GBP,Receive,8542,2020-05-15 ,Fully paid,0,Transaction complete,6
+514,Morgan Stanley,104353,CitiBank HongKong,EUR,Receive,5633,2020-05-20 ,Processing,5633,Payment is in progress,6
+515,Morgan Stanley,101832,CitiBank Bengaluru,USD,Receive,6953,2020-03-21 ,Partially Paid,4633,Waiting for pending amount,6
+516,J P Morgan,103589,CitiBank NewYork,INR,Receive,4946,2020-04-13 ,Processing,4946,Payment is in progress,6
+517,BNY Mellon,104040,CitiBank Singapore,INR,Receive,1342,2020-05-03 ,Partially Paid,9204,Waiting for pending amount,6
+518,Goldman Sachs,104776,CitiBank Singapore,EUR,Receive,4068,2020-05-02 ,Partially Paid,9465,Waiting for pending amount,6
+519,BNY Mellon,104750,CitiBank Singapore,USD,Deliver,2786,2020-04-10 ,Rejected,2786,Payment Failed,6
+520,BNY Mellon,101721,CitiBank Pune,USD,Deliver,5774,2020-03-29 ,Processing,5774,Payment is in progress,6
+521,Goldman Sachs,103085,CitiBank London,EUR,Receive,818,2020-03-01 ,Fully paid,0,Transaction complete,6
+522,BNP Paribas,101898,CitiBank Bengaluru,CAD,Deliver,5321,2020-04-28 ,Fully paid,0,Transaction complete,6
+523,DEUTSCHE BANK,103530,CitiBank London,GBP,Deliver,3141,2020-04-11 ,Processing,3141,Payment is in progress,6
+524,DEUTSCHE BANK,102988,CitiBank London,EUR,Deliver,4540,2020-03-26 ,Fully paid,0,Transaction complete,6
+525,HSBC,103078,CitiBank Pune,INR,Receive,5999,2020-02-27 ,Rejected,5999,Payment Failed,6
+526,BNY Mellon,103417,CitiBank HongKong,GBP,Deliver,8038,2020-03-11 ,Rejected,8038,Payment Failed,6
+527,J P Morgan,103350,CitiBank HongKong,CAD,Receive,5327,2020-02-22 ,Processing,5327,Payment is in progress,6
+528,Wells Fargo,103360,CitiBank Singapore,INR,Receive,800,2020-03-31 ,Processing,800,Payment is in progress,6
+529,DEUTSCHE BANK,104505,CitiBank NewYork,INR,Receive,9139,2020-05-29 ,Partially Paid,2225,Waiting for pending amount,6
+530,HSBC,103797,CitiBank Pune,USD,Deliver,5105,2020-04-09 ,Rejected,5105,Payment Failed,6
+531,BNY Mellon,103314,CitiBank NewYork,EUR,Deliver,1651,2020-05-26 ,Processing,1651,Payment is in progress,6
+532,BNP Paribas,101653,CitiBank Bengaluru,INR,Receive,730,2020-04-13 ,Fully paid,0,Transaction complete,6
+533,Wells Fargo,103787,CitiBank Pune,EUR,Deliver,8323,2020-03-19 ,Fully paid,0,Transaction complete,6
+534,HSBC,101987,CitiBank Bengaluru,USD,Receive,4654,2020-05-17 ,Rejected,4654,Payment Failed,6
+535,BNY Mellon,102138,CitiBank Pune,GBP,Receive,8578,2020-04-21 ,Processing,8578,Payment is in progress,6
+536,Morgan Stanley,102263,CitiBank Singapore,CAD,Deliver,5047,2020-04-18 ,Fully paid,0,Transaction complete,6
+537,Goldman Sachs,101259,CitiBank NewYork,USD,Receive,8794,2020-04-07 ,Fully paid,0,Transaction complete,6
+538,BNP Paribas,102978,CitiBank HongKong,INR,Deliver,1465,2020-03-19 ,Fully paid,0,Transaction complete,6
+539,BNP Paribas,102143,CitiBank Pune,INR,Receive,8037,2020-05-26 ,Processing,8037,Payment is in progress,6
+540,BNP Paribas,101469,CitiBank HongKong,GBP,Receive,1196,2020-06-01 ,Processing,1196,Payment is in progress,6
+541,BNP Paribas,102866,CitiBank Bengaluru,GBP,Deliver,7532,2020-05-18 ,Partially Paid,2208,Waiting for pending amount,6
+542,J P Morgan,101942,CitiBank Bengaluru,CAD,Deliver,3697,2020-06-06 ,Rejected,3697,Payment Failed,6
+543,J P Morgan,104696,CitiBank Singapore,CAD,Deliver,9988,2020-03-15 ,Fully paid,0,Transaction complete,6
+544,Wells Fargo,104431,CitiBank NewYork,INR,Receive,7996,2020-03-25 ,Partially Paid,2456,Waiting for pending amount,6
+545,BNP Paribas,101889,CitiBank London,EUR,Deliver,9717,2020-05-28 ,Fully paid,0,Transaction complete,6
+546,Morgan Stanley,102405,CitiBank HongKong,USD,Deliver,5209,2020-05-01 ,Processing,5209,Payment is in progress,6
+547,Goldman Sachs,101539,CitiBank HongKong,EUR,Deliver,1522,2020-03-11 ,Fully paid,0,Transaction complete,6
+548,BNP Paribas,103348,CitiBank HongKong,EUR,Deliver,7,2020-03-13 ,Partially Paid,5160,Waiting for pending amount,6
+549,BNP Paribas,101641,CitiBank Bengaluru,CAD,Deliver,6208,2020-03-15 ,Partially Paid,8977,Waiting for pending amount,6
+550,Wells Fargo,103102,CitiBank Bengaluru,USD,Receive,784,2020-05-16 ,Fully paid,0,Transaction complete,6
+551,J P Morgan,101157,CitiBank HongKong,INR,Receive,772,2020-04-16 ,Rejected,772,Payment Failed,6
+552,HSBC,104916,CitiBank Bengaluru,EUR,Receive,6604,2020-02-19 ,Processing,6604,Payment is in progress,6
+553,DEUTSCHE BANK,104401,CitiBank Bengaluru,GBP,Deliver,7025,2020-04-18 ,Processing,7025,Payment is in progress,6
+554,HSBC,103433,CitiBank NewYork,CAD,Receive,970,2020-02-21 ,Processing,970,Payment is in progress,6
+555,Morgan Stanley,102960,CitiBank Bengaluru,INR,Receive,3116,2020-06-02 ,Processing,3116,Payment is in progress,6
+556,Wells Fargo,102473,CitiBank Bengaluru,EUR,Receive,1786,2020-03-22 ,Partially Paid,4601,Waiting for pending amount,6
+557,Morgan Stanley,103240,CitiBank Singapore,GBP,Receive,669,2020-04-30 ,Rejected,669,Payment Failed,6
+558,HSBC,104519,CitiBank NewYork,INR,Receive,6797,2020-03-03 ,Fully paid,0,Transaction complete,6
+559,HSBC,102642,CitiBank Pune,EUR,Receive,3297,2020-03-20 ,Fully paid,0,Transaction complete,6
+560,Goldman Sachs,104606,CitiBank Singapore,GBP,Receive,9177,2020-03-13 ,Partially Paid,6647,Waiting for pending amount,6
+561,BNP Paribas,102136,CitiBank Pune,INR,Deliver,3660,2020-05-16 ,Rejected,3660,Payment Failed,6
+562,HSBC,103065,CitiBank HongKong,USD,Deliver,7406,2020-03-15 ,Partially Paid,6930,Waiting for pending amount,6
+563,HSBC,105080,CitiBank Pune,GBP,Receive,4475,2020-05-18 ,Fully paid,0,Transaction complete,6
+564,Goldman Sachs,101504,CitiBank Bengaluru,EUR,Receive,9563,2020-05-31 ,Rejected,9563,Payment Failed,6
+565,BNP Paribas,101359,CitiBank NewYork,GBP,Deliver,8501,2020-04-24 ,Processing,8501,Payment is in progress,6
+566,BNP Paribas,103271,CitiBank HongKong,CAD,Receive,78,2020-03-03 ,Rejected,78,Payment Failed,6
+567,BNY Mellon,102208,CitiBank Pune,GBP,Receive,3527,2020-03-10 ,Processing,3527,Payment is in progress,6
+568,BNY Mellon,102003,CitiBank NewYork,USD,Deliver,9445,2020-05-14 ,Rejected,9445,Payment Failed,6
+569,HSBC,103131,CitiBank Pune,INR,Receive,382,2020-06-07 ,Rejected,382,Payment Failed,6
+570,Wells Fargo,103316,CitiBank London,EUR,Receive,7545,2020-03-20 ,Rejected,7545,Payment Failed,6
+571,J P Morgan,102401,CitiBank Bengaluru,GBP,Receive,5787,2020-04-17 ,Partially Paid,7250,Waiting for pending amount,6
+572,Morgan Stanley,104813,CitiBank Pune,GBP,Receive,8335,2020-04-07 ,Partially Paid,3099,Waiting for pending amount,6
+573,DEUTSCHE BANK,101967,CitiBank Pune,EUR,Receive,7342,2020-04-22 ,Rejected,7342,Payment Failed,6
+574,Morgan Stanley,105015,CitiBank HongKong,USD,Receive,2621,2020-04-18 ,Partially Paid,737,Waiting for pending amount,6
+575,HSBC,102672,CitiBank London,EUR,Receive,7261,2020-04-15 ,Partially Paid,6437,Waiting for pending amount,6
+576,HSBC,102927,CitiBank London,USD,Deliver,7458,2020-04-09 ,Partially Paid,4374,Waiting for pending amount,6
+577,BNP Paribas,104284,CitiBank Pune,USD,Receive,1598,2020-04-29 ,Processing,1598,Payment is in progress,6
+578,DEUTSCHE BANK,104003,CitiBank NewYork,USD,Deliver,9808,2020-03-04 ,Rejected,9808,Payment Failed,6
+579,HSBC,102250,CitiBank London,GBP,Receive,1839,2020-04-03 ,Rejected,1839,Payment Failed,6
+580,Morgan Stanley,102427,CitiBank London,INR,Deliver,4821,2020-05-11 ,Fully paid,0,Transaction complete,6
+581,Goldman Sachs,104635,CitiBank Pune,GBP,Deliver,9375,2020-05-03 ,Partially Paid,6188,Waiting for pending amount,7
+582,Morgan Stanley,102569,CitiBank HongKong,INR,Deliver,4517,2020-04-08 ,Rejected,4517,Payment Failed,7
+583,BNP Paribas,101794,CitiBank NewYork,USD,Receive,2780,2020-03-16 ,Processing,2780,Payment is in progress,7
+584,BNP Paribas,103098,CitiBank Singapore,EUR,Deliver,4556,2020-03-28 ,Processing,4556,Payment is in progress,7
+585,Goldman Sachs,103303,CitiBank London,GBP,Deliver,7813,2020-05-09 ,Fully paid,0,Transaction complete,7
+586,Goldman Sachs,101134,CitiBank NewYork,EUR,Deliver,3169,2020-04-02 ,Partially Paid,3833,Waiting for pending amount,7
+587,BNP Paribas,105104,CitiBank NewYork,EUR,Deliver,7462,2020-05-21 ,Rejected,7462,Payment Failed,7
+588,HSBC,102198,CitiBank Pune,CAD,Deliver,7622,2020-04-23 ,Rejected,7622,Payment Failed,7
+589,DEUTSCHE BANK,101070,CitiBank London,GBP,Deliver,1704,2020-05-17 ,Fully paid,0,Transaction complete,7
+590,DEUTSCHE BANK,101716,CitiBank Bengaluru,EUR,Receive,7078,2020-02-24 ,Rejected,7078,Payment Failed,7
+591,BNY Mellon,101101,CitiBank Singapore,GBP,Deliver,5900,2020-04-09 ,Fully paid,0,Transaction complete,7
+592,Morgan Stanley,104514,CitiBank Pune,EUR,Deliver,5113,2020-03-18 ,Processing,5113,Payment is in progress,7
+593,Goldman Sachs,101201,CitiBank NewYork,USD,Receive,2189,2020-03-08 ,Rejected,2189,Payment Failed,7
+594,DEUTSCHE BANK,104719,CitiBank Bengaluru,EUR,Deliver,1867,2020-04-24 ,Fully paid,0,Transaction complete,7
+595,HSBC,101289,CitiBank Bengaluru,CAD,Receive,583,2020-03-02 ,Rejected,583,Payment Failed,7
+596,BNP Paribas,103229,CitiBank Singapore,EUR,Receive,9405,2020-04-17 ,Partially Paid,5107,Waiting for pending amount,7
+597,BNP Paribas,102422,CitiBank NewYork,USD,Receive,5170,2020-04-29 ,Rejected,5170,Payment Failed,7
+598,Wells Fargo,101286,CitiBank Bengaluru,USD,Receive,9947,2020-05-23 ,Fully paid,0,Transaction complete,7
+599,DEUTSCHE BANK,103159,CitiBank Bengaluru,EUR,Receive,432,2020-02-28 ,Fully paid,0,Transaction complete,7
+600,J P Morgan,104116,CitiBank HongKong,INR,Receive,3134,2020-03-04 ,Rejected,3134,Payment Failed,7
+601,BNY Mellon,101522,CitiBank HongKong,CAD,Deliver,5133,2020-05-21 ,Rejected,5133,Payment Failed,7
+602,HSBC,101613,CitiBank NewYork,INR,Receive,5585,2020-02-19 ,Partially Paid,779,Waiting for pending amount,7
+603,Goldman Sachs,101230,CitiBank London,INR,Receive,7578,2020-03-02 ,Rejected,7578,Payment Failed,7
+604,Morgan Stanley,103502,CitiBank Singapore,INR,Deliver,9998,2020-05-04 ,Rejected,9998,Payment Failed,7
+605,Goldman Sachs,103479,CitiBank NewYork,GBP,Receive,5325,2020-03-29 ,Partially Paid,3366,Waiting for pending amount,7
+606,BNY Mellon,101994,CitiBank NewYork,USD,Receive,8612,2020-05-01 ,Processing,8612,Payment is in progress,7
+607,Goldman Sachs,101185,CitiBank Pune,USD,Receive,2948,2020-03-13 ,Rejected,2948,Payment Failed,7
+608,Wells Fargo,104518,CitiBank NewYork,GBP,Deliver,2954,2020-03-01 ,Rejected,2954,Payment Failed,7
+609,Goldman Sachs,105079,CitiBank Pune,USD,Deliver,8515,2020-05-13 ,Processing,8515,Payment is in progress,7
+610,HSBC,102660,CitiBank Bengaluru,USD,Deliver,2779,2020-04-30 ,Rejected,2779,Payment Failed,7
+611,Wells Fargo,102395,CitiBank Bengaluru,GBP,Deliver,1327,2020-02-23 ,Rejected,1327,Payment Failed,7
+612,Morgan Stanley,103634,CitiBank Singapore,INR,Receive,2705,2020-05-24 ,Rejected,2705,Payment Failed,7
+613,J P Morgan,103030,CitiBank Pune,EUR,Deliver,8650,2020-03-21 ,Partially Paid,3462,Waiting for pending amount,7
+614,Morgan Stanley,102566,CitiBank London,INR,Receive,9313,2020-04-28 ,Partially Paid,3215,Waiting for pending amount,7
+615,Goldman Sachs,103111,CitiBank HongKong,USD,Receive,6213,2020-02-19 ,Processing,6213,Payment is in progress,7
+616,Goldman Sachs,102894,CitiBank Singapore,CAD,Receive,9398,2020-03-17 ,Processing,9398,Payment is in progress,7
+617,HSBC,101949,CitiBank Bengaluru,INR,Receive,4240,2020-04-29 ,Partially Paid,6404,Waiting for pending amount,7
+618,J P Morgan,103762,CitiBank HongKong,CAD,Deliver,8843,2020-02-28 ,Partially Paid,2574,Waiting for pending amount,7
+619,J P Morgan,104927,CitiBank NewYork,EUR,Deliver,7914,2020-05-25 ,Fully paid,0,Transaction complete,7
+620,BNP Paribas,103540,CitiBank NewYork,EUR,Receive,6958,2020-02-26 ,Partially Paid,9023,Waiting for pending amount,7
+621,Goldman Sachs,103923,CitiBank HongKong,EUR,Deliver,9686,2020-05-04 ,Processing,9686,Payment is in progress,7
+622,BNP Paribas,101923,CitiBank Bengaluru,INR,Deliver,4570,2020-02-22 ,Partially Paid,3272,Waiting for pending amount,7
+623,HSBC,101155,CitiBank London,USD,Receive,1001,2020-03-04 ,Rejected,1001,Payment Failed,7
+624,HSBC,102388,CitiBank NewYork,USD,Deliver,3429,2020-05-28 ,Partially Paid,3909,Waiting for pending amount,7
+625,BNP Paribas,102332,CitiBank Pune,INR,Receive,3719,2020-06-06 ,Partially Paid,1548,Waiting for pending amount,7
+626,DEUTSCHE BANK,104300,CitiBank Singapore,GBP,Receive,9396,2020-03-26 ,Partially Paid,7573,Waiting for pending amount,7
+627,DEUTSCHE BANK,103006,CitiBank NewYork,EUR,Receive,3441,2020-04-07 ,Processing,3441,Payment is in progress,7
+628,Wells Fargo,103975,CitiBank Pune,INR,Receive,6310,2020-06-08 ,Fully paid,0,Transaction complete,7
+629,J P Morgan,102857,CitiBank Singapore,INR,Receive,4590,2020-02-27 ,Partially Paid,2797,Waiting for pending amount,7
+630,BNP Paribas,101266,CitiBank London,INR,Deliver,9276,2020-03-02 ,Fully paid,0,Transaction complete,7
+631,DEUTSCHE BANK,103720,CitiBank HongKong,CAD,Receive,215,2020-04-29 ,Processing,215,Payment is in progress,7
+632,DEUTSCHE BANK,104546,CitiBank Singapore,USD,Receive,5481,2020-04-07 ,Processing,5481,Payment is in progress,7
+633,Goldman Sachs,104287,CitiBank HongKong,INR,Deliver,7383,2020-05-28 ,Rejected,7383,Payment Failed,7
+634,HSBC,102352,CitiBank London,GBP,Deliver,6570,2020-05-25 ,Rejected,6570,Payment Failed,7
+635,Goldman Sachs,101340,CitiBank London,INR,Receive,638,2020-03-30 ,Fully paid,0,Transaction complete,7
+636,J P Morgan,104930,CitiBank NewYork,CAD,Deliver,1130,2020-04-24 ,Processing,1130,Payment is in progress,7
+637,Wells Fargo,104074,CitiBank Singapore,USD,Deliver,67,2020-03-16 ,Partially Paid,4855,Waiting for pending amount,7
+638,Goldman Sachs,101453,CitiBank Singapore,CAD,Deliver,1758,2020-04-18 ,Rejected,1758,Payment Failed,7
+639,DEUTSCHE BANK,104362,CitiBank Singapore,CAD,Deliver,2451,2020-05-19 ,Partially Paid,6692,Waiting for pending amount,7
+640,BNP Paribas,103034,CitiBank London,GBP,Deliver,561,2020-04-03 ,Processing,561,Payment is in progress,7
+641,Wells Fargo,102593,CitiBank HongKong,USD,Deliver,591,2020-04-13 ,Fully paid,0,Transaction complete,7
+642,BNP Paribas,103872,CitiBank Singapore,GBP,Receive,2326,2020-06-04 ,Processing,2326,Payment is in progress,7
+643,J P Morgan,102523,CitiBank NewYork,EUR,Receive,2494,2020-03-06 ,Rejected,2494,Payment Failed,7
+644,HSBC,101383,CitiBank Bengaluru,INR,Deliver,5096,2020-04-17 ,Processing,5096,Payment is in progress,7
+645,J P Morgan,101615,CitiBank Singapore,EUR,Receive,6167,2020-05-08 ,Fully paid,0,Transaction complete,7
+646,HSBC,102079,CitiBank HongKong,USD,Deliver,7591,2020-05-08 ,Partially Paid,2703,Waiting for pending amount,7
+647,HSBC,102514,CitiBank Singapore,INR,Deliver,5924,2020-04-08 ,Fully paid,0,Transaction complete,7
+648,HSBC,101059,CitiBank Bengaluru,INR,Deliver,2484,2020-05-24 ,Processing,2484,Payment is in progress,7
+649,Wells Fargo,103704,CitiBank HongKong,GBP,Receive,4374,2020-05-12 ,Partially Paid,5587,Waiting for pending amount,7
+650,BNY Mellon,101605,CitiBank Bengaluru,EUR,Deliver,5762,2020-05-31 ,Processing,5762,Payment is in progress,7
+651,Wells Fargo,102962,CitiBank London,USD,Receive,687,2020-04-23 ,Rejected,687,Payment Failed,7
+652,J P Morgan,104620,CitiBank Pune,EUR,Deliver,5555,2020-04-26 ,Processing,5555,Payment is in progress,7
+653,Morgan Stanley,103506,CitiBank Bengaluru,CAD,Receive,92,2020-05-10 ,Rejected,92,Payment Failed,7
+654,HSBC,101706,CitiBank London,EUR,Deliver,5863,2020-04-27 ,Processing,5863,Payment is in progress,7
+655,DEUTSCHE BANK,104248,CitiBank NewYork,USD,Deliver,1758,2020-04-03 ,Fully paid,0,Transaction complete,7
+656,DEUTSCHE BANK,103899,CitiBank Pune,USD,Receive,5066,2020-04-21 ,Processing,5066,Payment is in progress,7
+657,DEUTSCHE BANK,102776,CitiBank Pune,INR,Deliver,589,2020-03-05 ,Rejected,589,Payment Failed,7
+658,J P Morgan,101296,CitiBank HongKong,USD,Deliver,3093,2020-03-16 ,Fully paid,0,Transaction complete,7
+659,Wells Fargo,101124,CitiBank London,INR,Receive,277,2020-03-08 ,Fully paid,0,Transaction complete,7
+660,J P Morgan,101363,CitiBank Singapore,EUR,Receive,1238,2020-03-16 ,Processing,1238,Payment is in progress,7
+661,HSBC,101724,CitiBank London,GBP,Deliver,4751,2020-06-02 ,Fully paid,0,Transaction complete,7
+662,DEUTSCHE BANK,104347,CitiBank Bengaluru,CAD,Deliver,2874,2020-05-13 ,Processing,2874,Payment is in progress,7
+663,BNP Paribas,103614,CitiBank Singapore,GBP,Deliver,9535,2020-03-17 ,Processing,9535,Payment is in progress,7
+664,BNP Paribas,104109,CitiBank HongKong,INR,Deliver,2560,2020-05-26 ,Processing,2560,Payment is in progress,7
+665,BNP Paribas,102966,CitiBank NewYork,GBP,Deliver,1933,2020-02-23 ,Partially Paid,6644,Waiting for pending amount,7
+666,BNY Mellon,104533,CitiBank NewYork,INR,Receive,6169,2020-02-21 ,Partially Paid,6530,Waiting for pending amount,8
+667,BNP Paribas,103414,CitiBank Bengaluru,EUR,Deliver,4206,2020-04-20 ,Processing,4206,Payment is in progress,8
+668,Goldman Sachs,101730,CitiBank Pune,INR,Receive,6268,2020-04-15 ,Partially Paid,7686,Waiting for pending amount,8
+669,BNP Paribas,104789,CitiBank NewYork,USD,Receive,253,2020-03-16 ,Rejected,253,Payment Failed,8
+670,Goldman Sachs,104622,CitiBank NewYork,USD,Deliver,6974,2020-06-08 ,Processing,6974,Payment is in progress,8
+671,Wells Fargo,101848,CitiBank Singapore,CAD,Receive,748,2020-04-12 ,Partially Paid,6526,Waiting for pending amount,8
+672,HSBC,102755,CitiBank Singapore,CAD,Deliver,3726,2020-04-08 ,Fully paid,0,Transaction complete,8
+673,DEUTSCHE BANK,102444,CitiBank Pune,INR,Deliver,8655,2020-03-05 ,Processing,8655,Payment is in progress,8
+674,BNY Mellon,103756,CitiBank NewYork,INR,Deliver,3637,2020-05-10 ,Fully paid,0,Transaction complete,8
+675,Morgan Stanley,104476,CitiBank London,GBP,Receive,1655,2020-02-26 ,Processing,1655,Payment is in progress,8
+676,HSBC,104743,CitiBank HongKong,EUR,Receive,9250,2020-03-08 ,Processing,9250,Payment is in progress,8
+677,Morgan Stanley,101681,CitiBank Bengaluru,GBP,Deliver,2128,2020-05-23 ,Rejected,2128,Payment Failed,8
+678,J P Morgan,104582,CitiBank London,USD,Receive,591,2020-05-06 ,Rejected,591,Payment Failed,8
+679,BNY Mellon,103335,CitiBank Singapore,USD,Receive,5802,2020-03-25 ,Fully paid,0,Transaction complete,8
+680,Wells Fargo,102393,CitiBank London,USD,Deliver,3682,2020-04-30 ,Rejected,3682,Payment Failed,8
+681,BNP Paribas,101167,CitiBank NewYork,GBP,Deliver,7697,2020-05-31 ,Processing,7697,Payment is in progress,8
+682,HSBC,102671,CitiBank HongKong,GBP,Receive,6886,2020-04-22 ,Rejected,6886,Payment Failed,8
+683,Wells Fargo,104950,CitiBank HongKong,INR,Receive,7998,2020-03-28 ,Partially Paid,5946,Waiting for pending amount,8
+684,BNY Mellon,102868,CitiBank NewYork,CAD,Deliver,3917,2020-02-24 ,Rejected,3917,Payment Failed,8
+685,Goldman Sachs,105073,CitiBank Bengaluru,GBP,Receive,6242,2020-02-22 ,Partially Paid,8675,Waiting for pending amount,8
+686,BNY Mellon,101366,CitiBank London,GBP,Receive,1327,2020-03-16 ,Fully paid,0,Transaction complete,8
+687,DEUTSCHE BANK,102146,CitiBank NewYork,CAD,Deliver,344,2020-03-18 ,Partially Paid,533,Waiting for pending amount,8
+688,HSBC,102855,CitiBank Bengaluru,CAD,Receive,5187,2020-04-30 ,Rejected,5187,Payment Failed,8
+689,DEUTSCHE BANK,102193,CitiBank Pune,CAD,Deliver,4785,2020-06-08 ,Fully paid,0,Transaction complete,8
+690,Wells Fargo,102661,CitiBank Pune,USD,Receive,123,2020-05-14 ,Rejected,123,Payment Failed,8
+691,BNP Paribas,103307,CitiBank London,CAD,Deliver,3792,2020-05-12 ,Partially Paid,523,Waiting for pending amount,8
+692,Wells Fargo,105128,CitiBank London,INR,Receive,5179,2020-05-17 ,Fully paid,0,Transaction complete,8
+693,BNY Mellon,102497,CitiBank NewYork,GBP,Deliver,7367,2020-04-15 ,Processing,7367,Payment is in progress,8
+694,Morgan Stanley,104199,CitiBank HongKong,CAD,Receive,7825,2020-03-21 ,Fully paid,0,Transaction complete,8
+695,Goldman Sachs,103908,CitiBank Pune,USD,Receive,9926,2020-02-27 ,Rejected,9926,Payment Failed,8
+696,DEUTSCHE BANK,102885,CitiBank Pune,GBP,Deliver,2229,2020-03-20 ,Processing,2229,Payment is in progress,8
+697,Morgan Stanley,104385,CitiBank Bengaluru,CAD,Receive,276,2020-05-31 ,Rejected,276,Payment Failed,8
+698,DEUTSCHE BANK,102134,CitiBank London,EUR,Deliver,2271,2020-04-10 ,Partially Paid,8065,Waiting for pending amount,8
+699,DEUTSCHE BANK,101120,CitiBank Singapore,CAD,Deliver,6914,2020-05-14 ,Fully paid,0,Transaction complete,8
+700,Morgan Stanley,104780,CitiBank Bengaluru,USD,Receive,3140,2020-05-12 ,Partially Paid,4058,Waiting for pending amount,8
+701,J P Morgan,102345,CitiBank Pune,GBP,Deliver,3946,2020-06-04 ,Processing,3946,Payment is in progress,8
+702,J P Morgan,104710,CitiBank Singapore,USD,Deliver,4281,2020-06-03 ,Rejected,4281,Payment Failed,8
+703,DEUTSCHE BANK,104724,CitiBank London,USD,Receive,1505,2020-02-25 ,Processing,1505,Payment is in progress,8
+704,BNY Mellon,103260,CitiBank Singapore,EUR,Receive,5324,2020-04-15 ,Fully paid,0,Transaction complete,8
+705,BNY Mellon,103891,CitiBank London,USD,Deliver,5171,2020-05-01 ,Rejected,5171,Payment Failed,8
+706,J P Morgan,101342,CitiBank Singapore,CAD,Receive,1781,2020-05-02 ,Partially Paid,177,Waiting for pending amount,8
+707,HSBC,101546,CitiBank London,CAD,Receive,4097,2020-03-12 ,Fully paid,0,Transaction complete,8
+708,Morgan Stanley,101707,CitiBank NewYork,USD,Receive,1543,2020-04-09 ,Partially Paid,2361,Waiting for pending amount,8
+709,Wells Fargo,104157,CitiBank Pune,CAD,Receive,8153,2020-03-05 ,Fully paid,0,Transaction complete,8
+710,Goldman Sachs,101492,CitiBank London,USD,Receive,2810,2020-05-18 ,Rejected,2810,Payment Failed,8
+711,Morgan Stanley,101387,CitiBank NewYork,USD,Deliver,7801,2020-03-15 ,Fully paid,0,Transaction complete,8
+712,DEUTSCHE BANK,103104,CitiBank Pune,USD,Receive,4456,2020-04-28 ,Fully paid,0,Transaction complete,8
+713,HSBC,104553,CitiBank HongKong,CAD,Deliver,6742,2020-02-23 ,Fully paid,0,Transaction complete,8
+714,Wells Fargo,101285,CitiBank Pune,CAD,Receive,2355,2020-05-25 ,Partially Paid,177,Waiting for pending amount,8
+715,HSBC,102645,CitiBank HongKong,CAD,Deliver,7934,2020-02-29 ,Fully paid,0,Transaction complete,8
+716,HSBC,102350,CitiBank London,USD,Receive,3685,2020-04-19 ,Fully paid,0,Transaction complete,8
+717,DEUTSCHE BANK,101899,CitiBank Bengaluru,INR,Receive,9656,2020-04-30 ,Fully paid,0,Transaction complete,8
+718,BNP Paribas,104175,CitiBank Singapore,INR,Receive,1723,2020-03-31 ,Processing,1723,Payment is in progress,8
+719,DEUTSCHE BANK,104599,CitiBank HongKong,USD,Receive,308,2020-04-29 ,Fully paid,0,Transaction complete,8
+720,HSBC,101802,CitiBank Bengaluru,CAD,Deliver,9053,2020-05-29 ,Processing,9053,Payment is in progress,8
+721,BNY Mellon,102443,CitiBank NewYork,GBP,Receive,327,2020-06-07 ,Fully paid,0,Transaction complete,8
+722,Wells Fargo,101823,CitiBank Bengaluru,GBP,Deliver,172,2020-02-28 ,Rejected,172,Payment Failed,8
+723,DEUTSCHE BANK,102913,CitiBank HongKong,INR,Deliver,5405,2020-04-30 ,Rejected,5405,Payment Failed,8
+724,DEUTSCHE BANK,104178,CitiBank London,CAD,Receive,6450,2020-05-30 ,Fully paid,0,Transaction complete,8
+725,Goldman Sachs,104180,CitiBank HongKong,CAD,Deliver,6190,2020-03-05 ,Fully paid,0,Transaction complete,8
+726,HSBC,105070,CitiBank Pune,EUR,Deliver,8689,2020-03-10 ,Partially Paid,7193,Waiting for pending amount,8
+727,BNY Mellon,102541,CitiBank London,USD,Receive,3568,2020-03-12 ,Partially Paid,3243,Waiting for pending amount,8
+728,HSBC,102693,CitiBank HongKong,EUR,Receive,2927,2020-02-29 ,Fully paid,0,Transaction complete,8
+729,Goldman Sachs,104375,CitiBank Pune,GBP,Deliver,2389,2020-04-28 ,Processing,2389,Payment is in progress,8
+730,HSBC,104828,CitiBank Pune,USD,Deliver,8258,2020-04-15 ,Rejected,8258,Payment Failed,8
+731,BNY Mellon,103744,CitiBank NewYork,EUR,Deliver,9558,2020-04-01 ,Rejected,9558,Payment Failed,8
+732,BNP Paribas,102180,CitiBank Singapore,EUR,Receive,3918,2020-03-01 ,Processing,3918,Payment is in progress,8
+733,DEUTSCHE BANK,101552,CitiBank HongKong,INR,Deliver,1058,2020-02-21 ,Partially Paid,4188,Waiting for pending amount,8
+734,BNP Paribas,102314,CitiBank NewYork,EUR,Deliver,6971,2020-04-14 ,Processing,6971,Payment is in progress,8
+735,HSBC,102796,CitiBank Singapore,CAD,Deliver,9953,2020-03-25 ,Rejected,9953,Payment Failed,8
+736,HSBC,105096,CitiBank London,CAD,Receive,8643,2020-04-09 ,Fully paid,0,Transaction complete,8
+737,Wells Fargo,102397,CitiBank Pune,USD,Deliver,4718,2020-03-28 ,Rejected,4718,Payment Failed,8
+738,BNY Mellon,101062,CitiBank Pune,USD,Receive,5823,2020-04-10 ,Partially Paid,1746,Waiting for pending amount,8
+739,Goldman Sachs,103897,CitiBank London,USD,Deliver,2377,2020-04-07 ,Fully paid,0,Transaction complete,8
+740,Wells Fargo,102310,CitiBank London,INR,Deliver,3312,2020-05-22 ,Fully paid,0,Transaction complete,8
+741,Morgan Stanley,104325,CitiBank London,CAD,Receive,2030,2020-05-16 ,Rejected,2030,Payment Failed,8
+742,HSBC,104584,CitiBank NewYork,EUR,Receive,1079,2020-05-20 ,Fully paid,0,Transaction complete,8
+743,DEUTSCHE BANK,103203,CitiBank Bengaluru,EUR,Receive,3295,2020-06-06 ,Rejected,3295,Payment Failed,8
+744,Wells Fargo,101260,CitiBank Pune,USD,Deliver,3888,2020-03-07 ,Partially Paid,7151,Waiting for pending amount,8
+745,Goldman Sachs,102582,CitiBank London,INR,Receive,400,2020-02-25 ,Processing,400,Payment is in progress,8
+746,HSBC,102489,CitiBank HongKong,CAD,Deliver,3808,2020-04-05 ,Fully paid,0,Transaction complete,8
+747,DEUTSCHE BANK,101273,CitiBank NewYork,CAD,Deliver,607,2020-03-26 ,Partially Paid,1726,Waiting for pending amount,8
+748,HSBC,101471,CitiBank Bengaluru,GBP,Receive,3954,2020-04-14 ,Rejected,3954,Payment Failed,8
+749,Morgan Stanley,103629,CitiBank HongKong,USD,Deliver,3435,2020-04-18 ,Processing,3435,Payment is in progress,8
+750,J P Morgan,104736,CitiBank Singapore,GBP,Deliver,6579,2020-04-04 ,Processing,6579,Payment is in progress,8
+751,DEUTSCHE BANK,103089,CitiBank Pune,INR,Receive,7390,2020-03-23 ,Processing,7390,Payment is in progress,8
+752,Goldman Sachs,102534,CitiBank Singapore,USD,Deliver,741,2020-06-08 ,Processing,741,Payment is in progress,9
+753,BNP Paribas,102483,CitiBank Singapore,CAD,Receive,3224,2020-05-20 ,Processing,3224,Payment is in progress,9
+754,J P Morgan,102383,CitiBank Pune,EUR,Deliver,1359,2020-05-10 ,Rejected,1359,Payment Failed,9
+755,Wells Fargo,105017,CitiBank Singapore,EUR,Receive,5635,2020-05-02 ,Partially Paid,7289,Waiting for pending amount,9
+756,Goldman Sachs,102403,CitiBank HongKong,CAD,Receive,1923,2020-03-24 ,Fully paid,0,Transaction complete,9
+757,DEUTSCHE BANK,101159,CitiBank Singapore,INR,Deliver,2975,2020-04-21 ,Processing,2975,Payment is in progress,9
+758,BNP Paribas,103785,CitiBank Singapore,USD,Receive,9874,2020-05-28 ,Fully paid,0,Transaction complete,9
+759,Morgan Stanley,101445,CitiBank Bengaluru,USD,Deliver,214,2020-04-28 ,Rejected,214,Payment Failed,9
+760,DEUTSCHE BANK,102098,CitiBank Singapore,CAD,Deliver,6183,2020-04-23 ,Partially Paid,2317,Waiting for pending amount,9
+761,Goldman Sachs,102763,CitiBank London,INR,Deliver,8593,2020-03-01 ,Rejected,8593,Payment Failed,9
+762,BNY Mellon,101446,CitiBank NewYork,GBP,Receive,3433,2020-05-31 ,Fully paid,0,Transaction complete,9
+763,BNY Mellon,102169,CitiBank Singapore,INR,Deliver,2387,2020-02-21 ,Rejected,2387,Payment Failed,9
+764,BNP Paribas,102280,CitiBank Singapore,GBP,Deliver,4536,2020-05-26 ,Fully paid,0,Transaction complete,9
+765,DEUTSCHE BANK,101434,CitiBank HongKong,INR,Receive,9434,2020-04-24 ,Rejected,9434,Payment Failed,9
+766,HSBC,103397,CitiBank London,CAD,Deliver,4140,2020-05-04 ,Processing,4140,Payment is in progress,9
+767,BNP Paribas,102107,CitiBank Pune,INR,Deliver,1537,2020-04-19 ,Rejected,1537,Payment Failed,9
+768,Goldman Sachs,104885,CitiBank HongKong,GBP,Deliver,7015,2020-03-23 ,Rejected,7015,Payment Failed,9
+769,BNP Paribas,103190,CitiBank Bengaluru,CAD,Receive,6625,2020-05-26 ,Fully paid,0,Transaction complete,9
+770,Morgan Stanley,102099,CitiBank Bengaluru,GBP,Deliver,8828,2020-04-20 ,Fully paid,0,Transaction complete,9
+771,DEUTSCHE BANK,101997,CitiBank Pune,GBP,Deliver,9186,2020-03-27 ,Processing,9186,Payment is in progress,9
+772,HSBC,101538,CitiBank Pune,INR,Receive,2821,2020-05-11 ,Rejected,2821,Payment Failed,9
+773,Morgan Stanley,103612,CitiBank HongKong,CAD,Deliver,1168,2020-03-31 ,Processing,1168,Payment is in progress,9
+774,BNP Paribas,104297,CitiBank Pune,USD,Deliver,1811,2020-04-16 ,Rejected,1811,Payment Failed,9
+775,BNP Paribas,103854,CitiBank HongKong,GBP,Receive,8558,2020-05-03 ,Fully paid,0,Transaction complete,9
+776,BNP Paribas,101466,CitiBank Bengaluru,EUR,Receive,7039,2020-04-16 ,Processing,7039,Payment is in progress,9
+777,J P Morgan,103389,CitiBank London,GBP,Deliver,3448,2020-04-07 ,Processing,3448,Payment is in progress,9
+778,Morgan Stanley,103268,CitiBank Bengaluru,INR,Deliver,2677,2020-05-13 ,Processing,2677,Payment is in progress,9
+779,HSBC,103579,CitiBank Pune,USD,Deliver,2007,2020-03-08 ,Processing,2007,Payment is in progress,9
+780,Wells Fargo,103148,CitiBank NewYork,GBP,Deliver,1727,2020-03-13 ,Processing,1727,Payment is in progress,9
+781,Morgan Stanley,101501,CitiBank London,CAD,Deliver,3595,2020-04-30 ,Rejected,3595,Payment Failed,9
+782,Wells Fargo,102531,CitiBank HongKong,USD,Deliver,1774,2020-05-10 ,Partially Paid,5551,Waiting for pending amount,9
+783,Morgan Stanley,104152,CitiBank Bengaluru,USD,Receive,5120,2020-04-12 ,Fully paid,0,Transaction complete,9
+784,BNP Paribas,103736,CitiBank NewYork,INR,Deliver,8496,2020-06-01 ,Partially Paid,1751,Waiting for pending amount,9
+785,Goldman Sachs,102110,CitiBank Singapore,USD,Receive,6559,2020-02-21 ,Partially Paid,4853,Waiting for pending amount,9
+786,BNY Mellon,104392,CitiBank HongKong,EUR,Receive,8497,2020-04-12 ,Partially Paid,1187,Waiting for pending amount,9
+787,Goldman Sachs,101805,CitiBank London,GBP,Receive,8504,2020-06-06 ,Rejected,8504,Payment Failed,9
+788,J P Morgan,104492,CitiBank NewYork,USD,Deliver,3972,2020-04-04 ,Processing,3972,Payment is in progress,9
+789,BNY Mellon,101401,CitiBank Singapore,GBP,Deliver,9296,2020-02-26 ,Fully paid,0,Transaction complete,9
+790,BNY Mellon,101927,CitiBank NewYork,EUR,Receive,3821,2020-02-29 ,Fully paid,0,Transaction complete,9
+791,DEUTSCHE BANK,103842,CitiBank Pune,EUR,Deliver,9023,2020-05-30 ,Partially Paid,5657,Waiting for pending amount,9
+792,BNP Paribas,101177,CitiBank Singapore,EUR,Deliver,3955,2020-04-08 ,Processing,3955,Payment is in progress,9
+793,DEUTSCHE BANK,103191,CitiBank HongKong,CAD,Receive,7946,2020-03-26 ,Processing,7946,Payment is in progress,9
+794,J P Morgan,103568,CitiBank HongKong,EUR,Receive,268,2020-04-22 ,Rejected,268,Payment Failed,9
+795,BNP Paribas,103601,CitiBank Singapore,EUR,Deliver,6302,2020-02-19 ,Processing,6302,Payment is in progress,9
+796,BNY Mellon,102620,CitiBank Bengaluru,CAD,Deliver,421,2020-03-03 ,Partially Paid,1546,Waiting for pending amount,9
+797,J P Morgan,103151,CitiBank London,EUR,Receive,7299,2020-04-08 ,Processing,7299,Payment is in progress,9
+798,Morgan Stanley,104803,CitiBank Bengaluru,EUR,Receive,3558,2020-03-01 ,Rejected,3558,Payment Failed,9
+799,BNY Mellon,103218,CitiBank Bengaluru,USD,Receive,5187,2020-04-29 ,Rejected,5187,Payment Failed,9
+800,HSBC,102976,CitiBank Bengaluru,INR,Receive,5630,2020-05-09 ,Fully paid,0,Transaction complete,9
+801,HSBC,104904,CitiBank Pune,CAD,Receive,333,2020-03-15 ,Fully paid,0,Transaction complete,9
+802,DEUTSCHE BANK,101144,CitiBank NewYork,INR,Deliver,7948,2020-05-08 ,Processing,7948,Payment is in progress,9
+803,DEUTSCHE BANK,103273,CitiBank NewYork,INR,Deliver,5149,2020-03-14 ,Processing,5149,Payment is in progress,9
+804,Wells Fargo,104681,CitiBank Bengaluru,USD,Deliver,1746,2020-05-05 ,Fully paid,0,Transaction complete,9
+805,Goldman Sachs,104738,CitiBank Bengaluru,INR,Deliver,3656,2020-04-24 ,Rejected,3656,Payment Failed,9
+806,Morgan Stanley,104369,CitiBank Bengaluru,USD,Deliver,9748,2020-04-03 ,Processing,9748,Payment is in progress,9
+807,Goldman Sachs,103653,CitiBank HongKong,CAD,Deliver,374,2020-05-26 ,Partially Paid,6705,Waiting for pending amount,9
+808,Morgan Stanley,103635,CitiBank NewYork,INR,Deliver,7278,2020-06-05 ,Processing,7278,Payment is in progress,9
+809,Morgan Stanley,103811,CitiBank Pune,GBP,Receive,1442,2020-05-27 ,Partially Paid,3815,Waiting for pending amount,9
+810,Morgan Stanley,103930,CitiBank HongKong,GBP,Deliver,6589,2020-04-17 ,Partially Paid,5728,Waiting for pending amount,9
+811,BNY Mellon,104586,CitiBank London,INR,Deliver,4216,2020-03-05 ,Fully paid,0,Transaction complete,9
+812,BNY Mellon,101091,CitiBank Singapore,USD,Receive,3435,2020-05-06 ,Rejected,3435,Payment Failed,9
+813,DEUTSCHE BANK,102433,CitiBank Singapore,EUR,Receive,5257,2020-03-03 ,Rejected,5257,Payment Failed,9
+814,DEUTSCHE BANK,102084,CitiBank Singapore,USD,Receive,1140,2020-05-08 ,Fully paid,0,Transaction complete,9
+815,BNP Paribas,104268,CitiBank Pune,EUR,Receive,7998,2020-04-25 ,Partially Paid,7615,Waiting for pending amount,9
+816,BNP Paribas,101477,CitiBank Pune,GBP,Receive,3101,2020-03-11 ,Fully paid,0,Transaction complete,9
+817,Morgan Stanley,103482,CitiBank Bengaluru,EUR,Receive,1817,2020-04-26 ,Partially Paid,9382,Waiting for pending amount,9
+818,DEUTSCHE BANK,101479,CitiBank NewYork,CAD,Deliver,4533,2020-04-08 ,Fully paid,0,Transaction complete,9
+819,Morgan Stanley,104777,CitiBank London,GBP,Deliver,1465,2020-05-03 ,Partially Paid,8295,Waiting for pending amount,9
+820,Goldman Sachs,101509,CitiBank Pune,EUR,Receive,7978,2020-05-30 ,Partially Paid,6720,Waiting for pending amount,9
+821,Morgan Stanley,101257,CitiBank Pune,CAD,Receive,8030,2020-05-09 ,Partially Paid,5775,Waiting for pending amount,9
+822,Goldman Sachs,103587,CitiBank HongKong,CAD,Receive,1670,2020-04-05 ,Fully paid,0,Transaction complete,9
+823,HSBC,101411,CitiBank Singapore,USD,Deliver,7544,2020-04-26 ,Fully paid,0,Transaction complete,9
+824,DEUTSCHE BANK,104847,CitiBank HongKong,EUR,Deliver,150,2020-03-24 ,Partially Paid,7999,Waiting for pending amount,9
+825,HSBC,104842,CitiBank Singapore,USD,Deliver,9319,2020-03-08 ,Partially Paid,9204,Waiting for pending amount,9
+826,HSBC,102969,CitiBank NewYork,USD,Receive,1436,2020-06-01 ,Partially Paid,7064,Waiting for pending amount,9
+827,Morgan Stanley,102762,CitiBank HongKong,INR,Receive,1133,2020-03-13 ,Processing,1133,Payment is in progress,9
+828,BNP Paribas,104698,CitiBank Bengaluru,INR,Receive,7857,2020-06-08 ,Processing,7857,Payment is in progress,9
+829,Morgan Stanley,102046,CitiBank Pune,INR,Deliver,187,2020-04-21 ,Fully paid,0,Transaction complete,9
+830,Goldman Sachs,102563,CitiBank HongKong,CAD,Receive,7490,2020-04-16 ,Processing,7490,Payment is in progress,9
+831,HSBC,102430,CitiBank Singapore,GBP,Receive,1074,2020-03-16 ,Processing,1074,Payment is in progress,9
+832,Goldman Sachs,101801,CitiBank Bengaluru,INR,Deliver,2972,2020-03-07 ,Fully paid,0,Transaction complete,9
+833,Goldman Sachs,101042,CitiBank Singapore,GBP,Deliver,5926,2020-04-16 ,Processing,5926,Payment is in progress,9
+834,J P Morgan,101011,CitiBank Pune,CAD,Receive,8882,2020-04-18 ,Rejected,8882,Payment Failed,9
+835,Morgan Stanley,104539,CitiBank London,GBP,Receive,4691,2020-04-09 ,Partially Paid,8019,Waiting for pending amount,9
+836,BNY Mellon,104576,CitiBank Singapore,USD,Receive,8112,2020-04-29 ,Processing,8112,Payment is in progress,9
+837,BNY Mellon,102055,CitiBank NewYork,CAD,Deliver,7913,2020-03-01 ,Processing,7913,Payment is in progress,9
+838,Wells Fargo,104565,CitiBank NewYork,EUR,Receive,6579,2020-06-01 ,Partially Paid,991,Waiting for pending amount,10
+839,Wells Fargo,101929,CitiBank NewYork,USD,Deliver,9337,2020-06-02 ,Fully paid,0,Transaction complete,10
+840,Wells Fargo,101423,CitiBank Bengaluru,CAD,Receive,4495,2020-05-03 ,Partially Paid,4319,Waiting for pending amount,10
+841,Wells Fargo,101847,CitiBank NewYork,EUR,Receive,2061,2020-06-07 ,Fully paid,0,Transaction complete,10
+842,Morgan Stanley,102331,CitiBank HongKong,GBP,Receive,4427,2020-03-18 ,Partially Paid,1622,Waiting for pending amount,10
+843,Morgan Stanley,103448,CitiBank Singapore,INR,Deliver,8835,2020-05-29 ,Processing,8835,Payment is in progress,10
+844,BNP Paribas,103778,CitiBank HongKong,CAD,Receive,1634,2020-04-12 ,Fully paid,0,Transaction complete,10
+845,HSBC,104695,CitiBank London,CAD,Receive,8631,2020-02-21 ,Rejected,8631,Payment Failed,10
+846,HSBC,102562,CitiBank Singapore,INR,Deliver,6152,2020-04-07 ,Processing,6152,Payment is in progress,10
+847,Morgan Stanley,101291,CitiBank HongKong,CAD,Receive,8088,2020-04-18 ,Fully paid,0,Transaction complete,10
+848,Goldman Sachs,101584,CitiBank HongKong,GBP,Receive,7003,2020-04-10 ,Rejected,7003,Payment Failed,10
+849,DEUTSCHE BANK,102109,CitiBank NewYork,INR,Deliver,8067,2020-03-22 ,Processing,8067,Payment is in progress,10
+850,Goldman Sachs,104976,CitiBank Bengaluru,CAD,Receive,9699,2020-03-10 ,Fully paid,0,Transaction complete,10
+851,Goldman Sachs,104130,CitiBank NewYork,EUR,Receive,6039,2020-04-23 ,Fully paid,0,Transaction complete,10
+852,Goldman Sachs,104759,CitiBank Bengaluru,GBP,Receive,1492,2020-03-30 ,Fully paid,0,Transaction complete,10
+853,BNY Mellon,101791,CitiBank London,INR,Deliver,9333,2020-04-25 ,Rejected,9333,Payment Failed,10
+854,DEUTSCHE BANK,101562,CitiBank London,CAD,Receive,5499,2020-05-18 ,Rejected,5499,Payment Failed,10
+855,HSBC,104879,CitiBank HongKong,CAD,Deliver,5238,2020-03-12 ,Partially Paid,1462,Waiting for pending amount,10
+856,Morgan Stanley,104729,CitiBank Bengaluru,INR,Deliver,8260,2020-04-07 ,Processing,8260,Payment is in progress,10
+857,Wells Fargo,101324,CitiBank NewYork,INR,Deliver,9256,2020-03-14 ,Fully paid,0,Transaction complete,10
+858,Morgan Stanley,103457,CitiBank Pune,EUR,Receive,8817,2020-03-01 ,Fully paid,0,Transaction complete,10
+859,BNP Paribas,103750,CitiBank Bengaluru,INR,Receive,4805,2020-05-07 ,Fully paid,0,Transaction complete,10
+860,Goldman Sachs,101984,CitiBank London,USD,Receive,6959,2020-04-13 ,Fully paid,0,Transaction complete,10
+861,Wells Fargo,103179,CitiBank London,INR,Receive,5474,2020-05-15 ,Rejected,5474,Payment Failed,10
+862,Wells Fargo,101945,CitiBank Bengaluru,INR,Deliver,9401,2020-03-20 ,Partially Paid,8471,Waiting for pending amount,10
+863,J P Morgan,103126,CitiBank Pune,EUR,Deliver,6750,2020-05-09 ,Rejected,6750,Payment Failed,10
+864,Goldman Sachs,103676,CitiBank Pune,CAD,Receive,8870,2020-05-14 ,Fully paid,0,Transaction complete,10
+865,BNY Mellon,104740,CitiBank London,EUR,Deliver,7250,2020-05-20 ,Fully paid,0,Transaction complete,10
+866,Morgan Stanley,101173,CitiBank NewYork,INR,Receive,4702,2020-02-24 ,Fully paid,0,Transaction complete,10
+867,Wells Fargo,103013,CitiBank NewYork,CAD,Deliver,7596,2020-04-30 ,Fully paid,0,Transaction complete,10
+868,Morgan Stanley,105031,CitiBank Bengaluru,GBP,Receive,8763,2020-03-24 ,Rejected,8763,Payment Failed,10
+869,BNP Paribas,101122,CitiBank Pune,EUR,Receive,2251,2020-02-26 ,Rejected,2251,Payment Failed,10
+870,BNP Paribas,103074,CitiBank London,CAD,Receive,6525,2020-03-10 ,Fully paid,0,Transaction complete,10
+871,Goldman Sachs,104596,CitiBank NewYork,EUR,Deliver,6900,2020-04-28 ,Fully paid,0,Transaction complete,10
+872,Goldman Sachs,104173,CitiBank Pune,CAD,Receive,8179,2020-04-25 ,Rejected,8179,Payment Failed,10
+873,Morgan Stanley,102463,CitiBank Bengaluru,INR,Deliver,8118,2020-03-07 ,Rejected,8118,Payment Failed,10
+874,BNP Paribas,104901,CitiBank NewYork,EUR,Receive,9375,2020-05-14 ,Fully paid,0,Transaction complete,10
+875,BNP Paribas,102338,CitiBank Singapore,CAD,Deliver,6672,2020-03-01 ,Rejected,6672,Payment Failed,10
+876,Morgan Stanley,104068,CitiBank London,USD,Receive,9382,2020-05-21 ,Processing,9382,Payment is in progress,10
+877,DEUTSCHE BANK,102171,CitiBank NewYork,GBP,Receive,4201,2020-03-11 ,Processing,4201,Payment is in progress,10
+878,Morgan Stanley,104459,CitiBank NewYork,USD,Receive,4974,2020-06-06 ,Rejected,4974,Payment Failed,10
+879,DEUTSCHE BANK,102425,CitiBank HongKong,CAD,Deliver,4705,2020-04-22 ,Rejected,4705,Payment Failed,10
+880,DEUTSCHE BANK,102165,CitiBank HongKong,GBP,Receive,3732,2020-05-07 ,Fully paid,0,Transaction complete,10
+881,Morgan Stanley,103168,CitiBank Bengaluru,CAD,Receive,9946,2020-05-29 ,Partially Paid,1252,Waiting for pending amount,10
+882,HSBC,104665,CitiBank HongKong,GBP,Receive,6133,2020-04-19 ,Processing,6133,Payment is in progress,10
+883,Wells Fargo,102592,CitiBank Singapore,CAD,Receive,6471,2020-04-03 ,Partially Paid,1999,Waiting for pending amount,10
+884,Wells Fargo,103342,CitiBank Singapore,INR,Receive,6699,2020-05-13 ,Fully paid,0,Transaction complete,10
+885,Wells Fargo,102519,CitiBank Pune,GBP,Receive,5988,2020-02-23 ,Partially Paid,9230,Waiting for pending amount,10
+886,HSBC,104309,CitiBank Pune,INR,Deliver,1374,2020-03-03 ,Rejected,1374,Payment Failed,10
+887,Morgan Stanley,102313,CitiBank Singapore,EUR,Deliver,841,2020-04-05 ,Partially Paid,2289,Waiting for pending amount,10
+888,BNY Mellon,103623,CitiBank London,INR,Receive,7945,2020-03-17 ,Fully paid,0,Transaction complete,10
+889,BNY Mellon,101074,CitiBank Singapore,EUR,Receive,9996,2020-03-24 ,Rejected,9996,Payment Failed,10
+890,Morgan Stanley,102867,CitiBank HongKong,EUR,Deliver,4073,2020-05-23 ,Partially Paid,243,Waiting for pending amount,10
+891,BNP Paribas,104764,CitiBank NewYork,INR,Deliver,2742,2020-03-03 ,Fully paid,0,Transaction complete,10
+892,BNP Paribas,102448,CitiBank Bengaluru,GBP,Receive,8134,2020-05-28 ,Rejected,8134,Payment Failed,10
+893,BNY Mellon,101845,CitiBank HongKong,EUR,Receive,2461,2020-04-18 ,Partially Paid,1943,Waiting for pending amount,10
+894,Goldman Sachs,102020,CitiBank HongKong,INR,Receive,7000,2020-05-11 ,Fully paid,0,Transaction complete,10
+895,BNP Paribas,103012,CitiBank HongKong,USD,Receive,6123,2020-06-07 ,Rejected,6123,Payment Failed,10
+896,Goldman Sachs,101900,CitiBank NewYork,GBP,Deliver,9640,2020-02-23 ,Processing,9640,Payment is in progress,10
+897,HSBC,102738,CitiBank London,USD,Deliver,2281,2020-02-29 ,Rejected,2281,Payment Failed,10
+898,Goldman Sachs,104994,CitiBank Singapore,INR,Receive,1007,2020-05-13 ,Partially Paid,7009,Waiting for pending amount,10
+899,Goldman Sachs,101591,CitiBank Bengaluru,EUR,Receive,9008,2020-02-25 ,Rejected,9008,Payment Failed,10
+900,J P Morgan,102382,CitiBank NewYork,CAD,Receive,2734,2020-03-16 ,Processing,2734,Payment is in progress,10
+901,BNP Paribas,101704,CitiBank NewYork,USD,Receive,2770,2020-05-17 ,Rejected,2770,Payment Failed,10
+902,BNY Mellon,105127,CitiBank Pune,INR,Receive,1347,2020-04-15 ,Partially Paid,8237,Waiting for pending amount,10
+903,J P Morgan,101098,CitiBank NewYork,CAD,Receive,550,2020-05-23 ,Processing,550,Payment is in progress,10
+904,J P Morgan,104934,CitiBank London,CAD,Deliver,817,2020-02-26 ,Rejected,817,Payment Failed,10
+905,BNY Mellon,102042,CitiBank HongKong,CAD,Deliver,6143,2020-03-11 ,Processing,6143,Payment is in progress,10
+906,J P Morgan,104328,CitiBank NewYork,EUR,Deliver,312,2020-03-16 ,Fully paid,0,Transaction complete,10
+907,DEUTSCHE BANK,103513,CitiBank HongKong,USD,Receive,2040,2020-05-12 ,Processing,2040,Payment is in progress,10
+908,DEUTSCHE BANK,104169,CitiBank Bengaluru,CAD,Receive,6834,2020-03-27 ,Partially Paid,1611,Waiting for pending amount,10
+909,HSBC,104968,CitiBank London,GBP,Deliver,5398,2020-03-10 ,Processing,5398,Payment is in progress,10
+910,J P Morgan,104132,CitiBank HongKong,USD,Receive,5229,2020-05-21 ,Partially Paid,3595,Waiting for pending amount,10
+911,DEUTSCHE BANK,102255,CitiBank Pune,EUR,Deliver,6941,2020-03-14 ,Fully paid,0,Transaction complete,10
+912,DEUTSCHE BANK,101946,CitiBank Bengaluru,INR,Receive,7347,2020-05-11 ,Processing,7347,Payment is in progress,10
+913,HSBC,101485,CitiBank Singapore,INR,Deliver,2376,2020-05-24 ,Partially Paid,8877,Waiting for pending amount,10
+914,Goldman Sachs,103875,CitiBank Bengaluru,CAD,Deliver,3547,2020-06-02 ,Rejected,3547,Payment Failed,10
+915,J P Morgan,102529,CitiBank Bengaluru,INR,Receive,36,2020-05-27 ,Rejected,36,Payment Failed,10
+916,BNY Mellon,101013,CitiBank Singapore,GBP,Deliver,4967,2020-02-21 ,Processing,4967,Payment is in progress,10
+917,DEUTSCHE BANK,102771,CitiBank London,CAD,Receive,5781,2020-05-11 ,Rejected,5781,Payment Failed,10
+918,Goldman Sachs,102400,CitiBank Singapore,EUR,Receive,6353,2020-04-25 ,Fully paid,0,Transaction complete,10
+919,Goldman Sachs,104914,CitiBank NewYork,INR,Deliver,7683,2020-04-30 ,Processing,7683,Payment is in progress,10
