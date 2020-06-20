@@ -1,0 +1,2 @@
+what is the {} of the transaction with account id 101192?
+what is the {} of the transaction between CitiBank NewYork and Deutsch Bank?
