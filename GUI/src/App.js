@@ -37,14 +37,27 @@ class App extends Component{
         {
                messages = [...messages,{"message" : c_message}];
 
-               this.setState({messages:messages});
-               
-               messages = [...messages,{"message" : "hi champ", "isbotmessage":true}];               
-               this.setState({messages:messages});
-
-               c_message ="";
-               this.setState({current_message:c_message});               
+               fetch("http://localhost:5005?message=" + c_message)
+		       .then(res => res.json())
+		       .then(
+		         (result) => {
+		           console.log(result);
+		           this.setState({
+		             messages: [...messages, {"message":result["message"], "isbotmessage":true}]
+		           });
+		         }, 
+		         (error) => {
+		         	     alert('server error');
+                            }
+                    );
+                c_message = ""
         }
+        
+             this.setState({
+            current_message: c_message,
+            messages
+            });
+
     }
 
     handleClick(event)
