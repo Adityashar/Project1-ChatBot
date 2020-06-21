@@ -40,6 +40,7 @@ def get_entities(threshold_value, FEATURES):
 
 
 def get_questions(intent):
+	intent = intent.replace("_", " ").lower()
     questions = []
     questions.append("what is {} for ".format(intent))
     questions.append("Tell me something about {} with ".format(intent))
@@ -90,18 +91,19 @@ class {}(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            table = get_table(tracker.latest_message['intent'])
+            intent = tracker.latest_message['intent']
+          #  table = get_table(intent)
             if(len(entities) == 0):
                 dispatcher.utter_message(template = '{}')
                 return []
 
-            records = record_finder(entities)
+           # records = record_finder(entities)
 
-            if(records.empty):
-                raise ValueError("No record for this query !!!")
+           # if(records.empty):
+           #     raise ValueError("No record for this query !!!")
     
-            print(records)
-            dispatcher.utter_message(text="{}")
+           # print(records)
+            dispatcher.utter_message(text="{}" + str(intent))
             return []
 
         except:
@@ -114,7 +116,7 @@ def add_action(Action, file):
         utterance = "utter" + action[6:]
         class_name = action.replace("_", "")
         utter.append(utterance)
-        template = text.format(class_name, action, utterance, "The intent is ")
+        template = text.format(class_name, action, "utter_color", "The intent is ")
         file.write(template)
     
     return utter
