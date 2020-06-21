@@ -4,6 +4,8 @@ import os
 import json
 import markdown
 import pickle
+import sys
+from getQuestions import get_questions
 
 
 def new_data(data_name, directory):
@@ -39,14 +41,14 @@ def get_entities(threshold_value, FEATURES):
     return ENTITIES, PRIMARY_KEY
 
 
-def get_questions(intent):
-    intent = intent.replace("_", " ").lower()
-    questions = []
-    questions.append("what is {} for ".format(intent))
-    questions.append("Tell me something about {} with ".format(intent))
-    questions.append("Give me information about {} for the ".format(intent))
+# def get_questions(intent):
+#     intent = intent.replace("_", " ").lower()
+#     questions = []
+#     questions.append("what is {} for ".format(intent))
+#     questions.append("Tell me something about {} with ".format(intent))
+#     questions.append("Give me information about {} for the ".format(intent))
     
-    return questions
+#     return questions
 
 # updating the domain.yml file
 # it contains a list of intents, actions, responses, entities, slots
@@ -192,7 +194,7 @@ def intents_to_md(data_md, intent_dict):
 def main():
 # This function should be triggered by a listener
 	global DATASET, FEATURES, PRIMARY_KEY
-	data_name = "dataset.csv"
+	data_name = sys.argv[1]
 	directory = '/home/aditya/Documents/citibot'
 	DATASET = new_data(data_name, directory)
 
@@ -204,7 +206,7 @@ def main():
 	ENTITIES, PRIMARY_KEY = get_entities(threshold_value, FEATURES)
 
 	# Dict of intents having a list of questions as their values.
-	INTENTS = {col:get_questions(col) for col in FEATURES.keys()}
+	INTENTS = {col:get_questions(col, ENTITIES) for col in FEATURES.keys()}
 
 	# making a dictionary of tables with corresponding intents for query based retrieval
 	table = os.path.splitext(data_name)[0]

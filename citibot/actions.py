@@ -60,6 +60,24 @@ ENTITY_LIST = {'legal_entity':'Legal_Entity',
               'amountpending':'Pending_Amount',
               'account_id':'Account_ID'}
 
+initial_table = {'Payment_table':['payment_status', 'paid_amount', 'pending_amount']}
+
+if 'dict.pkl' not in os.listdir('/home/aditya/Documents/citibot/data'):
+    information_table = {}
+else:
+    information_table = pickle.load(open('/home/aditya/Documents/citibot/data/dict.pkl', 'rb'))
+
+final_table = {**initial_table, **information_table}
+
+def get_table(intent):
+    tab = ""
+    for table in final_table.keys():
+        if intent in final_table[table]:
+            tab = table
+            break
+
+    return tab
+
 def query_maker(entities):
     string = ""
     for e in entities:
@@ -87,6 +105,7 @@ class ActionPayment(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            table = get_table(tracker.latest_message['intent'])
             if(len(entities) == 0):
                 dispatcher.utter_message(template = 'utter_payment')
                 return []
@@ -128,6 +147,7 @@ class ActionAmountPaid(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            table = get_table(tracker.latest_message['intent'])
             if(len(entities) == 0):
                 dispatcher.utter_message(template = 'utter_paidamount')
                 return []
@@ -164,6 +184,7 @@ class ActionAmountPending(Action):
 
         try:
             entities = tracker.latest_message['entities']
+            table = get_table(tracker.latest_message['intent'])
             if(len(entities) == 0):
                 dispatcher.utter_message(template = 'utter_pendingamount')
                 return []
