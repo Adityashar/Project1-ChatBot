@@ -40,7 +40,7 @@ def get_entities(threshold_value, FEATURES):
 
 
 def get_questions(intent):
-	intent = intent.replace("_", " ").lower()
+    intent = intent.replace("_", " ").lower()
     questions = []
     questions.append("what is {} for ".format(intent))
     questions.append("Tell me something about {} with ".format(intent))
