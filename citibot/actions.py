@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from dbconnect import query_formation, getData
 import pandas as pd
-import sys
+import sys, os, pickle
 
 
 ## database code 
@@ -81,8 +81,8 @@ def get_table(intent):
 def query_maker(entities):
     string = ""
     for e in entities:
-        if e['entity'] in ENTITY_LIST.keys() and e['extractor'] == 'CRFEntityExtractor':
-            string = string + ENTITY_LIST[e['entity']] + " == \"" + e['value'] + "\" and " 
+        if e['entity'] in FEATURES and e['extractor'] == 'CRFEntityExtractor':
+            string = string + e['entity'] + " == \"" + e['value'] + "\" and " 
     print(string)
     return string[:-5]
 
@@ -117,14 +117,14 @@ class ActionPayment(Action):
     
             print(records)
             dispatcher.utter_message(text="The payment is "+records['Payment_Status'].item()+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
-            return [SlotSet("account_id", records['Account_ID'].item()),
-                    SlotSet("legal_entity", records['Legal_Entity'].item()),
-                    SlotSet("client_name", records['Client_Name'].item()),
-                    SlotSet("amountpaid", records['Paid_Amount'].item()),
-                    SlotSet("amountpending", records['Pending_Amount'].item()),
-                    SlotSet("currency", records['Currency'].item()),
-                    SlotSet("source", records['Source'].item()),
-                    SlotSet("payment_date", records['Payment_Date'].item())
+            return [SlotSet("Account_ID", records['Account_ID'].item()),
+                    SlotSet("Legal_Entity", records['Legal_Entity'].item()),
+                    SlotSet("Client_Name", records['Client_Name'].item()),
+                    SlotSet("Paid_Amount", records['Paid_Amount'].item()),
+                    SlotSet("Pending_Amount", records['Pending_Amount'].item()),
+                    SlotSet("Currency", records['Currency'].item()),
+                    SlotSet("Source", records['Source'].item()),
+                    SlotSet("Payment_Date", records['Payment_Date'].item())
                     ]
 
         except:
@@ -158,14 +158,14 @@ class ActionAmountPaid(Action):
                 raise ValueError("No record for this query !!!")
             records = records
             dispatcher.utter_message(text="The payment amount is {} {}".format(records['Currency'].item(), records['Paid_Amount'].item())+ "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
-            return [SlotSet("account_id", records['Account_ID'].item()),
-                    SlotSet("legal_entity", records['Legal_Entity'].item()),
-                    SlotSet("client_name", records['Client_Name'].item()),
-                    SlotSet("amountpaid", records['Paid_Amount'].item()),
-                    SlotSet("amountpending", records['Pending_Amount'].item()),
-                    SlotSet("currency", records['Currency'].item()),
-                    SlotSet("source", records['Source'].item()),
-                    SlotSet("payment_date", records['Payment_Date'].item())
+            return [SlotSet("Account_ID", records['Account_ID'].item()),
+                    SlotSet("Legal_Entity", records['Legal_Entity'].item()),
+                    SlotSet("Client_Name", records['Client_Name'].item()),
+                    SlotSet("Paid_Amount", records['Paid_Amount'].item()),
+                    SlotSet("Pending_Amount", records['Pending_Amount'].item()),
+                    SlotSet("Currency", records['Currency'].item()),
+                    SlotSet("Source", records['Source'].item()),
+                    SlotSet("Payment_Date", records['Payment_Date'].item())
                     ]
 
         except:
@@ -194,14 +194,14 @@ class ActionAmountPending(Action):
                 raise ValueError("No record for this statement !!!")
             records = records
             dispatcher.utter_message(text="The payment pending is {} {}".format(records['Currency'].item(),records['Pending_Amount'].item()) + "\nSource for this info is document number {}.".format(records['Source'].item()))# {}  {}".format(PS, LE))
-            return [SlotSet("account_id", records['Account_ID'].item()),
-                    SlotSet("legal_entity", records['Legal_Entity'].item()),
-                    SlotSet("client_name", records['Client_Name'].item()),
-                    SlotSet("amountpaid", records['Paid_Amount'].item()),
-                    SlotSet("amountpending", records['Pending_Amount'].item()),
-                    SlotSet("currency", records['Currency'].item()),
-                    SlotSet("source", records['Source'].item()),
-                    SlotSet("payment_date", records['Payment_Date'].item())
+            return [SlotSet("Account_ID", records['Account_ID'].item()),
+                    SlotSet("Legal_Entity", records['Legal_Entity'].item()),
+                    SlotSet("Client_Name", records['Client_Name'].item()),
+                    SlotSet("Paid_Amount", records['Paid_Amount'].item()),
+                    SlotSet("Pending_Amount", records['Pending_Amount'].item()),
+                    SlotSet("Currency", records['Currency'].item()),
+                    SlotSet("Source", records['Source'].item()),
+                    SlotSet("Payment_Date", records['Payment_Date'].item())
                     ]
 
         except:

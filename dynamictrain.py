@@ -74,7 +74,23 @@ def update_domain(intents, actions, entities, responses, data):
     for entity in entities:
         string += "  - {}\n".format(entity)
     data = data[:pointer_ent+10] + string + data[pointer_ent+10:]
-    
+    # update responses
+    pointer_resp = data.find("responses:")
+    string = ""
+    for resp in responses:
+        text = "The {} for the given agreement is ".format(resp[6:].replace("_", " ")) + "{" + resp[6:] + "}."
+        string += "  {}:\n  - text: \"{}\"\n\n".format(resp, text)
+    data = data[:pointer_resp+11] + string + data[pointer_resp+11:]
+    # update slots
+    pointer_slot = data.find("slots:")
+    if pointer_slot == -1:
+        data = data + "\n\nslots:\n"
+        pointer_slot = data.find("slots:")
+    string = ""
+    for slot in entities:
+        string += "  {}:\n    type: unfeaturized\n    auto_fill: false\n".format(slot)
+    data = data[:pointer_slot+7] + string + data[pointer_slot+7:]
+
     return data
 
 # updating the actions file by addition of new actions based on an intent
@@ -94,19 +110,19 @@ class {}(Action):
         try:
             entities = tracker.latest_message['entities']
             intent = tracker.latest_message['intent']
-          #  table = get_table(intent)
+            table = get_table(intent)
             if(len(entities) == 0):
                 dispatcher.utter_message(template = '{}')
                 return []
 
-           # records = record_finder(entities)
+            records = record_finder(entities)
 
-           # if(records.empty):
-           #     raise ValueError("No record for this query !!!")
+            if(records.empty):
+                raise ValueError("No record for this query !!!")
     
-           # print(records)
-            dispatcher.utter_message(text="{}" + str(intent))
-            return []
+            print(records)
+            dispatcher.utter_message(text="{}"+ records[intent].item() + " for the given record with id " )
+            return [SlotSet("{}".format(slot), records[slot].item()) for slot in final_table[table]]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -117,8 +133,9 @@ def add_action(Action, file):
     for action in Action:
         utterance = "utter" + action[6:]
         class_name = action.replace("_", "")
+        intent = action[7:].replace("_", " ").lower()
         utter.append(utterance)
-        template = text.format(class_name, action, "utter_color", "The intent is ")
+        template = text.format(class_name, action, "utter_color", "The {} is ".format(intent))
         file.write(template)
     
     return utter
@@ -167,7 +184,7 @@ def lookups_to_md(data_md, entity_dict):
     for entity in entity_dict.keys():
         string_ent = " lookup:{}\n".format(entity)
         
-        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY:
+        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY or 'date' in entity:
             continue
             
         for val in entity_dict[entity]:
@@ -195,7 +212,7 @@ def main():
 # This function should be triggered by a listener
 	global DATASET, FEATURES, PRIMARY_KEY
 	data_name = sys.argv[1]
-	directory = '/home/aditya/Documents/citibot'
+	directory = '/home/aditya/Documents/rasa'
 	DATASET = new_data(data_name, directory)
 
 	# dict of columns in new data with corresponding dtypes 
@@ -206,19 +223,17 @@ def main():
 	ENTITIES, PRIMARY_KEY = get_entities(threshold_value, FEATURES)
 
 	# Dict of intents having a list of questions as their values.
-	INTENTS = {col:get_questions(col, ENTITIES) for col in FEATURES.keys()}
+	INTENTS = {col:get_questions(col, ENTITIES, PRIMARY_KEY) for col in FEATURES.keys()}
 
 	# making a dictionary of tables with corresponding intents for query based retrieval
 	table = os.path.splitext(data_name)[0]
-
-	if 'dict.pkl' not in os.listdir('/home/aditya/Documents/citibot/data'):
+	if 'dict.pkl' not in os.listdir('/home/aditya/Documents/rasa/data'):
 	    information_table = {}
 	else:
-	    information_table = pickle.load(open('/home/aditya/Documents/citibot/data/dict.pkl', 'rb'))
+	    information_table = pickle.load(open('/home/aditya/Documents/rasa/data/dict.pkl', 'rb'))
 
 	information_table[table] = list(INTENTS.keys())
-
-	pickle.dump(information_table, open('/home/aditya/Documents/citibot/data/dict.pkl', 'wb'))
+	pickle.dump(information_table, open('/home/aditya/Documents/rasa/data/dict.pkl', 'wb'))
 
 
 	nlu = open('/home/aditya/Documents/rasa/data/nlu.md', 'r')

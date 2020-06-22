@@ -10,13 +10,13 @@ intents:
   - source_info
 
 entities:
-  - legal_entity
-  - client_name
-  - currency
-  - payment_date
-  - amountpaid
-  - amountpending
-  - account_id
+  - Legal_Entity
+  - Client_Name
+  - Currency
+  - Payment_Date
+  - Paid_Amount
+  - Pending_Amount
+  - Account_ID
 
 actions:
   - action_payment
@@ -24,28 +24,28 @@ actions:
   - action_amount_pending
 
 slots:
-  legal_entity:
+  Legal_Entity:
     type: unfeaturized
     auto_fill: false
-  client_name:
+  Client_Name:
     type: unfeaturized
     auto_fill: false
-  currency:
+  Currency:
     type: unfeaturized
     auto_fill: false
-  payment_date:
+  Payment_Date:
     type: unfeaturized
     auto_fill: false
-  amountpaid:
+  Paid_Amount:
     type: unfeaturized
     auto_fill: false
-  amountpending:
+  Pending_Amount:
     type: unfeaturized
     auto_fill: false
-  account_id:
+  Account_ID:
     type: unfeaturized
     auto_fill: false
-  source:
+  Source:
     type: unfeaturized
     auto_fill: false
   
@@ -67,25 +67,25 @@ responses:
   - text: "I have received the payment"
 
   utter_accountid:
-  - text: "The agreement id is {account_id} for the transaction between {legal_entity} and {client_name}. "
+  - text: "The agreement id is {Account_ID} for the transaction between {Legal_Entity} and {Client_Name}. "
 
   utter_clientname:
-  - text: "The client involved in this agreement is {client_name}."  
+  - text: "The client involved in this agreement is {Client_Name}."  
 
   utter_legalentity:
-  - text: "The legal entity involved in this agreement is {legal_entity}."
+  - text: "The legal entity involved in this agreement is {Legal_Entity}."
 
   utter_paymentdate:
-  - text: "The transaction between {legal_entity} and {client_name} took place on {payment_date}."
+  - text: "The transaction between {Legal_Entity} and {Client_Name} took place on {Payment_Date}."
 
   utter_paidamount:
-  - text: "The amount paid is {currency} {amountpaid}."
+  - text: "The amount paid is {Currency} {Paid_Amount}."
 
   utter_pendingamount:
-  - text: "The amount pending is {currency} {amountpending}."
+  - text: "The amount pending is {Currency} {Pending_Amount}."
 
   utter_source:
-  - text: "The Source for given information is {source}."
+  - text: "The Source for given information is {Source}."
 
   utter_default:
   - text: "Please try again !!"
