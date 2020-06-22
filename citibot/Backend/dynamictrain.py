@@ -167,7 +167,7 @@ def lookups_to_md(data_md, entity_dict):
     for entity in entity_dict.keys():
         string_ent = " lookup:{}\n".format(entity)
         
-        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY:
+        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY or 'date'  in entity:
             continue
             
         for val in entity_dict[entity]:
@@ -195,7 +195,7 @@ def main():
 # This function should be triggered by a listener
 	global DATASET, FEATURES, PRIMARY_KEY
 	data_name = sys.argv[1]
-	directory = '/home/aditya/Documents/rasa/Backend'
+	directory = '/home/aditya/Documents/rasa'
 	DATASET = new_data(data_name, directory)
 
 	# dict of columns in new data with corresponding dtypes 
