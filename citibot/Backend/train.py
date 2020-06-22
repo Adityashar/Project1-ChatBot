@@ -21,5 +21,5 @@ def main():
 	# run the shell
 	subprocess.run('rasa run -m models --enable-api --cors "*" --debug', shell=True)
 
-if __name__==__main__:
+if __name__ == '__main__':
 	main()

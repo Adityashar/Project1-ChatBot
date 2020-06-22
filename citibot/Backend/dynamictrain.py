@@ -195,7 +195,7 @@ def main():
 # This function should be triggered by a listener
 	global DATASET, FEATURES, PRIMARY_KEY
 	data_name = sys.argv[1]
-	directory = '/home/aditya/Documents/citibot'
+	directory = '/home/aditya/Documents/rasa/Backend'
 	DATASET = new_data(data_name, directory)
 
 	# dict of columns in new data with corresponding dtypes 
@@ -206,19 +206,19 @@ def main():
 	ENTITIES, PRIMARY_KEY = get_entities(threshold_value, FEATURES)
 
 	# Dict of intents having a list of questions as their values.
-	INTENTS = {col:get_questions(col, ENTITIES) for col in FEATURES.keys()}
+	INTENTS = {col:get_questions(col, ENTITIES, PRIMARY_KEY) for col in FEATURES.keys()}
 
 	# making a dictionary of tables with corresponding intents for query based retrieval
 	table = os.path.splitext(data_name)[0]
 
-	if 'dict.pkl' not in os.listdir('/home/aditya/Documents/citibot/data'):
+	if 'dict.pkl' not in os.listdir('/home/aditya/Documents/rasa/data'):
 	    information_table = {}
 	else:
-	    information_table = pickle.load(open('/home/aditya/Documents/citibot/data/dict.pkl', 'rb'))
+	    information_table = pickle.load(open('/home/aditya/Documents/rasa/data/dict.pkl', 'rb'))
 
 	information_table[table] = list(INTENTS.keys())
 
-	pickle.dump(information_table, open('/home/aditya/Documents/citibot/data/dict.pkl', 'wb'))
+	pickle.dump(information_table, open('/home/aditya/Documents/rasa/data/dict.pkl', 'wb'))
 
 
 	nlu = open('/home/aditya/Documents/rasa/data/nlu.md', 'r')

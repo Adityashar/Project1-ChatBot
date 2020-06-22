@@ -14,9 +14,9 @@ def submit():
 		file = request.files['data']
 		file.save(file.filename)
 		#loadtheModule(file.filename, file.filename)
-		q = 'python dynamictrain.py ' + file.filename
+		q = 'python Backend/dynamictrain.py ' + file.filename
 		os.system(q)
-		os.system('train.py')
+		os.system('python Backend/train.py')
 
 	return redirect('/')
 
