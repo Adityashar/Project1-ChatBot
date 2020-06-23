@@ -33,3 +33,22 @@ NOTE: If you have MemoryError in the install try to use:
 ```
 pip3 install -r requirements.txt --no-cache-dir
 ```
+In order to run the system, in three separate terminals execute the following commands::
+1. Run the Flash server.
+```
+cd Project1-ChatBot/citibot/
+python Backend/app.py
+```
+2. Activate the Shell.
+```
+cd Project1-ChatBot/citibot/
+conda activate env
+rasa run -m models --enable-api --cors "*" --debug 
+```
+3. Activate the action server.
+```
+cd Project1-ChatBot/citibot/
+conda activate env
+rasa run actions
+```
+#### Once done, on a browser open *localhost:5000*. Chatbot appears at the bottom right corner, Ask your queries as needed!
