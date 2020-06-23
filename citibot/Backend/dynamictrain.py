@@ -110,19 +110,19 @@ class {}(Action):
         try:
             entities = tracker.latest_message['entities']
             intent = tracker.latest_message['intent']
-            table = get_table(intent)
+            table = get_table(intent['name'])
             if(len(entities) == 0):
                 dispatcher.utter_message(template = '{}')
                 return []
 
-            records = record_finder(entities)
+            records = record_finder(entities, table)
 
             if(records.empty):
                 raise ValueError("No record for this query !!!")
     
             print(records)
-            dispatcher.utter_message(text="{}"+ records[intent].item() + " for the given record with id " )
-            return [SlotSet("{}".format(slot), records[slot].item()) for slot in final_table[table]]
+            dispatcher.utter_message(text="{}"+ str(records[intent['name']].item()) + " for the given record with id "+ str(records['Account_ID'].item()) )
+            return [SlotSet("{{}}".format(slot), records[slot].item()) for slot in final_table[table]]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -135,7 +135,7 @@ def add_action(Action, file):
         class_name = action.replace("_", "")
         intent = action[7:].replace("_", " ").lower()
         utter.append(utterance)
-        template = text.format(class_name, action, "utter_color", "The {} is ".format(intent))
+        template = text.format(class_name, action, utterance, "The {} is ".format(intent))
         file.write(template)
     
     return utter
@@ -184,7 +184,7 @@ def lookups_to_md(data_md, entity_dict):
     for entity in entity_dict.keys():
         string_ent = " lookup:{}\n".format(entity)
         
-        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY or 'date' in entity:
+        if FEATURES[entity] == 'int64' or entity in PRIMARY_KEY or 'date' in entity.lower():
             continue
             
         for val in entity_dict[entity]:
