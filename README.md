@@ -1,10 +1,54 @@
-# Project1-CITI-INTERNSHIP
+# Project 1
 
+### Problem Statement : 
+The current project have data available in different sources like confluence, excels, emails, Jira and off course database. The idea is to train the model from the data available in each of these sources. You will be provided with some sample data from each of these data sources which you will use to train the model. You are free to choose any ML algorithm. The algorithm should give a very low error rate. The following is expected from the system:
+ 
+1. The system should be capable enough to train itself from different type of data source formats e.g. JSON, excel, txt etc.
+2. When the end user ask any specific question the system should be able to identify its source and display the result accordingly
+3. The system should also be able to interact with the DB if required.
+4. The system should be able handle contextual questions i.e. questions asked from the previous answer.
+5. Accept new dataset files and dynamically train the model
 
-### FLOW ; 
+### Solution Approach:
+Development of a chatbot which can handle intellectual user queries, context based conversations, query retrievals from a database, dynamic training on provision of new data and is integrated with a webapp for final submission.
 
-1. Used the 20 records sample to generate 1000 similar records with the help of a DATA GENERATOR. On the data generated performed 4 operations to make it compatible for usage.
-2. By using the above dataset, generated over 19000 questions with corresponding answers.
-3. We used the COUNTVECTORIZER module with ngrams in range = (1, 3) for converting the text based questions into number vectors.
-4. Will use the about vectorised data in a Seq2Seq model for training.
-5. Preparation of User Interface and deployment of the product.
+#### Technology used for the development:
+For the development of the bot-system, we used Pandas, Numpy, Spacy, Tensorflow and Rasa with a Flask backend.
+>Rasa is an open source conversational AI used for building assistants and chatbots in text and voice with machine learning backend.
+
+## Installation
+
+Clone the repository. (We are assuming you have python version 3.6.x and pip & anaconda are installed on your linux system)
+(Optional)If not, please use the below command, this will create a new environment using conda.
+
+```sh
+conda create -n env python=3.6
+conda activate env
+```
+All dependencies can be installed via:
+```sh
+pip install -r requirements.txt
+```
+NOTE: If you have MemoryError in the install try to use:
+```
+pip3 install -r requirements.txt --no-cache-dir
+```
+In order to run the system, in three separate terminals execute the following commands::
+1. Run the Flash server.
+```
+cd Project1-ChatBot/citibot/
+python Backend/app.py
+```
+2. Activate the Shell.
+```
+cd Project1-ChatBot/citibot/
+conda activate env
+rasa run -m models --enable-api --cors "*" --debug 
+```
+3. Activate the action server.
+```
+cd Project1-ChatBot/citibot/
+conda activate env
+rasa run actions
+```
+#### Once done, on a browser open *localhost:5000*. Chatbot appears at the bottom right corner, Ask your queries as needed!
