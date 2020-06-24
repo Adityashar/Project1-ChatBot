@@ -1,0 +1,5 @@
+rasa
+rasa[convert]
+spacy
+numpy
+pandas

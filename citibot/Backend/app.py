@@ -13,10 +13,10 @@ def submit():
     if request.method == 'POST':
         file = request.files['data']
         file.save(file.filename)
-        #loadtheModule(file.filename, file.filename)
+        loadtheModule(file.filename, file.filename)
         print("==========================================\n\nDatabase has been created!!\n")
         q = 'python Backend/dynamictrain.py ' + file.filename
-        # os.system(q)
+        os.system(q)
         os.system('python Backend/train.py')
 
     return redirect('/')

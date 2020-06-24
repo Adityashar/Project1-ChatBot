@@ -28,11 +28,20 @@ conda activate env
 All dependencies can be installed via:
 ```sh
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 ```
 NOTE: If you have MemoryError in the install try to use:
 ```
 pip3 install -r requirements.txt --no-cache-dir
 ```
+In order to use the bot, ensure you have mysql-server installed and running for query data retrieval. If not, follow the link *https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04* for the same.
+```
+Check the service using the following command :
+systemctl status mysql.service
+```
+In the files *citibot/Backend/dataload.py* and *citibot/dbConnect.py* , update the database name, password, and username.
+
+
 In order to run the system, in three separate terminals execute the following commands::
 1. Run the Flash server.
 ```
