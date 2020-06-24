@@ -111,18 +111,24 @@ class {}(Action):
             entities = tracker.latest_message['entities']
             intent = tracker.latest_message['intent']
             table = get_table(intent['name'])
+
             if(len(entities) == 0):
                 dispatcher.utter_message(template = '{}')
                 return []
 
-            records = record_finder(entities, table)
+            records, features = getData(query_formation(entities, table), table)
+            features = {{tup[0]:val for tup,val in zip(features,records[0])}}
+            print(records, features)
 
-            if(records.empty):
+            # why make two query calls when already have features
+
+            if(len(records)==0 or len(records)>1):
                 raise ValueError("No record for this query !!!")
     
             print(records)
-            dispatcher.utter_message(text="{}"+ str(records[intent['name']].item()) + " for the given record with id "+ str(records['Account_ID'].item()) )
-            return [SlotSet("{{}}".format(slot), records[slot].item()) for slot in final_table[table]]
+            #dispatcher.utter_message(text="yy")
+            dispatcher.utter_message(text="{} "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
+            return [SlotSet("{{}}".format(slot), features[slot.lower()]) for slot in final_table[table]]
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -131,9 +137,11 @@ class {}(Action):
 def add_action(Action, file):
     utter = []
     for action in Action:
+        # print(action)
         utterance = "utter" + action[6:]
         class_name = action.replace("_", "")
         intent = action[7:].replace("_", " ").lower()
+        # sprint(intent)
         utter.append(utterance)
         template = text.format(class_name, action, utterance, "The {} is ".format(intent))
         file.write(template)

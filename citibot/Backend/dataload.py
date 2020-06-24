@@ -1,15 +1,16 @@
 import numpy as np
 import pandas as pd
 import mysql.connector
-import traceback
+import traceback, os
 
 def loadtheModule(filename, table):
     data = pd.read_csv(filename)
+    table = os.path.splitext(table)[0]
     #data = data.drop(['Unnamed: 0'], axis = 1)
     create = "CREATE TABLE " + table + "("
     cnt = 0
     for cols in data.columns:
-        create += (cols.lower())
+        create += cols.lower()
         if(data[cols].dtype == 'int64'):
             create += ' int'
         else:
@@ -24,7 +25,6 @@ def loadtheModule(filename, table):
     query = []
     ins = "INSERT INTO " + table + " VALUES("
     for ix in range(len(data)):
-        print(data['Account_ID'][ix])
         res = ins
         cnt = 0
         for cols in data.columns:
@@ -42,8 +42,8 @@ def loadtheModule(filename, table):
     mydb = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                passwd="*Ritik22*",
-                database="citi"
+                passwd="password",
+                database="Rasadatabases"
                 )
 
 # set up the cursor to execute the query
@@ -53,4 +53,5 @@ def loadtheModule(filename, table):
     for q in query:
         cursor.execute(q)
         mydb.commit()
+
     
