@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from dataload import loadtheModule
+from dataload import loadData
 import os
 
 app = Flask(__name__)
@@ -13,8 +13,7 @@ def submit():
     if request.method == 'POST':
         file = request.files['data']
         file.save(file.filename)
-        loadtheModule(file.filename, file.filename)
-        print("==========================================\n\nDatabase has been created!!\n")
+        loadData(file.filename)
         q = 'python Backend/dynamictrain.py ' + file.filename
         os.system(q)
         os.system('python Backend/train.py')

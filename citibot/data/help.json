@@ -1,0 +1,8 @@
+{
+    "Payment creation": "Click on <dummy_link> Go to Tools > Setup > Basics > Create payment",
+    "Payment Successful": "Payment is successful if you get an acknowledgement via an email",
+    "Add new fund and account details": "To add a new fund and account details raise a request in <dummy_link> with the approval from your immediate manager",
+    "Transaction id of payment": "The transaction ID is the payment is successful could be found in Account tab under profile section of the link <dummy_link>",
+    "Cross country accounts": "you can have same account accross countries in that case fxrate will be applied to local currency of country",
+    "Number of accounts": "you can have multiple accounts across the country one for receive and one for deliver"
+}

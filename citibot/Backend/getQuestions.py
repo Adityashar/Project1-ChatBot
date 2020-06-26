@@ -16,12 +16,12 @@ def add_ques1(intents, entity , values):
     questions.append("Please check the {} of [{}]({})".format((intents[0]) , random.choice(values), entity))
     questions.append("Brief me about the {} for the accord with [{}]({})".format(random.choice(intents),random.choice(values),entity))
     questions.append("Please show me the {} for transaction with id [{}]({})".format(random.choice(intents) , random.choice(values), entity))
-    
-    for i in range(1,3):
-        questions.append("{} for id [{}]({})".format((intents[i]),random.choice(values),entity))
-        questions.append("What is the {} with agreement id [{}]({})".format((intents[i]),random.choice(values),entity))
-        questions.append("What is the {} for transaction with [{}]({})".format((intents[i]),random.choice(values),entity))
-    
+    if len(intents) > 1:
+        for i in range(1,3):
+            questions.append("{} for id [{}]({})".format((intents[i]),random.choice(values),entity))
+            questions.append("What is the {} with agreement id [{}]({})".format((intents[i]),random.choice(values),entity))
+            questions.append("What is the {} for transaction with [{}]({})".format((intents[i]),random.choice(values),entity))
+        
 
     return questions
 
