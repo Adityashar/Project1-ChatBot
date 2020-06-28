@@ -16,6 +16,8 @@ Development of a chatbot which can handle intellectual user queries, context bas
 For the development of the bot-system, we used Pandas, Numpy, Spacy, Tensorflow and Rasa with a Flask backend.
 >Rasa is an open source conversational AI used for building assistants and chatbots in text and voice with machine learning backend.
 
+For more information, refer to this [document](https://docs.google.com/document/d/15t44R7hkevV6p5dz3C45xHsHfl7nuD_Xs6CVED_JQGw/edit?usp=sharing). 
+
 ## Installation
 
 Clone the repository. (We are assuming you have python version 3.6.x and pip & anaconda are installed on your linux system)

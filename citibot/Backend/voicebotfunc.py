@@ -6,9 +6,9 @@ from gtts import gTTS
 
 def talk():
 
-	message = ""
-	bot_message = ""
-	r = sr.Recognizer()  # initialize recognizer
+    message = ""
+    bot_message = ""
+    r = sr.Recognizer()  # initialize recognizer
     with sr.Microphone() as source:  # mention source it will be either Microphone or audio files.
         
         r.adjust_for_ambient_noise(source)
@@ -21,11 +21,12 @@ def talk():
         except:
             print("Sorry could not recognize your voice")  # In case of voice not recognized  clearly
     if len(message)==0:
-        continue
+        return message, "Sorry could not recognize your voice"
 
     for i, s in enumerate(message):
         if i < len(message)-1 and message[i] == ' ' and message[i-1].isdigit() and message[i+1].isdigit():
             message = message[:i] + message[i+1:]
+    
     print("Sending message now...")
 
     r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": message})
