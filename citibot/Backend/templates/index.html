@@ -183,22 +183,22 @@
 
             <div id = "window">
                 
-                {% for ix in range(length) %}
+                {{% for ix in range(length) %}}
 
-                    {% if ix % 2 == 0 %}
+                    {{% if ix % 2 == 0 %}}
 
                         <div class = "message sen"> {{lis[ix]}} </div>
-                    {%endif%}
+                    {{%endif%}}
 
 
-                    {% if ix % 2 == 1 %}
+                    {{% if ix % 2 == 1 %}}
 
                         <div class = "message rec"> {{lis[ix]}} </div>
                     
-                    {%endif%}
+                    {{%endif%}}
 
 
-                {%endfor%}
+                {{%endfor%}}
                 
 
             </div>
