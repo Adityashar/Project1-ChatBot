@@ -4,48 +4,90 @@ intents:
   - affirm
   - deny
   - thank
-  - payment_status
-  - paid_amount
-  - pending_amount
-  - source_info
+  - Client_Name
+  - Account_ID
+  - Legal_Entity
+  - Currency
+  - Payment_Type
+  - Paid_Amount
+  - Payment_Date
+  - Payment_Status
+  - Pending_Amount
+  - Comments
+  - Source
+  - help_payment_creation
+  - help_multiple_accounts
+  - help_payment_successful
+  - help_get_id
+  - help_cross_country
+  - help_dummy_link
+  - help_add_account
 
 entities:
-  - Legal_Entity
   - Client_Name
-  - Currency
-  - Payment_Date
-  - Paid_Amount
-  - Pending_Amount
   - Account_ID
+  - Legal_Entity
+  - Currency
+  - Payment_Type
+  - Paid_Amount
+  - Payment_Date
+  - Payment_Status
+  - Pending_Amount
+  - Comments
+  - Source
 
 actions:
-  - action_payment
-  - action_amount_paid
-  - action_amount_pending
+  - action_Client_Name
+  - action_Legal_Entity
+  - action_Currency
+  - action_Payment_Type
+  - action_Paid_Amount
+  - action_Payment_Date
+  - action_Payment_Status
+  - action_Pending_Amount
+  - action_Comments
+  - action_help_payment_creation
+  - action_help_multiple_accounts
+  - action_help_payment_successful
+  - action_help_get_id
+  - action_help_cross_country
+  - action_help_add_account
 
 slots:
-  Legal_Entity:
-    type: unfeaturized
-    auto_fill: false
   Client_Name:
-    type: unfeaturized
-    auto_fill: false
-  Currency:
-    type: unfeaturized
-    auto_fill: false
-  Payment_Date:
-    type: unfeaturized
-    auto_fill: false
-  Paid_Amount:
-    type: unfeaturized
-    auto_fill: false
-  Pending_Amount:
     type: unfeaturized
     auto_fill: false
   Account_ID:
     type: unfeaturized
     auto_fill: false
+  Legal_Entity:
+    type: unfeaturized
+    auto_fill: false
+  Currency:
+    type: unfeaturized
+    auto_fill: false
+  Payment_Type:
+    type: unfeaturized
+    auto_fill: false
+  Paid_Amount:
+    type: unfeaturized
+    auto_fill: false
+  Payment_Date:
+    type: unfeaturized
+    auto_fill: false
+  Payment_Status:
+    type: unfeaturized
+    auto_fill: false
+  Pending_Amount:
+    type: unfeaturized
+    auto_fill: false
+  Comments:
+    type: unfeaturized
+    auto_fill: false
   Source:
+    type: unfeaturized
+    auto_fill: false
+  Domain:
     type: unfeaturized
     auto_fill: false
   
@@ -63,29 +105,38 @@ responses:
   utter_affirm:
   - text: "okay"
 
-  utter_payment:
-  - text: "I have received the payment"
+  utter_Payment_Status:
+  - text: "The Payment status for the ID {Account_ID} is {Payment_Status}."
 
-  utter_accountid:
+  utter_Account_ID:
   - text: "The agreement id is {Account_ID} for the transaction between {Legal_Entity} and {Client_Name}. "
 
-  utter_clientname:
+  utter_Client_Name:
   - text: "The client involved in this agreement is {Client_Name}."  
 
-  utter_legalentity:
+  utter_Legal_Entity:
   - text: "The legal entity involved in this agreement is {Legal_Entity}."
 
-  utter_paymentdate:
+  utter_Payment_Date:
   - text: "The transaction between {Legal_Entity} and {Client_Name} took place on {Payment_Date}."
 
-  utter_paidamount:
+  utter_Paid_Amount:
   - text: "The amount paid is {Currency} {Paid_Amount}."
 
-  utter_pendingamount:
+  utter_Pending_Amount:
   - text: "The amount pending is {Currency} {Pending_Amount}."
 
-  utter_source:
+  utter_Source:
   - text: "The Source for given information is {Source}."
+
+  utter_Payment_Type:
+  - text: "The Payment Type for the given agreement is {Payment_Type}."
+
+  utter_Comments:
+  - text: "The Comments for the given agreement is {Comments}."
+
+  utter_help_dummy_link:
+  - text: "For {Domain} issue, please visit our support @citi.com."
 
   utter_default:
   - text: "Please try again !!"

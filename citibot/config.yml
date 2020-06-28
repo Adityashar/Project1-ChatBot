@@ -45,9 +45,9 @@ pipeline:
 # https://rasa.com/docs/rasa/core/policies/
 policies:
   - name: MemoizationPolicy
-    max_history: 30
+    max_history: 0
   - name: TEDPolicy
-    max_history: 30
+    max_history: 10
     epochs: 40
   - name: MappingPolicy
   # - name: "FallbackPolicy"
