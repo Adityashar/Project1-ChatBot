@@ -3,3 +3,4 @@ rasa[convert]
 spacy
 numpy
 pandas
+mysql.connector
