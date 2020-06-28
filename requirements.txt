@@ -6,3 +6,4 @@ pandas
 mysql.connector
 requests
 speechrecognition
+recognizers-text-suite
