@@ -137,14 +137,14 @@ $("#sendMic").on("click", function(e){
     recognition.onstart = function(){
         iconMic.classList.remove("fa-microphone");
         iconMic.classList.add("fa-microphone-slash");
-        $(".keypad").focus()
-        $(".usrInput").val("...");
+        $(".usrInput").focus()
+        $(".usrInput").val("Listening...");
     }
     
     recognition.onend = function(){
         iconMic.classList.add("fa-microphone");
         iconMic.classList.remove("fa-microphone-slash");
-        $(".keypad").focus()
+        $(".usrInput").focus()
         console.log("Mic stopped !!");
     }
 

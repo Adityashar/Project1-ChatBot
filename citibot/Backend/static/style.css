@@ -1,0 +1,48 @@
+body{
+	background-color: whitesmoke;
+}
+h1{
+	text-align: center;
+}
+
+.button{
+	background-color:white;
+	color:black;
+	padding:10px 15px;
+	border:none;
+}
+
+.button:hover{
+	background:white;
+	color:black;
+}
+p{
+	font-size: 20px;
+}
+h2{
+	font-family: helvetica
+}
+.input{
+	text-align: center;
+	float: left;
+	width: 50%
+}
+.output{
+	text-align: center;
+	float: right;
+	width: 50%
+}
+form {
+	text-align: center;
+}
+#container{
+	width: 100%
+}
+button{
+	display: inline-block;
+	background-color:white;
+	color:black;
+	padding:2px 20px;
+	border:none;
+	margin-left: 30px;
+}

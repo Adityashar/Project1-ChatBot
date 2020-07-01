@@ -34,7 +34,7 @@
 
 ## give source path
 * Source
-  - utter_Source
+  - action_Source
 
 ## Client_Name path 1
 * Client_Name
@@ -88,3 +88,6 @@
 * help_add_account 
   - action_help_add_account 
 
+## information path 1
+* information
+  - utter_information

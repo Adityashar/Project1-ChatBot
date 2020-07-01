@@ -14,7 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from dbconnect import query_formation, getData
 import pandas as pd
-import sys, os, pickle, json
+import sys, os, pickle, json, datetime
 
 
 ## database code 
@@ -52,16 +52,24 @@ helpFile = json.load(open('data/help.json', 'r'))
 FEATURES = ['Client_Name', 'Account_ID', 'Legal_Entity', 'Currency', 
             'Payment_Type', 'Paid_Amount', 'Payment_Date', 'Payment_Status', 
             'Pending_Amount','Comments', 'Source']
+Table = ""
+initial_table = {'dataset':FEATURES}
+initial_pk = {'dataset': ["Account_ID"]}
 
-table1 = 'Payment_table'
-initial_table = {'Payment_table':FEATURES}
+if 'pk.pkl' not in os.listdir('./data'):
+    primary_table = {}
+else:
+    primary_table = pickle.load(open('./data/pk.pkl', 'rb'))
+final_pk = {**initial_pk, **primary_table}
 
-if 'dict.pkl' not in os.listdir('/home/aditya/Documents/citibot/data'):
+if 'dict.pkl' not in os.listdir('./data'):
     information_table = {}
 else:
-    information_table = pickle.load(open('/home/aditya/Documents/citibot/data/dict.pkl', 'rb'))
-
+    information_table = pickle.load(open('./data/dict.pkl', 'rb'))
 final_table = {**initial_table, **information_table}
+
+
+helpFile = json.load(open('data/help.json', 'r'))
 
 def get_table(intent):
     tab = ""
@@ -69,8 +77,15 @@ def get_table(intent):
         if intent in final_table[table]:
             tab = table
             break
-
+    Table = tab
+    # print(tab)
     return tab
+
+def containsEntity(e, entities):
+    for ent in entities:
+        if e == ent['entity']:
+            return True;
+    return False;
 
 def query_maker(entities, table):
     string = ""
@@ -96,7 +111,19 @@ def record_finder(entities, table):
 
     return records
 
-slots = ['Legal_Entity','Client_Name','Currency','Payment_Date','Paid_Amount','Pending_Amount','Account_ID','Source', 'Comments', 'Payment_Type', 'Payment_Status']
+# def getstring(val, tup):
+#     if 'date' in tup.lower():
+#         val = val.strftime('%Y-%m-%d')
+#         print(type(val))
+#     # print((str(val)))
+#     return val
+
+def saveRecords(table, records):
+    features = final_table[table]
+    store = {i:{tup:val for tup,val in zip(features,records[i])} for i in range(len(records))}
+    with open('./botfiles/records.json', 'w') as fp:
+        json.dump(store, fp)
+    return 
 
 # class ActionPayment(Action):
 
@@ -202,10 +229,10 @@ class ActionPayCreation(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        Table = ""
+        dispatcher.utter_message(text=str(helpFile['Payment creation'][0]))
 
-        dispatcher.utter_message(text=str(helpFile['Payment creation']))
-
-        return [SlotSet("Domain", "Payment creation link"),UserUtteranceReverted()]
+        return [SlotSet("Domain", "Payment creation link"), SlotSet("Source", "'Help.json'")]
 
 class ActionMultiAcc(Action):
 
@@ -215,10 +242,10 @@ class ActionMultiAcc(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        Table = ""
+        dispatcher.utter_message(text=str(helpFile["Number of accounts"][0]))
 
-        dispatcher.utter_message(text=str(helpFile["Number of accounts"]))
-
-        return [SlotSet("Domain", "Account setup link"),UserUtteranceReverted()]
+        return [SlotSet("Domain", "Account setup link"), SlotSet("Source", "'Help.json'")]
 
 class ActionPaySuccess(Action):
 
@@ -228,10 +255,10 @@ class ActionPaySuccess(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        Table = ""
+        dispatcher.utter_message(text=str(helpFile['Payment Successful'][0]))
 
-        dispatcher.utter_message(text=str(helpFile['Payment Successful']))
-
-        return [SlotSet("Domain", "payment status link"),UserUtteranceReverted()]
+        return [SlotSet("Domain", "payment status link"), SlotSet("Source", "'Help.json'")]
 
 class ActionGetID(Action):
 
@@ -241,10 +268,11 @@ class ActionGetID(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        Table= ""
+        dispatcher.utter_message(text=str(helpFile['Transaction id of payment'][0]))
 
-        dispatcher.utter_message(text=str(helpFile['Transaction id of payment']))
-
-        return [SlotSet("Domain", "get id link"),UserUtteranceReverted()]
+        return [SlotSet("Domain", "get id link"), SlotSet("Source", "'Help.json'")]
 
 class ActionCrossCountry(Action):
 
@@ -254,10 +282,11 @@ class ActionCrossCountry(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         
+        Table= ""
+        dispatcher.utter_message(text=str(helpFile['Cross country accounts'][0]))
 
-        dispatcher.utter_message(text=str(helpFile['Cross country accounts']))
-
-        return [SlotSet("Domain", "cross country link"),UserUtteranceReverted()]
+        return [SlotSet("Domain", "cross country link"), SlotSet("Source", "'Help.json'")]
 
 class ActionAddAcc(Action):
 
@@ -267,10 +296,12 @@ class ActionAddAcc(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         
+        Table= ""
+        dispatcher.utter_message(text=str(helpFile['Add new fund and account details'][0]))
 
-        dispatcher.utter_message(text=str(helpFile['Add new fund and account details']))
+        return [SlotSet("Domain", "add account link"), SlotSet("Source", "'Help.json'")]
 
-        return [SlotSet("Domain", "add account link"),UserUtteranceReverted()]
 
 
 class actionClientName(Action):
@@ -284,67 +315,94 @@ class actionClientName(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
-            flag = [ 1 for e in entities if e['entity'] == 'Account_ID']
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
+
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Client_Name')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Client_Name')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The client name is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The client name is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+                # return []
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The Client names are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
             return []
 
 
-# class actionAccountID(Action):
+class actionAccountID(Action):
 
-#     def name(self) -> Text:
-#         return "action_Account_ID"
+    def name(self) -> Text:
+        return "action_Account_ID"
 
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-#         try:
-#             entities = tracker.latest_message['entities']
-#             intent = tracker.latest_message['intent']
-#             table = 'dataset'#get_table(intent['name'])
+        try:
+            entities = tracker.latest_message['entities']
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
-#             if(len(entities) == 0):
-#                 dispatcher.utter_message(template = 'utter_Account_ID')
-#                 return []
+            if(len(entities) == 0):
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Account_ID')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
+                return []
 
-#             records, features = getData(query_formation(entities, table), table)
-#             features = {tup[0]:val for tup,val in zip(features,records[0])}
-#             print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-#             # why make two query calls when already have features
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
+                raise ValueError("No record for this query !!!")
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The account id is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The ids are {}.".format(', '.join(records)))
+                return []
 
-#             if(len(records)==0 or len(records)>1):
-#                 raise ValueError("No record for this query !!!")
-    
-#             print(records)
-#             #dispatcher.utter_message(text="yy")
-#             dispatcher.utter_message(text="The account id is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-#             return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
-
-#         except:
-#             dispatcher.utter_message(text = str(sys.exc_info()[1]))
-#             return []
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []
 
 
 class actionLegalEntity(Action):
@@ -358,26 +416,40 @@ class actionLegalEntity(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Legal_Entity')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Legal_Entity')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The legal entity is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The legal entity is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                print(records)
+                dispatcher.utter_message(text="The legal entities are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -395,26 +467,39 @@ class actionCurrency(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Currency')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Currency')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The currency is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The currency is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The Currenies are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -432,26 +517,39 @@ class actionPaymentType(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Payment_Type')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Payment_Type')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The payment type is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The payment type is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The Status are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -469,26 +567,40 @@ class actionPaidAmount(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Paid_Amount')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Paid_Amount')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
 
-            if(len(records)==0 or len(records)>1):
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The paid amount is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The paid amount is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The amounts are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -506,26 +618,39 @@ class actionPaymentDate(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Payment_Date')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Payment_Date')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The payment date is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The payment date is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The dops are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -543,26 +668,39 @@ class actionPaymentStatus(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Payment_Status')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Payment_Status')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The payment status is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The payment status is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The status are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -580,26 +718,39 @@ class actionPendingAmount(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Pending_Amount')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Pending_Amount')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The pending amount is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The pending amount is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The amounts are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -617,26 +768,39 @@ class actionComments(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name']))
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
 
             if(len(entities) == 0):
-                dispatcher.utter_message(template = 'utter_Comments')
+                if(tracker.get_slot('Account_ID') is not None):    
+                    dispatcher.utter_message(template = 'utter_Comments')
+                else:
+                    dispatcher.utter_message(text = "Please enter a valid transaction ID !")
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The comments is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,allrecords[0])}
+                print(allrecords, features)
+                dispatcher.utter_message(text="The comments is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The Comments are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -654,31 +818,43 @@ class actionSource(Action):
 
         try:
             entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']
-            table = 'dataset'#get_table(intent['name'])
-
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
+            print(Table)
             if(len(entities) == 0):
+                print(Table)
                 dispatcher.utter_message(template = 'utter_Source')
+                if(Table != ""):
+                    dispatcher.utter_message(template = 'utter_table')
                 return []
 
-            records, features = getData(query_formation(entities, table), table)
-            features = {tup[0]:val for tup,val in zip(features,records[0])}
-            print(records, features)
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            # why make two query calls when already have features
-
-            if(len(records)==0 or len(records)>1):
+            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
                 raise ValueError("No record for this query !!!")
-    
-            print(records)
-            #dispatcher.utter_message(text="yy")
-            dispatcher.utter_message(text="The source is  "+ str(features[intent['name'].lower()]) + " for the given record with id "+ str(features['account_id']) )
-            return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table1]]
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,records[0])}
+                print(records, features)
+                dispatcher.utter_message(text="The source is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            else:
+                records = [rec[0] for rec in records]
+                records = list(set(records))
+                dispatcher.utter_message(text="The sources are {}.".format(', '.join(records)))
+                return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
             return []
-
 
 
 

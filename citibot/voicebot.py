@@ -14,7 +14,7 @@ from gtts import gTTS
 bot_message = ""
 message=""
 
-r = requests.post('http://localhost:5002/webhooks/rest/webhook', json={"message": "Hello"})
+r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": "Hello"})
 print(r.json())
 print("Bot says, ",end=' ')
 for i in r.json():
@@ -49,7 +49,7 @@ while bot_message != "Bye" or bot_message!='thanks':
             message = message[:i] + message[i+1:]
     print("Sending message now...")
 
-    r = requests.post('http://localhost:5002/webhooks/rest/webhook', json={"message": message})
+    r = requests.post('http://localhost:5005/webhooks/rest/webhook', json={"message": message})
 
     print("Bot says, ",end=' ')
     for i in r.json():

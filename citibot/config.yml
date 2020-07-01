@@ -44,11 +44,17 @@ pipeline:
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
+  - name: "KerasPolicy"
+    featurizer:
+    - name: MaxHistoryTrackerFeaturizer
+      max_history: 15
+      state_featurizer:
+        - name: BinarySingleStateFeaturizer
   - name: MemoizationPolicy
     max_history: 0
-  - name: TEDPolicy
-    max_history: 10
-    epochs: 40
+  # - name: TEDPolicy
+  #   max_history: 15
+  #   epochs: 40
   - name: MappingPolicy
   # - name: "FallbackPolicy"
   #   nlu_threshold: 0.4

@@ -124,7 +124,8 @@ $("#sendMic").on("click", function(e){
     const iconMic = searchMic.firstElementChild;
     var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     var recognition = new SpeechRecognition()
-    
+    // var prevText = ""
+
     recognition.lang = 'en-US'
 
     if(iconMic.classList.contains('fa-microphone')){
@@ -137,14 +138,18 @@ $("#sendMic").on("click", function(e){
     recognition.onstart = function(){
         iconMic.classList.remove("fa-microphone");
         iconMic.classList.add("fa-microphone-slash");
-        $(".keypad").focus()
-        $(".usrInput").val("...");
+        $(".usrInput").focus()
+        // if($(".usrInput").val() != null || $(".usrInput").val() != "" || $(".usrInput").val() != "Listening..."){
+        //     prevText = $(".usrInput").val();
+        // }
+        prevText = $(".usrInput").val();
+        // $(".usrInput").val("Listening...");
     }
     
     recognition.onend = function(){
         iconMic.classList.add("fa-microphone");
         iconMic.classList.remove("fa-microphone-slash");
-        $(".keypad").focus()
+        $(".usrInput").focus()
         console.log("Mic stopped !!");
     }
 
@@ -157,7 +162,20 @@ $("#sendMic").on("click", function(e){
         
         console.log(result)
         setTimeout(() => {
-            $(".usrInput").val(result);
+            if($(".usrInput").val() == ""){
+                console.log("empty")
+                $(".usrInput").val(result);
+            }
+            else if(result.toLowerCase().trim() === "go"){
+                console.log(prevText)
+                setUserResponse(prevText);
+                send(prevText);
+                e.preventDefault();
+            }
+            else{
+                console.log("third")
+                $(".usrInput").val(result);
+            }
         }, 500);
         
     }
@@ -202,7 +220,7 @@ function send(message) {
                 return;
             }
             setBotResponse(botResponse);
-
+            $(".usrInput").focus()
         },
         error: function(xhr, textStatus, errorThrown) {
 
@@ -223,7 +241,7 @@ function send(message) {
 
 //=================== set bot response in the chats ===========================================
 function setBotResponse(response) {
-
+    console.log(1)
     //display bot response after 500 milliseconds
     setTimeout(function() {
         hideBotTyping();
@@ -242,7 +260,7 @@ function setBotResponse(response) {
 
                 //check if the response contains "text"
                 if (response[i].hasOwnProperty("text")) {
-                    var BotResponse = '<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">' + response[i].text + '</p><div class="clearfix"></div>';
+                    var BotResponse = '<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">' + response[i].text +  '</p><div class="clearfix"></div>';
                     $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
                 }
 

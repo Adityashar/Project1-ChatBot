@@ -13,6 +13,7 @@
 - see you later
 
 ## intent:affirm
+- okay
 - yes
 - indeed
 - of course
@@ -49,10 +50,9 @@
 
 ## intent:help_payment_successful
 - how can i know payment is processed
-- by what means can i know payment status
 - how should i know payment is successful
 - will i receive email to notify about payment
-- will i get mail to tell about status of payment
+- will i get mail to tell about success of payment
 - mail briefing the success of the payment
 
 ## intent:help_get_id
@@ -83,6 +83,8 @@
 - how to add new account
 - what steps to follow while adding new acc
 - help me create new account in the bank
+- help me setting up a new account
+- steps to set up a new account
 
 
 ## intent:Payment_Status
@@ -93,22 +95,10 @@
 - Brief me about the transaction deal with agreement id [103640](Account_ID) 
 - Brief me about the payment agreement deal with [103600](Account_ID) id
 - Tell me the status of the transaction [101872](Account_ID)
-- Give the details of the account [101369](Account_ID)
-- Give the details about agreement [102906](Account_ID) accound id
 - Tell me something about the deal with [105086](Account_ID) id
 - How are things going on with the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the details pls
 - For the id [103490](Account_ID) tell me the status 
-- Tell me the status for the transaction from [CitiBank Pune](Legal_Entity) with id [103560](Account_ID)
-- Tell me the status for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103570](Account_ID)
-- Brief me about the payment status from [CitiBank Bangalore]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} for account [103360](Account_ID)
-- Brief us for the agreement of [CitiBank Pune](Legal_Entity) for transaction id [103660](Account_ID)
-- Give me details about the status of the payment from [CitiBank NYC]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for agreement [103510](Account_ID) id
-- Give me something about the current status of the transaction from [CitiBank NewYorkCity]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for payment id [103520](Account_ID) 
-- For the id [103923](Account_ID) provide me the details of the current status of payment from [CitiBank London](Legal_Entity) 
-- for the transaction [18331](Account_ID) give me status of agreement deal from [CitiBank Bengaluru](Legal_Entity)
-- for the agreement id [18391](Account_ID) give me report of transaction from [Citi Bank Bangaluru]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} 
-- Give me the status report for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103520](Account_ID)
 
 
 ## intent:Paid_Amount
@@ -119,25 +109,12 @@
 - Brief me about the transaction done in deal with agreement id [103640](Account_ID) 
 - Brief me about the payment made in the agreement deal with [103600](Account_ID) id
 - Tell me how much money was delivered in the transaction [101872](Account_ID)
-- Give the details of the money transferred with account id [101369](Account_ID)
 - Give the amount paid for agreement [102906](Account_ID) accound id
 - Tell me something about money payment done in the deal with [105086](Account_ID) id
 - How much amount transaction took place with the agreement [103180](Account_ID) id
 - How much amount transferred in the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the paid amount details
 - For the id [103440](Account_ID) tell me the payment made
-- Tell me the amount paid for the transaction from [CitiBank Pune](Legal_Entity) with id [103560](Account_ID)
-- Tell me the details for the transaction amount from [citibank pune]{"entity": "Legal_Entity", "value":"CitiBank Pune"} with id [103561](Account_ID)
-- Tell me the details for the payment made from [citibank Hongkong]{"entity": "Legal_Entity", "value":"CitiBank HongKong"} with [103161](Account_ID) id
-- Tell me the amount paid for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103570](Account_ID)
-- Brief me about the payment made [CitiBank Bangalore]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} for account [103360](Account_ID)
-- Brief us about the money payment made for the agreement of [CitiBank Pune](Legal_Entity) for transaction id [103660](Account_ID)
-- Give me details about the amount paid for [CitiBank NYC]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for agreement [103510](Account_ID) id
-- Give me something about the current amount paid for the transaction from [CitiBank NewYorkCity]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for payment id [103520](Account_ID) 
-- For the id [103923](Account_ID) provide me the details of the current amount paid  from [CitiBank London](Legal_Entity) 
-- for the transaction [18331](Account_ID) give me paid amount for agreement deal from [CitiBank Bengaluru](Legal_Entity)
-- for the agreement id [18391](Account_ID) give me transaction amount from [Citi Bank Bangaluru]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} 
-- Give me the money paid for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103520](Account_ID)
 
 
 ## intent:Pending_Amount
@@ -158,18 +135,6 @@
 - How much amount needs to be transferred in the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the pending amount details
 - For the id [103440](Account_ID) tell me the pending amount
-- Tell me the pending amount for the transaction from [CitiBank Pune](Legal_Entity) with id [103560](Account_ID)
-- Tell me the details for the pending transaction from [citibank pune]{"entity": "Legal_Entity", "value":"CitiBank Pune"} with id [103561](Account_ID)
-- Tell me the details for the payment to be given from [citibank Hongkong]{"entity": "Legal_Entity", "value":"CitiBank HongKong"} with [103161](Account_ID) id
-- Tell me the payment pending for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103570](Account_ID)
-- Brief me about the amount pending from [CitiBank Bangalore]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} for account [103360](Account_ID)
-- Brief us for money pending for the agreement of [CitiBank Pune](Legal_Entity) for transaction id [103660](Account_ID)
-- Give me details about the payment left from [CitiBank NYC]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for agreement [103510](Account_ID) id
-- Give me something about the current payment left to be paid for the transaction from [CitiBank NewYorkCity]{"entity": "Legal_Entity", "value":"CitiBank NewYork"} for payment id [103520](Account_ID) 
-- For the id [103923](Account_ID) provide me the details of the current pending payment from [CitiBank London](Legal_Entity) 
-- for the transaction [18331](Account_ID) give me money pending of agreement deal from [CitiBank Bengaluru](Legal_Entity)
-- for the agreement id [18391](Account_ID) give me report of transaction pending from [Citi Bank Bangaluru]{"entity": "Legal_Entity", "value":"CitiBank Bengaluru"} 
-- Give me the money to be paid for the transaction from [CitiBank Pune](Legal_Entity) for agreement [103520](Account_ID)
 
 ## intent:Payment_Type
 - payment type for id [105135](Account_ID)
@@ -232,7 +197,44 @@
 - which company paid for agreement [123456](Account_ID)
 - for the [123456](Account_ID) id the company which has pay the pending money is
 - give the conglomerate accountable for agreement with transaction id [123456](Account_ID)
-
+- tell me the clients for which the payments are [Fully paid](Payment_Status)
+- for what client companies are the payments [Processing](Payment_Status)
+- which are the client names for whom the payments [Rejected](Payment_Status)
+- Tell the client companies for which the payments are [partially paid]{"entity":"Payment_Status", "value":"Partially Paid"}
+- what are the client companies for which the transactions are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- what are the client companies for which the transactions are [completely paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- for what client companies are the payments [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"}
+- for what client companies are the payments [processing]{"entity":"Payment_Status", "value":"Processing"}
+- what are the client names for which the payments are [failed]{"entity":"Payment_Status", "value":"Rejected"}
+- tell the companies whose payments are in [progress]{"entity":"Payment_Status", "value":"Processing"}
+- for what client companies are the payments [pending]{"entity":"Payment_Status", "value":"Partially Paid"}
+- in which client companies are the transactions [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"}
+- what are the clients for which the payment status is [incomplete]{"entity":"Payment_Status", "value":"Partially Paid"}
+- Breif me about the client names that performed transaction between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date)
+- Tell me about the clients whose transaction took place from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- What are the name of the clients with transaction from [2020-01-06](Payment_Date) to [2020-03-06](Payment_Date)
+- Client Names with payments between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the client names that did transaction?
+- From [2020-01-06](Payment_Date) to [2021-06-06](Payment_Date) what are the client names who delivered or received payments?
+- Breif me about the client companies that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date)
+- Tell me about the client details of transaction from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- Client Names with trans between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the clients that did transaction?
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the client names for whom the transaction was [Rejected](Payment_Status)?
+- From [2020-01-06](Payment_Date) to [2021-06-06](Payment_Date) what are the client names whose payments have been in [process]{"entity":"Payment_Status", "value":"Processing"}?
+- Breif me about the client companies that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [Fully paid](Payment_Status)
+- Tell me about the client details for transactions that were [Rejected](Payment_Status) from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- Tell me about the client names for whom transactions had [failed]{"entity":"Payment_Status", "value":"Rejected"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
+- Client Names whose transactions were [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the clients whose payments are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- Breif me about the client companies that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [Fully paid](Payment_Status)
+- Tell me about the client details for transactions that were [processed]{"entity":"Payment_Status", "value":"Processing"} from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- Tell me about the client names for whom payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
+- Client Names whose payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- client companies that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [failed]{"entity":"Payment_Status", "value":"Rejected"}
+- client details for transactions that were [Failed]{"entity":"Payment_Status", "value":"Rejected"} from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- give info about client names for whom payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
+- tell Client Names whose payments were [failed]{"entity":"Payment_Status", "value":"Rejected"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
 
 ## intent:Legal_Entity
 - legal entity for id [105126](Account_ID)
@@ -262,8 +264,30 @@
 - For the the id [103432](Account_ID) give me the bank name
 - with regards to the transaction with id [103432](Account_ID), what is legal entity
 - with respect to the agreement [103432](Account_ID), what is the bank
-
-
+- tell me the le for which the payments are [Fully paid](Payment_Status)
+- for what legal entity are the payments [Processing](Payment_Status)
+- which are the legal entity for whom the payments [Rejected](Payment_Status)
+- Tell the legal entity for which the payments are [partially paid]{"entity":"Payment_Status", "value":"Partially Paid"}
+- what are the legal entities for which the transactions are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- what are the legal entities for which the transactions are [completely paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- for what legal entity banks are the payments [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"}
+- for what l e are the payments [processing]{"entity":"Payment_Status", "value":"Processing"}
+- what are the legal entity names for which the payments are [failed]{"entity":"Payment_Status", "value":"Rejected"}
+- tell the banks whose payments are in [progress]{"entity":"Payment_Status", "value":"Processing"}
+- for what legal entities are the payments [pending]{"entity":"Payment_Status", "value":"Partially Paid"}
+- in which legal entities are the transactions [incompletely]{"entity":"Payment_Status", "value":"Partially Paid"}
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the legal entities for whom the transaction was [Rejected](Payment_Status)?
+- From [2020-01-06](Payment_Date) to [2021-06-06](Payment_Date) what are the legal entities names whose payments have been in [process]{"entity":"Payment_Status", "value":"Processing"}?
+- Breif me about the legal entities that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [Fully paid](Payment_Status)
+- Tell me about the legal entities details for transactions that were [Rejected](Payment_Status) from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- Tell me about the le names for whom transactions had [failed]{"entity":"Payment_Status", "value":"Rejected"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
+- legal entities whose transactions were [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the legal entities whose payments are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- Breif me about the legal entities that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
+- Tell me about the legal entities details for payments that were [paid]{"entity":"Payment_Status", "value":"Fully paid"} on date [2020-02-02](Payment_Date)
+- Tell me about the le names for whom transactions had [failed]{"entity":"Payment_Status", "value":"Rejected"} on [2020-02-02](Payment_Date)
+- legal entities whose transactions were [incompletely paid]{"entity":"Payment_Status", "value":"Partially Paid"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Between [2020-06-01](Payment_Date) and [2020-06-06](Payment_Date), what are the legal entities whose payments are [paid]{"entity":"Payment_Status", "value":"Fully paid"}
 
 ## intent:Payment_Date
 - payment date for id [105170](Account_ID)
@@ -286,15 +310,16 @@
 - with regards to the transaction with id [103432](Account_ID), what is payment date
 - with respect to the agreement [103432](Account_ID), what is the date of transaction
 
+
 ## intent:Comments
 - comments for id [105071](Account_ID)
 - What are the comments with agreement id [105126](Account_ID)
 - What are the comments for transaction with [105150](Account_ID)
 - comments for agreement with [105146](Account_ID) id
-- Give me the final statement details about agreement with [105146](Account_ID)id
+- Give me the final statement details about agreement with [105146](Account_ID) id
 - Tell me the comments for the [105061](Account_ID)
 - Can you show me the comments for [105170](Account_ID) id 
-- I request you to provide me the final statement made with [105121](Account_ID)id 
+- I request you to provide me the final statement made with [105121](Account_ID) id 
 - Please output the final conclusive statement of [105125](Account_ID)
 - Brief me about the final statement for the accord with [105059](Account_ID) id 
 - Please show me the comments for transaction with id [105059](Account_ID)
@@ -310,6 +335,28 @@
 - What is the source for transaction with [105146](Account_ID)
 - source for agreement with [105050](Account_ID) id
 - Please check the source of [105120](Account_ID)
+- source
+- give the source for information
+- give the reference document
+- which doc was referenced for this purpose
+
+## intent:information
+- Please provide more info on records
+- give more information related to the response
+- provide a link displaying more information
+- i want to know more about the records
+- tell me something more about the responses
+- give me complete details of records
+- provide me the details of the enteries
+- give all the details for given response please
+- tell me more info details for the records
+- tell more info
+
+<!-- ## intent:all_the_clients
+- give me the client names for all the payments that failed
+- for which all clients did the payments fail
+- can you tell me the client companies for which the payments failed -->
+
 
 ## lookup:Client_Name
 - J P Morgan
@@ -376,3 +423,19 @@
 - CitiBank NewYorkCity
 - CitiBank New york City
 
+## synonym:Rejected
+- rejected
+- failed
+- fail
+- bounced
+
+## synonym:Fully paid
+- paid
+- completely paid
+- full paid
+- complete
+
+## synonym:Processing
+- process
+- Processing
+- processed

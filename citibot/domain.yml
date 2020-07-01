@@ -4,15 +4,21 @@ intents:
   - affirm
   - deny
   - thank
-  - Client_Name
+  - Client_Name:
+      triggers: action_Client_Name
   - Account_ID
-  - Legal_Entity
+  - Legal_Entity:
+      triggers: action_Legal_Entity
   - Currency
   - Payment_Type
-  - Paid_Amount
-  - Payment_Date
-  - Payment_Status
-  - Pending_Amount
+  - Paid_Amount:
+      triggers: action_Paid_Amount
+  - Payment_Date:
+      triggers: action_Payment_Date
+  - Payment_Status:
+      triggers: action_Payment_Status
+  - Pending_Amount:
+      triggers: action_Pending_Amount
   - Comments
   - Source
   - help_payment_creation
@@ -22,6 +28,7 @@ intents:
   - help_cross_country
   - help_dummy_link
   - help_add_account
+  - information
 
 entities:
   - Client_Name
@@ -52,6 +59,7 @@ actions:
   - action_help_get_id
   - action_help_cross_country
   - action_help_add_account
+  - action_Source
 
 slots:
   Client_Name:
@@ -90,6 +98,7 @@ slots:
   Domain:
     type: unfeaturized
     auto_fill: false
+
   
 
 responses:
@@ -127,7 +136,7 @@ responses:
   - text: "The amount pending is {Currency} {Pending_Amount}."
 
   utter_Source:
-  - text: "The Source for given information is {Source}."
+  - text: "The Source for given information is doc {Source}."
 
   utter_Payment_Type:
   - text: "The Payment Type for the given agreement is {Payment_Type}."
@@ -137,6 +146,12 @@ responses:
 
   utter_help_dummy_link:
   - text: "For {Domain} issue, please visit our support @citi.com."
+
+  utter_table:
+  - text: "{Table} table in the SQL database."
+
+  utter_information:
+  - text: "For more information about the records, please <a href='localhost:5000/details' target='_blank'>Click Here. </a> "
 
   utter_default:
   - text: "Please try again !!"

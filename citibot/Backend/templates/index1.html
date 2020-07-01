@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet">
+
+    <!--Import Font Awesome Icon Font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" type="text/css" href="static/css/materialize.min.css">
+
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href={{url_for('static',filename='style2.css')}}>
+
+	<title>Smart Email Tracker</title>
+	<style type="text/css">
+        .xyz {
+            background-size: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .btn-circle.btn-sm {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            font-size: 8px;
+            text-align: center;
+            background-color: #145BFE;
+        }
+        .btn-circle.btn-md {
+            width: 60px;
+            height: 60px;
+            padding: 7px 10px;
+            border-radius: 30px;
+            font-size: 10px;
+            text-align: center;
+            background-color: #145BFE;
+        }
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .small{
+        	color : blue;
+        }
+
+        .sue{
+        	position: absolute;
+        	right: 150px;
+        	bottom: 20px;
+        }
+        .test{
+        	display: none;
+        }
+
+        #vis{
+        	color: blue;
+        	position: absolute;
+        	right: 80px;
+        	bottom: 100px;
+        }
+
+        #mike{
+        	position: absolute;
+        	right: 180px;
+        	bottom: 20px;
+        }
+
+
+        #box{
+            height: 450px;
+            width: 400px;
+            border-radius: 40px;
+            position: absolute;
+            right: 50px;
+            bottom: 100px;
+            background-color: white;
+            box-shadow: 3px 3px ;
+        }
+
+        #head{
+            height: 15%;
+            background-color: #145BFE;
+        }
+
+        #text{
+            height: 10%;
+            background-color: #F0F0F0;
+        /*  align-content: center;*/
+        }
+
+        #window{
+            height: 75%;
+            /*background-color: yellow;*/
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+        }
+
+        #micro{
+            width: 10%;
+            /*background-color: #0080FF;*/
+            height: 100%;
+            /*padding: 2px 5px 2px 5px;*/
+            margin: 0px 0px 0px 170px;
+        }
+
+        .message{
+            width: 80%;
+        }
+
+        .rec{
+            margin: 10px 10px 10px 0px;
+            border-radius: 5px;
+            padding: 5px 5px 5px 5px;
+            color: black;
+            background-color: #F0F0F0;
+            display: block;
+            word-wrap: break-word;
+            /*overflow-wrap: break-word;*/
+        }
+
+        .sen{
+            margin: 10px 10px 10px 60px;
+            border-radius: 5px;
+            padding: 5px 5px 5px 5px;
+            color: white;
+            background-color: #145BFE;
+            display: block;
+            word-wrap: break-word;
+            /*overflow-wrap: break-word;*/
+        }
+
+        #tit{
+            color: white;
+            padding: 10px 10px 10px 10px;
+        }
+
+        #but{
+            height: 40px;
+            border-radius: 20px;
+            width: 40px;
+            margin-top: 2px;
+            background-color: #145BFE;
+            color: white;
+            font-size: 10px;
+
+        }
+
+       /* #mike{
+            background: url("mike2.png") no-repeat;
+            background-color: #145BFE;
+            object-fit: cover;
+        }
+
+*/
+
+
+    </style>
+</head>
+<body>
+	<header class="site-header">
+		  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+			<div class="container">
+			  <a class="navbar-brand mr-4" href="/thread">Email Thread</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarToggle">
+				<div class="navbar-nav mr-auto">
+				  <a class="nav-item nav-link" href="/">Home</a>
+				  <a class="nav-item nav-link" href="/show">Show All</a>
+				  <a class="nav-item nav-link" href="{{url_for('upload_file')}}">Upload Email File</a>
+				  <a class="nav-item nav-link" href="{{url_for('retrain')}}">Retrain</a>
+				</div>
+				<!-- Navbar Right Side -->
+				<div class="navbar-nav">
+				  {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{{url_for('logout')}}">Logout</a>
+                  {% else %}
+                    <a class="nav-item nav-link" href="{{url_for('login')}}">Login</a>
+                    <a class="nav-item nav-link" href="{{url_for('register')}}">Register</a>
+                  {% endif %}
+				</div>
+			  </div>
+			</div>
+		  </nav>
+	</header>
+	<h1>Smart Email Tracker</h1>
+	<hr>
+	<main role="main" class="container">
+		  <div class="row">
+			  <div class="col-md-8">
+					{% with messages = get_flashed_messages(with_categories=true) %}
+                	{% if messages %}
+                    	{% for category, message in messages %}
+                        	<div class="alert alert-{{ category }}">
+                            	{{ message }}
+                        	</div>
+                    	{% endfor %}
+                	{% endif %}
+            		{% endwith %}
+			  </div>
+			<div class="col-md-8">
+			  <p>
+				Please enter the details below :
+			  </p>
+				<form class="my-form" action="" method="POST">
+					<div>
+						<label>From    : </label>
+						<input type="text" name="From" placeholder="Enter sender email">
+					</div>
+					<br>
+					<div>
+						<label>To      :    </label>
+						<input type="text" name="To" placeholder="Enter receiver email">
+					</div>
+					<br>
+					<div>
+						<label>Subject : </label>
+						<input type="text" name="Subject" placeholder="Enter the subject">
+					</div>
+					<br>
+					<div>
+						<label>Body    : </label>
+						<textarea name="Message"></textarea>
+					</div>
+					<br>
+					<div>
+						<label>Add Attachment : </label>
+				 		<input type = "file" name = "file" />
+					</div>
+					<input class="button" type="submit" name="submit" value="Submit">
+				</form>
+			</div>
+			<div class="col-md-4">
+			  <div class="content-section">
+				<p class='text-muted'>
+				  <h2>Predicted Output</h2>
+				<p>
+				The email belongs to class : {{m}}
+				</p>
+				<p>Was the right class predicted?</p>
+			 		<button>
+				   		<a href="{{url_for('right')}}">
+							Yes
+						</a>
+					</button>
+					<span></span>
+					<button>
+				   		<a href="{{url_for('wrong')}}">
+							NO
+						</a>
+					</button>
+			  </div>
+			</div>
+		  </div>
+	</main>
+	<div class="container">
+		<button type="button" class="btn btn-primary btn-circle btn-md sue"> <b>Upload</b></button>
+ 			<form class = "test" id = "vis" action="\submit" method="POST" enctype="multipart/form-data">
+  				<div class="form-row">
+    				<div class = "small">
+      					<input type="file" name="data">
+    				</div>
+    			<div class = "small">
+      				<input type="submit">
+    			</div>
+  				</div>
+			</form>
+
+        <!-- Modal for rendering the charts, declare this if you want to render charts,
+         else you remove the modal -->
+        <div id="modal1" class="modal">
+            <canvas id="modal-chart"></canvas>
+        </div>
+
+        <!--chatbot widget -->
+        <div class="widget">
+            <div class="chat_header">
+
+                <!--Add the name of the bot here -->
+                <span class="chat_header_title">Bot</span>
+                <span class="dropdown-trigger" href='#' data-target='dropdown1'>
+                  <i class="material-icons">
+                  more_vert
+                  </i>
+               </span>
+
+                <!-- Dropdown menu-->
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#" id="clear">Clear</a></li>
+                    <li><a href="#" id="restart">Restart</a></li>
+                    <li><a href="#" id="close">Close</a></li>
+                </ul>
+            </div>
+
+            <!--Chatbot contents goes here -->
+            <div class="chats" id="chats">
+                <div class="clearfix"></div>
+
+            </div>
+
+            <!--keypad for user to type the message -->
+            <div class="keypad">
+                <textarea id="userInput" placeholder="Type a message..." class="usrInput"></textarea>
+                <div id="sendMic"><i class="fa fa-microphone" aria-hidden="true" style="font-size:24px"></i></div>
+                <div id="sendButton"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+            </div>
+        </div>
+
+        <!--bot profile-->
+        <div class="profile_div" id="profile_div">
+            <img class="imgProfile" src="static/img/chat.png" />
+        </div>
+
+        <!-- Bot pop-up intro -->
+        <!-- <div class="tap-target" data-target="profile_div">
+            <div class="tap-target-content">
+                <h5 class="white-text">Hey there 👋</h5>
+                <p class="white-text">I can help you get started with Rasa and answer your technical questions.</p>
+            </div>
+        </div> -->
+
+
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+
+    <!--Main Script -->
+    <script type="text/javascript" src="static/js/script.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+<script type="text/javascript">
+
+	var but = document.querySelector('.sue');
+	var frm = document.querySelector('#vis');
+	but.addEventListener("click", function(){
+		frm.classList.toggle("test");
+	});
+</script>
+</body>
+</html>

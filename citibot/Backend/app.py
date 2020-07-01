@@ -7,7 +7,7 @@ app = Flask(__name__)
 strs = []
 @app.route('/')
 def hello():
-	return render_template('ind.html', lis = strs, length = len(strs))
+	return render_template('index.html', lis = strs, length = len(strs))
 
 @app.route('/submit', methods = ['POST'])
 def submit():
@@ -17,7 +17,8 @@ def submit():
         #loadData(file.filename)
         q = 'python Backend/dynamictrain.py ' + file.filename
         #os.system(q)
-        #os.system('python Backend/train.py')
+        os.system('python Backend/train.py')
+        print("trained")
 
     return redirect('/')
 
@@ -36,6 +37,14 @@ def mike():
 
     return redirect('/')
 
+@app.route("/details", methods = ['GET'])
+def details():
+    lisp = []
+    with open('../botfiles/records.json') as json_file: 
+        data = json.load(json_file) 
+        for dic in data.values():
+            lisp.append(dic)
+    return render_template('details.html', lis = lisp)
 
 if __name__ == '__main__':
     app.run(debug = True)

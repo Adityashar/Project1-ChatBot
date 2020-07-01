@@ -1,8 +1,8 @@
 {
-    "Payment creation": "Click on <dummy_link> Go to Tools > Setup > Basics > Create payment",
-    "Payment Successful": "Payment is successful if you get an acknowledgement via an email",
-    "Add new fund and account details": "To add a new fund and account details raise a request in <dummy_link> with the approval from your immediate manager",
-    "Transaction id of payment": "The transaction ID is the payment is successful could be found in Account tab under profile section of the link <dummy_link>",
-    "Cross country accounts": "you can have same account accross countries in that case fxrate will be applied to local currency of country",
-    "Number of accounts": "you can have multiple accounts across the country one for receive and one for deliver"
+    "Payment creation": ["Click on <a href='https://www.online.citibank.co.in/customerservice/home.htm' target='_blank'>this link. </a> \nGo to Tools > Setup > Basics > Create payment"],
+    "Payment Successful": ["Payment is successful if you get an acknowledgement via an email.\nFor more info, visit  <a href='https://www.online.citibank.co.in/customerservice/home.htm' target='_blank'>this link. </a>"],
+    "Add new fund and account details": ["To add a new fund and account details raise a request in <a href='https://www.online.citibank.co.in/customerservice/home.htm' target='_blank'>this link</a> with the approval from your immediate manager"],
+    "Transaction id of payment": ["The transaction ID if the payment is successful could be found in Account tab under profile section of <a href='' target='_blank'>this link. </a>"],
+    "Cross country accounts": ["You can have same account accross countries in that case fxrate will be applied to local currency of country.\nFor more info, visit <a href='https://www.online.citibank.co.in/customerservice/home.htm' target='_blank'>this link. </a>"],
+    "Number of accounts": ["You can have multiple accounts across the country one for receive and one for deliver.\nFor more info, visit <a href='https://www.online.citibank.co.in/customerservice/home.htm' target='_blank'>this link. </a>"]
 }

@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import mysql.connector
-import traceback
+import traceback,json
 
 def isfound(data):
     mydb = mysql.connector.connect(
@@ -57,6 +57,8 @@ def loadtheModule(filename):
             create += (cols.lower())
             if(data[cols].dtype == 'int64'):
                 create += ' int'
+            elif 'date' in cols.lower():
+                create += ' date'
             else:
                 create += ' varchar(30)'
     
@@ -97,7 +99,8 @@ def loadtheModule(filename):
     
 
 def loadJson(filename):
-    dataxy = pd.read_json(filename, typ='series')
+    # dataxy = pd.read_json(filename, typ='series')
+    dataxy = pd.DataFrame(json.load(open(filename, 'r')))
     mydb = mysql.connector.connect(
                 host="localhost",
                 user="root",
@@ -111,13 +114,14 @@ def loadJson(filename):
     table = filename.split('.')[0]
     create = "CREATE TABLE " + table + "("
     cnt = 0
-    for ix in range(len(dataxy)):
-        col_name = dataxy.index[ix].lower()
-        new_name = col_name.split(' ')
-        cols = "_".join(new_name)
-        create += (cols.lower())
-        create += ' varchar(400)'
-        if cnt < len(dataxy)-1 :
+    for cols in dataxy.columns:
+        create += (cols.replace(' ', '_').lower())
+        if(dataxy[cols].dtype == 'int64'):
+            create += ' int'
+        else:
+            create += ' varchar(300)'
+    
+        if cnt < len(dataxy.columns)-1 :
             create += ','
         cnt = cnt + 1
     
@@ -129,23 +133,36 @@ def loadJson(filename):
     
     query = []
     ins = "INSERT INTO " + table + " VALUES("
+    # for ix in range(len(dataxy)):
+    #     #print(data['Account_ID'][ix])
+    #     res = ins
+    #     cnt = 0
+    #     for iy in range(len(dataxy)):
+    #         if ix == iy:
+    #             res += str("\"" + dataxy[ix] + "\"")
+    #         else:
+    #             res += "NULL"
+        
+    #         if cnt < len(dataxy) -  1: 
+    #             res += ','
+    #         cnt = cnt + 1
+    #     res += ");"
+    #     query.append(res)
+    
     for ix in range(len(dataxy)):
-        #print(data['Account_ID'][ix])
         res = ins
         cnt = 0
-        for iy in range(len(dataxy)):
-            if ix == iy:
-                res += str("\"" + dataxy[ix] + "\"")
+        for cols in dataxy.columns:
+            if dataxy[cols].dtype == 'object':
+                res += str("\"" + dataxy[cols][ix] + "\"")
             else:
-                res += "NULL"
+                res += str(dataxy[cols][ix])
         
-            if cnt < len(dataxy) -  1: 
+            if cnt < len(dataxy.columns) -  1: 
                 res += ','
-            cnt = cnt + 1
+            cnt = cnt + 1    
         res += ");"
         query.append(res)
-    
-    
 
 # set up the cursor to execute the query
     
@@ -168,5 +185,5 @@ def loadData(data_name):
     elif data_name.endswith('.json'):
         loadJson(data_name)
 
-#if __name__=='__main__':
-    #loadJson('help.json')
+if __name__=='__main__':
+    loadData('dataset.csv')
