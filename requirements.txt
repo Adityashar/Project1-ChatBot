@@ -7,5 +7,4 @@ mysql.connector
 requests
 speechrecognition
 recognizers-text-suite
-pyaudio
-sudo apt-get install portaudio19-dev python-pyaudio
+
