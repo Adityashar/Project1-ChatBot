@@ -1,0 +1,53 @@
+abc@gmail.com
+adityas29@outlook.com
+
+Make UI logged out
+- Loggin in into the webpage
+
+Input these emails in UI:
+1- type any email in "From"
+2- type registered email in "To"
+
+payment processed,
+hi, the payment for amt. of usd 34535 was paid successfully for trans no. 12345.
+
+click-yes
+
+Payment in processing
+hi, the payment for amt. of usd 34535 id being processed for trans no. 123456.
+
+click-yes
+
+The transaction 1234567 failed
+Due to insufficient funds in savings account, the transaction 1234567 have been failed
+
+click-yes
+
+The transaction 12345 is pending
+Due to insufficient funds in savings account, the check no. 1623624 is bounced
+
+click- yes
+
+click- show_all()
+
+click- email thread
+	type - "12345"
+	press yes
+
+
+click- retrain
+
+go on upload files- upload:-
+	tmp/upload file/ upload pdf.1
+
+click -yes
+
+credit card stolen
+Could you please block my credit card with no. 7864876 with account ID 2131232
+
+click N0-
+click on add new class
+type-CreditCard
+click - submit
+click - show_all
+	
