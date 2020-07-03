@@ -22,9 +22,7 @@ Show me more info.
 
 ##### 3. Dynamic Updation - First upload new data, model trains, query over new data
 ```
-For the id CBOW, whats the tran type?
-
-whats the ipo year ?
+For the id AGFS, whats the ipo year?
 
 And the establishment associated?
 ```
