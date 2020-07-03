@@ -30,7 +30,9 @@ conda activate env
 All dependencies can be installed via:
 ```sh
 pip install -r requirements.txt
-python -m spacy download en_core_web_sm
+sudo apt-get install portaudio19-dev python-pyaudio
+pip install pyaudio
+python -m spacy download en
 ```
 NOTE: If you have MemoryError in the install try to use:
 ```
