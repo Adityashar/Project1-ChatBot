@@ -10,7 +10,7 @@ what is the pending amount ?
 
 what was the payment date ?
 
-what is the source for info ?
+Tell me the source for info ?
 ```
 
 ##### 2. Timeframe based query retrieval
@@ -22,7 +22,9 @@ Show me more info.
 
 ##### 3. Dynamic Updation - First upload new data, model trains, query over new data
 ```
-For the id 370220, whats the tran type?
+For the id CBOW, whats the tran type?
 
-whats the corresponding company?
+whats the ipo year ?
+
+And the establishment associated?
 ```
