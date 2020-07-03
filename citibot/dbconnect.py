@@ -35,12 +35,16 @@ def query_formation(entities, val, features, table:str):
                 continue;       
             if e['extractor'] == 'CRFEntityExtractor' and len(e['value'].split()) > 3:
                 continue
+            if e['extractor'] == 'DIETClassifier' and e['value'].lower() == "paid":
+                e['value'] = "Fully paid"
+            if e['extractor'] == 'DIETClassifier' and "failed" in e['value'].lower():
+                e['value'] = "Rejected"
             query += " {} = '{}' and".format(e['entity'], e['value'])
     
     print(query)
     return query[:-3]
 
-def query_formation_dy(entities, val:str, features):
+def query_formation_dynamic(entities, val:str, features, table):
 
     query = "SELECT {} FROM {} WHERE".format(val, table)
     for e in entities:

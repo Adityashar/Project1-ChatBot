@@ -20,23 +20,14 @@ body {
 
 .chat_header {
     height: 60px;
-    background: #ffffff;
+    background: rgb(90, 23, 238);
     border-radius: 10px 10px 0px 0px;
     padding: 5px;
     font-size: 20px;
 }
 
-.chat_header:hover {
-    background-color: #1a72fe;
-    transition: 0.6s;
-}
-
-.chat_header:hover .chat_header_title {
-    color: #ffffff;
-}
-
 .chat_header_title {
-    color: #1a72fe;
+    color: white;
     float: left;
     margin-top: 3%;
     margin-left: 5%;
@@ -44,7 +35,8 @@ body {
 }
 
 .chat_header_title:hover {
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #1a72fe;
     cursor: pointer;
   }
 

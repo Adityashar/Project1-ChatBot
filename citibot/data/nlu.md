@@ -99,6 +99,14 @@
 - How are things going on with the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the details pls
 - For the id [103490](Account_ID) tell me the status 
+- give us the payment status for id [222222](Account_ID)
+- please give the status of payment
+- status of payment for the same
+- Give me something about the current status of the transaction
+- For the id [103923](Account_ID) provide me the details of the current status of payment 
+- for the transaction [18331](Account_ID) give me status of agreement deal 
+- Give me the status of payment report for the transaction
+- Give me details about the status of the payment for agreement [103510](Account_ID) id
 
 
 ## intent:Paid_Amount
@@ -115,6 +123,12 @@
 - How much amount transferred in the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the paid amount details
 - For the id [103440](Account_ID) tell me the payment made
+- give us the paid amount for the same
+- please provide the amount paid in the transaction
+- please mention the amount paid in the deal
+- Give me the money paid for the transaction
+- for the agreement id [18391](Account_ID) give me transaction amount 
+- Tell me the details for the transaction amount with id [333333](Account_ID)
 
 
 ## intent:Pending_Amount
@@ -135,22 +149,19 @@
 - How much amount needs to be transferred in the agreement [103180](Account_ID) id
 - For [103490](Account_ID) agreement give me the pending amount details
 - For the id [103440](Account_ID) tell me the pending amount
+- give us the pending amount for the same
+- please provide the amount to be paid in the transaction
+- please mention the amount pending in the deal
+- Give me the money to be paid for the transaction for agreement [103520](Account_ID)
+- Give me details about the payment left for agreement [103510](Account_ID) id
+- for the agreement id [18391](Account_ID) give me report of transaction amount pending  
 
 ## intent:Payment_Type
 - payment type for id [105135](Account_ID)
-- What is the payment type with agreement id [105150](Account_ID)
-- What is the payment type for transaction with [105049](Account_ID)
-- payment type for agreement with [105140](Account_ID) id
-- Give me the payment type details about agreement with [105120](Account_ID)
-- Tell me the p t for the [105170](Account_ID)
-- Can you show me the payment type for [105140](Account_ID)
-- I request you to provide me the p t made with [105122](Account_ID)
-- Could you please give me the p t insights regarding concurrence with [105061](Account_ID) id
-- Please check the payment type of [105170](Account_ID)
-- Brief me about the pt for the accord with [105122](Account_ID)
-- Please show me the payment type for transaction with id [105120](Account_ID)
+- what is the payment type?
 
 ## intent:Currency
+- whats the currency used ?
 - currency used for transaction with id [105146](Account_ID)
 - What is the currency used agreement id [105050](Account_ID)
 - Which currency is involved in transaction with [105135](Account_ID)
@@ -232,9 +243,11 @@
 - Tell me about the client names for whom payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
 - Client Names whose payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
 - client companies that performed payments between [2020-02-23](Payment_Date) and [2020-02-23](Payment_Date) and the payments are [failed]{"entity":"Payment_Status", "value":"Rejected"}
-- client details for transactions that were [Failed]{"entity":"Payment_Status", "value":"Rejected"} from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
+- client details for transactions that were [failed]{"entity":"Payment_Status", "value":"Rejected"} from [2020-02-02](Payment_Date) to [2020-06-06](Payment_Date)
 - give info about client names for whom payments were [paid]{"entity":"Payment_Status", "value":"Fully paid"} between [2020-02-02](Payment_Date) and [2020-06-06](Payment_Date)
 - tell Client Names whose payments were [failed]{"entity":"Payment_Status", "value":"Rejected"} between [2020-06-06](Payment_Date) and [2020-01-06](Payment_Date)
+- Give me the clients whose payments got [failed]{"entity":"Payment_Status", "value":"Rejected"} in between the 4th and 6th april 2020
+
 
 ## intent:Legal_Entity
 - legal entity for id [105126](Account_ID)
@@ -351,6 +364,7 @@
 - give all the details for given response please
 - tell me more info details for the records
 - tell more info
+- give more information
 
 <!-- ## intent:all_the_clients
 - give me the client names for all the payments that failed
@@ -439,3 +453,66 @@
 - process
 - Processing
 - processed
+
+## intent:id
+
+## intent:establishment
+- for id [TWOU](id), what is the establishment
+- for id [TWOU](id), tell me the establishment
+- establishment for id [AKAO](id)
+- What is the establishment with agreement id [ACRS](id)
+- What is the establishment for transaction with [FLWS](id)
+- establishment for agreement with [BCOW](id) id
+- Give me the establishment details about agreement with [ACMR](id)
+- Tell me the establishment for the [XLRN](id)
+- Can you show me the establishment for [QFIN](id)
+- I request you to provide me the establishment made with [ARAY](id)
+- Could you please give me the establishment insights regarding concurrence with [ACAD](id) id
+- Please check the establishment of [YI](id)
+- Brief me about the establishment for the accord with [XLRN](id)
+- Please show me the establishment for transaction with id [QFIN](id)
+
+## intent:ipo_year
+- for id [ACHN](id), what is the ipo year
+- for id [ACMR](id), tell me the ipo year
+- ipo year for id [ACIU](id)
+- What is the ipo year with agreement id [BCOW](id)
+- What is the ipo year for transaction with [BCOW](id)
+- ipo year for agreement with [QFIN](id) id
+- Give me the ipo year details about agreement with [ARAY](id)
+- Tell me the iy for the [PIH](id)
+- Can you show me the ipo year for [YI](id)
+- I request you to provide me the iy made with [ACHN](id)
+- Could you please give me the i y insights regarding concurrence with [AKAO](id) id
+- Please check the ipo year of [XLRN](id)
+- Brief me about the i y for the accord with [ACMR](id)
+- Please show me the iy for transaction with id [YI](id)
+- iy for id [AKAO](id)
+- What is the iy with agreement id [BCOW](id)
+- What is the iy for transaction with [ACRS](id)
+- i y for id [ACAD](id)
+- What is the i y with agreement id [ACRS](id)
+- What is the i y for transaction with [ABIL](id)
+
+## lookup:establishment
+- 111, Inc.
+- 1347 Property Insurance Holdings, Inc.
+- 1-800 FLOWERS.COM, Inc.
+- 1895 Bancorp of Wisconsin, Inc.
+- 21Vianet Group, Inc.
+- 2U, Inc.
+- 360 Finance, Inc.
+- 51job, Inc.
+- Ability Inc.
+- AC Immune SA
+- Acacia Communications, Inc.
+- ACADIA Pharmaceuticals Inc.
+- Acceleron Pharma Inc.
+- Accuray Incorporated
+- AcelRx Pharmaceuticals, Inc.
+- Achaogen, Inc.
+- Achillion Pharmaceuticals, Inc.
+- Aclaris Therapeutics, Inc.
+- ACM Research, Inc.
+- Acorda Therapeutics, Inc.
+

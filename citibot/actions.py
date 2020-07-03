@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from dbconnect import query_formation, getData
+from dbconnect import query_formation, getData, query_formation_dynamic
 import pandas as pd
 import sys, os, pickle, json, datetime
 
@@ -47,7 +47,7 @@ import sys, os, pickle, json, datetime
 # ps -fA | grep python
 
 
-helpFile = json.load(open('data/help.json', 'r'))
+helpFile = json.load(open('./data/help.json', 'r'))
 
 FEATURES = ['Client_Name', 'Account_ID', 'Legal_Entity', 'Currency', 
             'Payment_Type', 'Paid_Amount', 'Payment_Date', 'Payment_Status', 
@@ -69,16 +69,17 @@ else:
 final_table = {**initial_table, **information_table}
 
 
-helpFile = json.load(open('data/help.json', 'r'))
+helpFile = json.load(open('./data/help.json', 'r'))
 
 def get_table(intent):
+    global Table
     tab = ""
     for table in final_table.keys():
         if intent in final_table[table]:
-            tab = table
+            tab = os.path.basename(table)
             break
     Table = tab
-    # print(tab)
+    print(tab)
     return tab
 
 def containsEntity(e, entities):
@@ -229,6 +230,7 @@ class ActionPayCreation(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        global Table
         Table = ""
         dispatcher.utter_message(text=str(helpFile['Payment creation'][0]))
 
@@ -242,6 +244,7 @@ class ActionMultiAcc(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        global Table
         Table = ""
         dispatcher.utter_message(text=str(helpFile["Number of accounts"][0]))
 
@@ -255,6 +258,7 @@ class ActionPaySuccess(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        global Table
         Table = ""
         dispatcher.utter_message(text=str(helpFile['Payment Successful'][0]))
 
@@ -268,7 +272,7 @@ class ActionGetID(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+        global Table
         Table= ""
         dispatcher.utter_message(text=str(helpFile['Transaction id of payment'][0]))
 
@@ -282,7 +286,7 @@ class ActionCrossCountry(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-         
+        global Table
         Table= ""
         dispatcher.utter_message(text=str(helpFile['Cross country accounts'][0]))
 
@@ -296,7 +300,7 @@ class ActionAddAcc(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-         
+        global Table 
         Table= ""
         dispatcher.utter_message(text=str(helpFile['Add new fund and account details'][0]))
 
@@ -817,40 +821,40 @@ class actionSource(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         try:
-            entities = tracker.latest_message['entities']
-            intent = tracker.latest_message['intent']['name']
-            table = get_table(intent)
-            primary_key = final_pk[table][0]
+            # entities = tracker.latest_message['entities']
+            # intent = tracker.latest_message['intent']['name']
+            # table = get_table(intent)
+            # primary_key = final_pk[table][0]
             print(Table)
-            if(len(entities) == 0):
-                print(Table)
-                dispatcher.utter_message(template = 'utter_Source')
-                if(Table != ""):
-                    dispatcher.utter_message(template = 'utter_table')
-                return []
+            # if(len(entities) == 0):
+            #     print(Table)
+            dispatcher.utter_message(template = 'utter_Source')
+                # if(Table != ""):
+                #     dispatcher.utter_message(template = 'utter_table')
+            return []
 
-            if(containsEntity(primary_key, entities)):
-                val = '*'
-            else:
-                val = intent
-                allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
+            # if(containsEntity(primary_key, entities)):
+            #     val = '*'
+            # else:
+            #     val = intent
+            #     allrecords, features = getData(query_formation(entities, "*",  final_table[table],table), table)
 
-            records, features = getData(query_formation(entities, val,  final_table[table],table), table)
-            if val == "*":
-                allrecords = records
-            saveRecords(table, allrecords)
-            if len(records) == 0:
-                raise ValueError("No record for this query !!!")
-            elif len(records) == 1:
-                features = {tup[0]:val for tup,val in zip(features,records[0])}
-                print(records, features)
-                dispatcher.utter_message(text="The source is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
-                return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
-            else:
-                records = [rec[0] for rec in records]
-                records = list(set(records))
-                dispatcher.utter_message(text="The sources are {}.".format(', '.join(records)))
-                return []
+            # records, features = getData(query_formation(entities, val,  final_table[table],table), table)
+            # if val == "*":
+            #     allrecords = records
+            # saveRecords(table, allrecords)
+            # if len(records) == 0:
+            #     raise ValueError("No record for this query !!!")
+            # elif len(records) == 1:
+            #     features = {tup[0]:val for tup,val in zip(features,records[0])}
+            #     print(records, features)
+            #     dispatcher.utter_message(text="The source is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+            #     return [SlotSet("{}".format(slot), features[slot.lower()]) for slot in final_table[table]]
+            # else:
+            #     records = [rec[0] for rec in records]
+            #     records = list(set(records))
+            #     dispatcher.utter_message(text="The sources are {}.".format(', '.join(records)))
+            #     return []
 
         except:
             dispatcher.utter_message(text = str(sys.exc_info()[1]))
@@ -875,3 +879,142 @@ class actionSource(Action):
 #       result = db.query(q)
 
 #       return [SlotSet("matches", result if result is not None else [])]
+
+
+
+class actionid(Action):
+
+    def name(self) -> Text:
+        return "action_id"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
+
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_id')
+                return []
+
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation_dynamic(entities, "*",  final_table[table],table), table)
+
+            records, features = getData(query_formation_dynamic(entities, val, final_table[table], table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
+                raise ValueError("No record for this query !!!")
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,records[0])}
+                print(records, features)
+                features['Source'] = features.pop('source')
+                dispatcher.utter_message(text="The id is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot]) for slot in features.keys()]
+            else:
+                print(records)
+                return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []
+
+
+class actionestablishment(Action):
+
+    def name(self) -> Text:
+        return "action_establishment"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
+
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_establishment')
+                return []
+
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation_dynamic(entities, "*",  final_table[table],table), table)
+
+            records, features = getData(query_formation_dynamic(entities, val, final_table[table], table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
+                raise ValueError("No record for this query !!!")
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,records[0])}
+                print(records, features)
+                features['Source'] = features.pop('source')
+                dispatcher.utter_message(text="The establishment is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot]) for slot in features.keys()]
+            else:
+                print(records)
+                return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []
+
+
+class actionipoyear(Action):
+
+    def name(self) -> Text:
+        return "action_ipo_year"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        try:
+            entities = tracker.latest_message['entities']
+            intent = tracker.latest_message['intent']['name']
+            table = get_table(intent)
+            primary_key = final_pk[table][0]
+
+            if(len(entities) == 0):
+                dispatcher.utter_message(template = 'utter_ipo_year')
+                return []
+
+            if(containsEntity(primary_key, entities)):
+                val = '*'
+            else:
+                val = intent
+                allrecords, features = getData(query_formation_dynamic(entities, "*",  final_table[table],table), table)
+
+            records, features = getData(query_formation_dynamic(entities, val, final_table[table], table), table)
+            if val == "*":
+                allrecords = records
+            saveRecords(table, allrecords)
+            if len(records) == 0:
+                raise ValueError("No record for this query !!!")
+            elif len(records) == 1:
+                features = {tup[0]:val for tup,val in zip(features,records[0])}
+                print(records, features)
+                features['Source'] = features.pop('source')
+                dispatcher.utter_message(text="The ipo year is  "+ str(features[intent.lower()]) + " for the given record with id "+ str(features[primary_key.lower()]) )
+                return [SlotSet("{}".format(slot), features[slot]) for slot in features.keys()]
+            else:
+                print(records)
+                return []
+
+        except:
+            dispatcher.utter_message(text = str(sys.exc_info()[1]))
+            return []

@@ -1,4 +1,10 @@
 intents:
+  - id:
+      triggers: action_id
+  - establishment:
+      triggers: action_establishment
+  - ipo_year:
+      triggers: action_ipo_year
   - greet
   - goodbye
   - affirm
@@ -31,6 +37,9 @@ intents:
   - information
 
 entities:
+  - id
+  - establishment
+  - ipo_year
   - Client_Name
   - Account_ID
   - Legal_Entity
@@ -44,6 +53,9 @@ entities:
   - Source
 
 actions:
+  - action_id
+  - action_establishment
+  - action_ipo_year
   - action_Client_Name
   - action_Legal_Entity
   - action_Currency
@@ -62,6 +74,15 @@ actions:
   - action_Source
 
 slots:
+  id:
+    type: unfeaturized
+    auto_fill: false
+  establishment:
+    type: unfeaturized
+    auto_fill: false
+  ipo_year:
+    type: unfeaturized
+    auto_fill: false
   Client_Name:
     type: unfeaturized
     auto_fill: false
@@ -102,6 +123,15 @@ slots:
   
 
 responses:
+  utter_id:
+  - text: "The id for the given agreement is {id}."
+
+  utter_establishment:
+  - text: "The establishment for the given agreement is {establishment}."
+
+  utter_ipo_year:
+  - text: "The ipo year for the given agreement is {ipo_year}."
+
   utter_greet:
   - text: "Hey! How can i help you?"
 
@@ -136,10 +166,13 @@ responses:
   - text: "The amount pending is {Currency} {Pending_Amount}."
 
   utter_Source:
-  - text: "The Source for given information is doc {Source}."
+  - text: "The Source for given information is  {Source}."
 
   utter_Payment_Type:
   - text: "The Payment Type for the given agreement is {Payment_Type}."
+  
+  utter_Currency:
+  - text: "The Currency used in transaction is {Currency}."
 
   utter_Comments:
   - text: "The Comments for the given agreement is {Comments}."

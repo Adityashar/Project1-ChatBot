@@ -1,0 +1,5 @@
+Transaction 999999
+From HSBC
+To CitiBank London
+Rejected Rejected Rejected Rejected
+

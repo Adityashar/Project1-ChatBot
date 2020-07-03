@@ -91,3 +91,16 @@
 ## information path 1
 * information
   - utter_information
+
+## id path 1
+* id
+  - action_id
+
+## establishment path 1
+* establishment
+  - action_establishment
+
+## ipo_year path 1
+* ipo_year
+  - action_ipo_year
+
